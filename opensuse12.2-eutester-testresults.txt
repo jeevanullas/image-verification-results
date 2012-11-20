@@ -1,0 +1,27 @@
+TESTUNIT LIST SUMMARY FOR 'instancetest'
+
+--------------------------------------------------------------------------------
+TEST: BasicInstanceChecks                          RESULT:passed Time:255
+VALUES: BasicInstanceChecks(zone:None)
+--------------------------------------------------------------------------------
+TEST: MetaData                                     RESULT:failed Time:0
+VALUES: MetaData(zone:None)
+ERROR(MetaData): Incorrect private ip in metadata
+--------------------------------------------------------------------------------
+TEST: Reboot                                       RESULT:passed Time:90
+VALUES: Reboot(zone:None)
+--------------------------------------------------------------------------------
+TEST: clean_method                                 RESULT:passed Time:12
+VALUES: clean_method()
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 4       | 1       | 3       | 0       | 357     
+------------------------------------------------------
+
+-------------------------------------------------------------------------
+passed:3 out of total:4
+
