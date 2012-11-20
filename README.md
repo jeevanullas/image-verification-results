@@ -17,5 +17,19 @@ After image has been added to the Starter-Images wiki, use eutester to test the 
 
 After running the tests, add the results to image-verification-results repo on github.  Here is an example:
 
+* This is for the CentOS 6.3 x86_64 image *
+
+<code>
+git clone https://github.com/eucalyptus/image-verification-results.git
+cd image-verification-results
+<add text file output from instancetest.py testcase output>
+git add .
+git commit -m "Eutester Test Case for CentOS 6.3 Image x86_64"
+git push origin master
+</code>
+
+After pushing the results file, update the "Latest test" column on the Starter-Images page by referencing the URL to the file in the image-verification-results repo.
+
+
 
 
