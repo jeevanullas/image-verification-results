@@ -1,7 +1,7 @@
 image-verification-results
 ==========================
 
-Repository for test results of images hosted on emis.eucalyptus.com.
+Repository for test results of images hosted on emis.eucalyptus.com and eustore.
 
 The images should be listed here:
 
@@ -34,6 +34,7 @@ git clone https://github.com/eucalyptus/image-verification-results.git</code>
 
 After pushing the results file, update the "Latest test" column on the Starter-Images page by referencing the URL to the file in the image-verification-results repo.
 
+For any questions concerning how to use Euster, please refer to https://github.com/eucalyptus/eutester.
 
 
 
