@@ -30,7 +30,9 @@ After running the tests, add the results to image-verification-results repo on g
 3. Add the eucalyptus/image-verification-results as a upstream remote:
 
   <code>cd image-verification-results</code>
+  
   <code>git remote add upstream https://github.com/eucalyptus/image-verification-results.git</code>
+  
   <code>git fetch upstream</code>
 
 4. After doing that, put the results of the eustester testcase for the image into a text file:
@@ -40,6 +42,7 @@ After running the tests, add the results to image-verification-results repo on g
 5. Once the text file is created, add it to the local repo, and put in the appropriate commit message:
   
   <code>git add .</code>
+  
   <code>git commit -m "Eutester Test Case for CentOS 6.3 Image x86_64"</code>
 
 6. Finally, push the code to master to prepare for a pull request:
