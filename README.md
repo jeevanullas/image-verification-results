@@ -53,9 +53,9 @@ After running the tests, add the results to image-verification-results repo on g
 
 After the pull request has been merged, we will do the following:
 
-  *update the "Latest Test" column on the Starter-Images page by referencing the URL to the file in the image-verification-results repo.
-  *update the URL under "URL to Image" to reference the location on emis.eucalyptus.com.
-  *update the catalog file on emis.eucalyptus.com so that eustore can access the new image.
+  * update the "Latest Test" column on the Starter-Images page by referencing the URL to the file in the image-verification-results repo.
+  * update the URL under "URL to Image" to reference the location on emis.eucalyptus.com.
+  * update the catalog file on emis.eucalyptus.com so that eustore can access the new image.
 
 For any questions concerning how to use Euster, please refer to https://github.com/eucalyptus/eutester.
 
