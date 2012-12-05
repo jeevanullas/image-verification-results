@@ -1,0 +1,721 @@
+# Note:
+# This image is an official Ubuntu cloud image from cloud-images.ubuntu.com
+# By default the root user is disabled and users have to use the ubuntu user. Eutester instancetest runs some commands which require root permissions so
+# the root account was enabled with a cloud-init config file containing:
+# #cloud-config
+# disable_root: false
+#
+# Then eutester was told to use this on instance launch with the following line in eucaops/ec2ops.py:
+# user_data = open('/root/cloud-config.txt', 'r').read()
+#
+# The only failure show is the ramdisk ID not present in the meta-data, this is due to Ubuntu not needing a ramdisk.
+#
+# ./eutester/testcases/cloud_user/instances/instancetest.py --emi emi-7346368A --credpath credentials/ --tests BasicInstanceChecks MetaData Reboot
+setuptestname:None
+Starting setup_debugmethodNone
+[2012-12-04 15:53:42,475] [instancetest] [DEBUG]: (get_default_userhome_config:1120): Default config not found:/root/.eutester/eutester.conf
+[2012-12-04 15:53:42,477] [instancetest] [DEBUG]: (show_self:1133): 
+-------------------------------------------------------------------------
+TESTCASE INFO:           
+----------              
+NAME:                     --->:  instancetest
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  []
+-------------------------------------------------------------------------
+[2012-12-04 15:53:42,479] [instancetest] [DEBUG]: (show_args:1154): 
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+-------------------------------------------------------------------------
+[2012-12-04 15:53:42,482] [instancetest] [DEBUG]: (get_args:1054): Unable to read config from file: [Errno 2] No such file or directory: '../input/2b_tested.lst'
+[2012-12-04 15:53:42,484] [instancetest] [DEBUG]: (show_self:1133): 
+-------------------------------------------------------------------------
+TESTCASE INFO:           
+----------              
+NAME:                     --->:  instancetest
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  ['../input/2b_tested.lst']
+-------------------------------------------------------------------------
+[2012-12-04 15:53:42,486] [instancetest] [DEBUG]: (show_args:1154): 
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+args                      --->:  Namespace(config='../input/2b_tested.lst', config_file='../input/2b_tested.lst', configblocks=[], configfile='../input/2b_tested.lst', configsections=['MEMO', 'globals', 'instancetest'], cred_path='credentials/', credpath='credentials/', emi='emi-7346368A', ignoreblocks=[], keypair=None, password='foobar', tests=['BasicInstanceChecks', 'MetaData', 'Reboot'], use_color=False, vmtype='c1.medium', zone=None)
+config                    --->:  ../input/2b_tested.lst
+config_file               --->:  ../input/2b_tested.lst
+configblocks              --->:  []
+configfile                --->:  ../input/2b_tested.lst
+configsections            --->:  ['MEMO', 'globals', 'instancetest']
+cred_path                 --->:  credentials/
+credpath                  --->:  credentials/
+emi                       --->:  emi-7346368A
+ignoreblocks              --->:  []
+keypair                   --->:  None
+password                  --->:  foobar
+tests                     --->:  ['BasicInstanceChecks', 'MetaData', 'Reboot']
+use_color                 --->:  False
+vmtype                    --->:  c1.medium
+zone                      --->:  None
+-------------------------------------------------------------------------
+[2012-12-04 15:53:42,486] [EUTESTER] [DEBUG]: Extracting keys from credentials/
+[2012-12-04 15:53:42,486] [EUTESTER] [DEBUG]: Attempting to create ec2 connection to 10.110.1.87
+[2012-12-04 15:53:42,487] [EUTESTER] [DEBUG]: Attempting to create S3 connection to 10.110.1.87
+[2012-12-04 15:53:42,487] [EUTESTER] [DEBUG]: Attempting to create IAM connection to 10.110.1.87
+[2012-12-04 15:53:42,490] [EUTESTER] [DEBUG]: Attempting to create STS connection to 10.110.1.87
+[2012-12-04 15:53:42,490] [EUTESTER] [DEBUG]: Looking up group group-1354665222.49
+[2012-12-04 15:53:42,543] [EUTESTER] [DEBUG]: Creating Security Group: group-1354665222.49
+[2012-12-04 15:53:42,604] [EUTESTER] [DEBUG]: Attempting authorization of group-1354665222.49 on port 22 tcp
+[2012-12-04 15:53:42,662] [EUTESTER] [DEBUG]: Attempting authorization of group-1354665222.49 on port -1 icmp
+[2012-12-04 15:53:42,720] [EUTESTER] [DEBUG]: Looking up keypair keypair-1354665222.72
+[2012-12-04 15:53:42,774] [EUTESTER] [DEBUG]: Creating keypair: keypair-1354665222.72
+Creating testunit:BasicInstanceChecks, args:
+[2012-12-04 15:53:43,458] [instancetest] [DEBUG]: (populate_testunit_with_args:1172): Attempting to populate testunit:BasicInstanceChecks, with testcase.args...
+[2012-12-04 15:53:43,462] [instancetest] [DEBUG]: (populate_testunit_with_args:1180): Testunit keyword args:{}
+[2012-12-04 15:53:43,464] [instancetest] [DEBUG]: (populate_testunit_with_args:1185): Got method args:('self', 'zone')
+[2012-12-04 15:53:43,466] [instancetest] [DEBUG]: (populate_testunit_with_args:1193): test unit total args:{}
+[2012-12-04 15:53:43,468] [instancetest] [DEBUG]: (populate_testunit_with_args:1199): Found matching arg for:zone
+Creating testunit:MetaData, args:
+[2012-12-04 15:53:43,470] [instancetest] [DEBUG]: (populate_testunit_with_args:1172): Attempting to populate testunit:MetaData, with testcase.args...
+[2012-12-04 15:53:43,472] [instancetest] [DEBUG]: (populate_testunit_with_args:1180): Testunit keyword args:{}
+[2012-12-04 15:53:43,474] [instancetest] [DEBUG]: (populate_testunit_with_args:1185): Got method args:('self', 'zone')
+[2012-12-04 15:53:43,476] [instancetest] [DEBUG]: (populate_testunit_with_args:1193): test unit total args:{}
+[2012-12-04 15:53:43,478] [instancetest] [DEBUG]: (populate_testunit_with_args:1199): Found matching arg for:zone
+Creating testunit:Reboot, args:
+[2012-12-04 15:53:43,480] [instancetest] [DEBUG]: (populate_testunit_with_args:1172): Attempting to populate testunit:Reboot, with testcase.args...
+[2012-12-04 15:53:43,482] [instancetest] [DEBUG]: (populate_testunit_with_args:1180): Testunit keyword args:{}
+[2012-12-04 15:53:43,484] [instancetest] [DEBUG]: (populate_testunit_with_args:1185): Got method args:('self', 'zone')
+[2012-12-04 15:53:43,486] [instancetest] [DEBUG]: (populate_testunit_with_args:1193): test unit total args:{}
+[2012-12-04 15:53:43,488] [instancetest] [DEBUG]: (populate_testunit_with_args:1199): Found matching arg for:zone
+[2012-12-04 15:53:43,490] [instancetest] [DEBUG]: (run_test_case_list:676): 
+-------------------------------------------------------------------------
+- STARTING TESTUNIT:  - 
+METHOD:BasicInstanceChecks, TEST DESCRIPTION:
+
+        This Case Was Developed To Run Through A Series Of Basic Instance Tests.
+             The Tests Are As Follows:
+                   - Execute Run_Instances Command
+                   - Make Sure That Public Dns Name And Private Ip Aren'T The Same
+                       (This Is For Managed/Managed-Novlan Networking Modes)
+                   - Test To See If Instance Is Ping-Able
+                   - Test To Make Sure That Instance Is Accessible Via Ssh
+                       (Ssh Into Instance And Run Basic Ls Command)
+             If Any Of These Tests Fail, The Test Case Will Error Out, Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "BasicInstanceChecks(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2012-12-04 15:53:43,490] [EUTESTER] [DEBUG]: Looking for image prefix: emi-7346368A
+[2012-12-04 15:53:43,638] [EUTESTER] [DEBUG]: Returning image:emi-7346368A
+[2012-12-04 15:53:43,638] [EUTESTER] [DEBUG]: Attempting to run instance-store image Image:emi-7346368A in group group-1354665222.49
+[2012-12-04 15:53:43,895] [EUTESTER] [DEBUG]: Beginning poll loop for the 1 found in Reservation:r-66593CA9
+[2012-12-04 15:53:43,896] [EUTESTER] [DEBUG]: Beginning poll loop for instance Instance:i-F7EB3D08 to go to running
+[2012-12-04 15:53:43,963] [EUTESTER] [DEBUG]: Instance(i-F7EB3D08) State(pending), elapsed:0/480
+[2012-12-04 15:53:54,061] [EUTESTER] [DEBUG]: Instance(i-F7EB3D08) State(pending), elapsed:10/480
+[2012-12-04 15:54:04,163] [EUTESTER] [DEBUG]: Instance(i-F7EB3D08) State(running) time elapsed (20)
+[2012-12-04 15:54:04,163] [EUTESTER] [DEBUG]: Instance:i-F7EB3D08 is now in running
+[2012-12-04 15:54:04,163] [EUTESTER] [DEBUG]: Instance i-F7EB3D08 now in running state  in zone: cluster1
+[2012-12-04 15:54:04,163] [EUTESTER] [DEBUG]: Instance:i-F7EB3D08 got Public IP: 10.101.52.10 Private IP: 172.19.50.153 Public DNS Name: 10.101.52.10 Private DNS Name: 172.19.50.153
+[2012-12-04 15:54:04,163] [EUTESTER] [DEBUG]: Attempting to ping 10.101.52.10
+[2012-12-04 15:54:04,168] [EUTESTER] [DEBUG]: Was able to ping address
+[2012-12-04 15:54:04,168] [EUTESTER] [DEBUG]: Converting Reservation:r-66593CA9 into euinstances
+[2012-12-04 15:54:04,225] [i-F7EB3D08-10.101.52.10] [DEBUG]: Attempting to reconnect_to_instance:i-F7EB3D08
+[2012-12-04 15:54:04,226] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:54:04,226] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:54:04,235] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:54:04,235] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:0/460
+[2012-12-04 15:54:09,240] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:54:09,241] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:54:09,241] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:54:09,242] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:5/460
+[2012-12-04 15:54:14,247] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:54:14,247] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:54:14,248] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:54:14,248] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:10/460
+[2012-12-04 15:54:19,253] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:54:19,253] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:54:19,254] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:54:19,254] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:15/460
+[2012-12-04 15:54:24,259] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:54:24,260] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:54:24,260] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:54:24,260] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:20/460
+[2012-12-04 15:54:29,265] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:54:29,266] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:54:29,266] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:54:29,267] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:25/460
+[2012-12-04 15:54:34,271] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:54:34,272] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:54:34,272] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:54:34,273] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:30/460
+[2012-12-04 15:54:39,276] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:54:39,276] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:54:49,595] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# 
+[2012-12-04 15:54:49,813] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+
+[2012-12-04 15:54:49,814] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:49,814] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# dmesg | grep vda
+[2012-12-04 15:54:49,871] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+[    0.000000] Command line: root=/dev/vda1 console=ttyS0
+[    0.000000] Kernel command line: root=/dev/vda1 console=ttyS0
+[    0.171974]  vda: vda1 vda2 vda3
+[    0.362587] EXT3-fs (vda1): error: couldn't mount because of unsupported optional features (240)
+[    0.366405] EXT4-fs (vda1): mounted filesystem with ordered data mode. Opts: (null)
+[    0.797954] EXT4-fs (vda1): re-mounted. Opts: (null)
+
+[2012-12-04 15:54:49,871] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:49,871] [EUTESTER] [DEBUG]: Beginning poll loop for the 1 found in Reservation:r-66593CA9
+[2012-12-04 15:54:49,872] [EUTESTER] [DEBUG]: Beginning poll loop for instance Instance:i-F7EB3D08 to go to running
+[2012-12-04 15:54:49,963] [EUTESTER] [DEBUG]: Instance(i-F7EB3D08) State(running) time elapsed (0)
+[2012-12-04 15:54:49,963] [EUTESTER] [DEBUG]: Instance:i-F7EB3D08 is now in running
+[2012-12-04 15:54:49,964] [EUTESTER] [DEBUG]: Attempting to ping 10.101.52.10
+[2012-12-04 15:54:49,968] [EUTESTER] [DEBUG]: Was able to ping address
+[2012-12-04 15:54:49,968] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls -1 /dev/vda2
+[2012-12-04 15:54:50,025] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+/dev/vda2
+
+[2012-12-04 15:54:50,025] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,029] [instancetest] [DEBUG]: (endsuccess:584): 
+-------------------------------------------------------------------------
+- UNIT ENDED - BasicInstanceChecks
+-------------------------------------------------------------------------
+
+[2012-12-04 15:54:50,033] [instancetest] [DEBUG]: (run_test_case_list:688): RESULTS SUMMARY FOR 'instancetest':
+[2012-12-04 15:54:50,033] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2012-12-04 15:54:50,033] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:54:50,033] [instancetest] [DEBUG]: (run_test_case_list:688): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2012-12-04 15:54:50,033] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:54:50,033] [instancetest] [DEBUG]: (run_test_case_list:688): | 3       | 0       | 1       | 2       | 66
+[2012-12-04 15:54:50,033] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:54:50,033] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2012-12-04 15:54:50,036] [instancetest] [DEBUG]: (run_test_case_list:676): 
+-------------------------------------------------------------------------
+- STARTING TESTUNIT:  - 
+METHOD:MetaData, TEST DESCRIPTION:
+
+        This Case Was Developed To Test The Metadata Service Of An Instance For Consistency.
+        The Following Meta-Data Attributes Are Tested:
+           - Public-Keys/0/Openssh-Key
+           - Security-Groups
+           - Instance-Id
+           - Local-Ipv4
+           - Public-Ipv4
+           - Ami-Id
+           - Ami-Launch-Index
+           - Reservation-Id
+           - Placement/Availability-Zone
+           - Kernel-Id
+           - Public-Hostname
+           - Local-Hostname
+           - Hostname
+           - Ramdisk-Id
+           - Instance-Type
+           - Any Bad Metadata That Shouldn'T Be Present.
+        Missing Nodes
+         ['Block-Device-Mapping/',  'Ami-Manifest-Path']
+        If Any Of These Tests Fail, The Test Case Will Error Out; Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "MetaData(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2012-12-04 15:54:50,036] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:50,091] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.343 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.343/0.343/0.343/0.000 ms
+
+[2012-12-04 15:54:50,091] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,091] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/public-keys/0/openssh-key
+[2012-12-04 15:54:50,192] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCAQN7tvvS/r/zEmsQCXMrwY0WPVEou8KIM3/gD0ASkZ8A3/7EfOyJTjI4LLuIYchjX+O66OCmY+Jd1Ib1yg0z3dPdLleMWJf7UIm6ZM+h0H5Jrej096AI/O8OobzXzfA6SVAyb0o7pfRmktljwow2lf6/bvffGK9KyKXcq4ZnqEKaGIZuKFx1m4dr+A4OXUStUbnxC/zfliCePT4jgsJXc+NCdOZpKCdgkRPCjslWS+dXzeXTFefK9r1Ol0JQvFwdW/sr0T/pn5wl/9VnH+3wIUUx4Nd+6VpGhSXw0K+Bw/GAy8bkdHA/vwfrZ0WrdqTyBxaBupPfrjuF9sN3bOjP9 285839779360@eucalyptus.keypair-1354665222.72
+[2012-12-04 15:54:50,192] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,193] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:50,248] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.294 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.294/0.294/0.294/0.000 ms
+
+[2012-12-04 15:54:50,248] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,249] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/security-groups
+[2012-12-04 15:54:50,343] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+group-1354665222.49
+[2012-12-04 15:54:50,344] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,344] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:50,400] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.264 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.264/0.264/0.264/0.000 ms
+
+[2012-12-04 15:54:50,400] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,400] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/instance-id
+[2012-12-04 15:54:50,500] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+i-F7EB3D08
+[2012-12-04 15:54:50,500] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,501] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:50,556] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.267 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.267/0.267/0.267/0.000 ms
+
+[2012-12-04 15:54:50,556] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,556] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/local-ipv4
+[2012-12-04 15:54:50,646] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+172.19.50.153
+[2012-12-04 15:54:50,646] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,647] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:50,702] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.287 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.287/0.287/0.287/0.000 ms
+
+[2012-12-04 15:54:50,702] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,702] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/public-ipv4
+[2012-12-04 15:54:50,818] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+10.101.52.10
+[2012-12-04 15:54:50,819] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,819] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:50,874] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.288 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.288/0.288/0.288/0.000 ms
+
+[2012-12-04 15:54:50,875] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,875] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/ami-id
+[2012-12-04 15:54:50,977] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+emi-7346368A
+[2012-12-04 15:54:50,977] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:50,977] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:51,033] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.297 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.297/0.297/0.297/0.000 ms
+
+[2012-12-04 15:54:51,033] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,033] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/ami-launch-index
+[2012-12-04 15:54:51,124] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+0
+[2012-12-04 15:54:51,124] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,125] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:51,180] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.270 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.270/0.270/0.270/0.000 ms
+
+[2012-12-04 15:54:51,180] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,180] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/reservation-id
+[2012-12-04 15:54:51,280] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+r-66593CA9
+[2012-12-04 15:54:51,280] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,280] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:51,336] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.362 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.362/0.362/0.362/0.000 ms
+
+[2012-12-04 15:54:51,336] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,336] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/placement/availability-zone
+[2012-12-04 15:54:51,441] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+cluster1
+[2012-12-04 15:54:51,442] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,442] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:51,497] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.334 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.334/0.334/0.334/0.000 ms
+
+[2012-12-04 15:54:51,497] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,498] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/kernel-id
+[2012-12-04 15:54:51,599] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+eki-89BD3467
+[2012-12-04 15:54:51,600] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,600] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:51,655] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.314 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.314/0.314/0.314/0.000 ms
+
+[2012-12-04 15:54:51,655] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,656] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/public-hostname
+[2012-12-04 15:54:51,757] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+10.101.52.10
+[2012-12-04 15:54:51,757] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,757] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:51,812] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.318 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.318/0.318/0.318/0.000 ms
+
+[2012-12-04 15:54:51,813] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,813] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/local-hostname
+[2012-12-04 15:54:51,911] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+172.19.50.153
+[2012-12-04 15:54:51,911] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,912] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:51,967] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.246 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.246/0.246/0.246/0.000 ms
+
+[2012-12-04 15:54:51,967] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:51,967] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/hostname
+[2012-12-04 15:54:52,059] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+10.101.52.10
+[2012-12-04 15:54:52,060] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:52,060] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:54:52,115] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.295 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.295/0.295/0.295/0.000 ms
+
+[2012-12-04 15:54:52,115] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:54:52,115] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/ramdisk-id
+[2012-12-04 15:54:52,217] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>404 - Not Found</title>
+ </head>
+ <body>
+  <h1>404 - Not Found: failed to find meta-data/ramdisk-id</h1>
+  <pre></pre>
+ </body>
+</html>
+
+[2012-12-04 15:54:52,217] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[101mTraceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/eutester-0.0.5-py2.6.egg/eutester/eutestcase.py", line 264, in run
+    ret = self.method(*self.args, **self.kwargs)
+  File "./eutester/testcases/cloud_user/instances/instancetest.py", line 188, in MetaData
+    self.assertTrue(re.match(instance.get_metadata("ramdisk-id")[0], instance.ramdisk ), 'Incorrect ramdisk in metadata') #instance-type
+  File "/usr/lib64/python2.6/re.py", line 137, in match
+    return _compile(pattern, flags).match(string)
+TypeError: expected string or buffer
+[0m
+[2012-12-04 15:54:52,222] [instancetest] [DEBUG]: (endsuccess:584): 
+-------------------------------------------------------------------------
+- UNIT ENDED - MetaData
+-------------------------------------------------------------------------
+
+[2012-12-04 15:54:52,226] [instancetest] [DEBUG]: (run_test_case_list:688): RESULTS SUMMARY FOR 'instancetest':
+[2012-12-04 15:54:52,226] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2012-12-04 15:54:52,226] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:54:52,227] [instancetest] [DEBUG]: (run_test_case_list:688): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2012-12-04 15:54:52,227] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:54:52,227] [instancetest] [DEBUG]: (run_test_case_list:688): | 3       | 1       | 1       | 1       | 68
+[2012-12-04 15:54:52,227] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:54:52,227] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2012-12-04 15:54:52,231] [instancetest] [DEBUG]: (run_test_case_list:676): 
+-------------------------------------------------------------------------
+- STARTING TESTUNIT:  - 
+METHOD:Reboot, TEST DESCRIPTION:
+
+        This Case Was Developed To Test Ip Connectivity And Volume Attachment After
+        Instance Reboot.  The Following Tests Are Done For This Test Case:
+                   - Creates A 1 Gig Ebs Volume, Then Attach Volume
+                   - Reboot Instance
+                   - Attempts To Connect To Instance Via Ssh
+                   - Checks To See If Ebs Volume Is Attached
+                   - Detaches Volume
+                   - Deletes Volume
+        If Any Of These Tests Fail, The Test Case Will Error Out; Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "Reboot(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2012-12-04 15:54:52,231] [EUTESTER] [DEBUG]: Sending create volume request, count:1
+[2012-12-04 15:54:52,394] [EUTESTER] [DEBUG]: 1/1 requests for volume creation succeeded.
+[2012-12-04 15:54:52,394] [EUTESTER] [DEBUG]: 
+
+------------------------------------------------------------------------------------------------------------------------------
+     VOL_ID    |ORDER|LASTSTATUS|TESTSTATUS|AGE@STATUS|SIZE|   FROM_SNAP   |             MD5_SUM             |MD5LEN|INFO_MSG
+------------------------------------------------------------------------------------------------------------------------------
+  vol-61223C28 |  0  | creating | creating |    0     | 1  |      None     |               None              |  32  |None
+------------------------------------------------------------------------------------------------------------------------------
+
+[2012-12-04 15:54:52,394] [EUTESTER] [DEBUG]: Monitoring 1 volumes for at least 1 to reach state:available
+[2012-12-04 15:54:52,394] [EUTESTER] [DEBUG]: Monitoring 1 volumes for at least 1 to reach state:available
+[2012-12-04 15:54:52,394] [EUTESTER] [DEBUG]: Polling 1 volumes for status:"available"...
+[2012-12-04 15:54:52,504] [EUTESTER] [DEBUG]: Volume #0 (vol-61223C28) State(creating), seconds elapsed: 0/120
+[2012-12-04 15:54:52,504] [EUTESTER] [DEBUG]: ----Time Elapsed:0, Waiting on 1 volumes to enter state:available-----
+[2012-12-04 15:55:02,605] [EUTESTER] [DEBUG]: Volume #0 (vol-61223C28) State(available), seconds elapsed: 10/120
+[2012-12-04 15:55:02,605] [EUTESTER] [DEBUG]: ----Time Elapsed:10, Waiting on 0 volumes to enter state:available-----
+[2012-12-04 15:55:02,605] [EUTESTER] [DEBUG]: 
+
+------------------------------------------------------------------------------------------------------------------------------
+     VOL_ID    |ORDER|LASTSTATUS|TESTSTATUS|AGE@STATUS|SIZE|   FROM_SNAP   |             MD5_SUM             |MD5LEN|INFO_MSG
+------------------------------------------------------------------------------------------------------------------------------
+  vol-61223C28 |  0  |available |available |  10.37   | 1  |      None     |               None              |  32  |None
+------------------------------------------------------------------------------------------------------------------------------
+
+[2012-12-04 15:55:02,606] [i-F7EB3D08-10.101.52.10] [DEBUG]: Attempting to attach volume:vol-61223C28 to instance:i-F7EB3D08 to dev:None
+[2012-12-04 15:55:02,606] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls -1 /dev/ | grep '^sd\|^vd\|^xd\|^xvd'
+[2012-12-04 15:55:02,663] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+vda
+vda1
+vda2
+vda3
+
+[2012-12-04 15:55:02,663] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:55:02,836] [i-F7EB3D08-10.101.52.10] [DEBUG]: Instance:i-F7EB3D08 returning available scsi dev:/dev/sde
+[2012-12-04 15:55:02,836] [EUTESTER] [DEBUG]: Sending attach for Volume:vol-61223C28 to be attached to Instance:i-F7EB3D08 at requested device  /dev/sde
+[2012-12-04 15:55:03,494] [EUTESTER] [DEBUG]: Volume:vol-61223C28, state:in-use, attached status:attaching, elapsed:0/60
+[2012-12-04 15:55:03,494] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-12-04 15:55:13,588] [EUTESTER] [DEBUG]: Volume:vol-61223C28, state:in-use, attached status:attaching, elapsed:10/60
+[2012-12-04 15:55:13,588] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-12-04 15:55:23,679] [EUTESTER] [DEBUG]: Volume:vol-61223C28, state:in-use, attached status:attaching, elapsed:20/60
+[2012-12-04 15:55:23,679] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-12-04 15:55:33,772] [EUTESTER] [DEBUG]: Volume:vol-61223C28, Attached: in-use - attached, elapsed:30
+[2012-12-04 15:55:33,772] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# dmesg | grep vda
+[2012-12-04 15:55:33,831] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+[    0.000000] Command line: root=/dev/vda1 console=ttyS0
+[    0.000000] Kernel command line: root=/dev/vda1 console=ttyS0
+[    0.171974]  vda: vda1 vda2 vda3
+[    0.362587] EXT3-fs (vda1): error: couldn't mount because of unsupported optional features (240)
+[    0.366405] EXT4-fs (vda1): mounted filesystem with ordered data mode. Opts: (null)
+[    0.797954] EXT4-fs (vda1): re-mounted. Opts: (null)
+[   64.166897] Adding 524284k swap on /dev/vda3.  Priority:-1 extents:1 across:524284k 
+[   64.173135] EXT3-fs (vda2): using internal journal
+[   64.173138] EXT3-fs (vda2): mounted filesystem with ordered data mode
+
+[2012-12-04 15:55:33,831] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:55:33,831] [i-F7EB3D08-10.101.52.10] [DEBUG]: Checking for volume attachment on guest, elapsed time(0)
+[2012-12-04 15:55:33,831] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls -1 /dev/ | grep '^sd\|^vd\|^xd\|^xvd'
+[2012-12-04 15:55:33,892] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+vda
+vda1
+vda2
+vda3
+vdb
+
+[2012-12-04 15:55:33,892] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:55:33,892] [i-F7EB3D08-10.101.52.10] [DEBUG]: dev_list_after:vda vda1 vda2 vda3 vdb
+[2012-12-04 15:55:33,892] [i-F7EB3D08-10.101.52.10] [DEBUG]: Volume:vol-61223C28 guest device:/dev/vdb
+[2012-12-04 15:55:33,892] [i-F7EB3D08-10.101.52.10] [DEBUG]: vol-61223C28 Requested dev:/dev/sde, attached to guest device:/dev/vdb
+[2012-12-04 15:55:33,892] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# head -c 32 /dev/vdb | xargs -0 printf %s | wc -c
+[2012-12-04 15:55:33,950] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+0
+
+[2012-12-04 15:55:33,950] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:55:33,950] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls /dev/vdb
+[2012-12-04 15:55:34,006] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+/dev/vdb
+
+[2012-12-04 15:55:34,006] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:55:34,006] [i-F7EB3D08-10.101.52.10] [DEBUG]: exit code:0
+[2012-12-04 15:55:34,007] [i-F7EB3D08-10.101.52.10] [DEBUG]: File /dev/vdb is present on i-F7EB3D08
+[2012-12-04 15:55:34,007] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls /dev/urandom
+[2012-12-04 15:55:34,063] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+/dev/urandom
+
+[2012-12-04 15:55:34,063] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:55:34,063] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# head -c 32 /dev/urandom > /dev/vdb; sync
+[2012-12-04 15:55:34,159] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+
+[2012-12-04 15:55:34,159] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:55:34,159] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls /dev/vdb
+[2012-12-04 15:55:34,215] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+/dev/vdb
+
+[2012-12-04 15:55:34,215] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:55:34,215] [i-F7EB3D08-10.101.52.10] [DEBUG]: exit code:0
+[2012-12-04 15:55:34,216] [i-F7EB3D08-10.101.52.10] [DEBUG]: File /dev/vdb is present on i-F7EB3D08
+[2012-12-04 15:55:34,216] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# head -c 32 /dev/vdb | md5sum
+[2012-12-04 15:55:34,272] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+a88c46078a92fa9f9b8da13769a910fc  -
+
+[2012-12-04 15:55:34,272] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:55:34,272] [i-F7EB3D08-10.101.52.10] [DEBUG]: Got MD5 for Volume:vol-61223C28 dev:/dev/vdb md5:a88c46078a92fa9f9b8da13769a910fc
+[2012-12-04 15:55:34,272] [i-F7EB3D08-10.101.52.10] [DEBUG]: Filled Volume:vol-61223C28 dev:/dev/vdb md5:a88c46078a92fa9f9b8da13769a910fc
+[2012-12-04 15:55:34,272] [i-F7EB3D08-10.101.52.10] [DEBUG]: Success attaching volume:vol-61223C28 to instance:i-F7EB3D08, cloud dev:/dev/sde, attached dev:/dev/vdb
+[2012-12-04 15:55:34,273] [i-F7EB3D08-10.101.52.10] [DEBUG]: Attempting to reboot instance:i-F7EB3D08
+[2012-12-04 15:55:54,327] [i-F7EB3D08-10.101.52.10] [DEBUG]: Attempting to reconnect_to_instance:i-F7EB3D08
+[2012-12-04 15:55:54,357] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:55:54,357] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:55:54,358] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:55:54,358] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:0/300
+[2012-12-04 15:55:59,363] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:55:59,364] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:55:59,364] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:55:59,365] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:5/300
+[2012-12-04 15:56:04,370] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:56:04,370] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:56:04,371] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:56:04,371] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:10/300
+[2012-12-04 15:56:09,376] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:56:09,376] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:56:09,377] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:56:09,377] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:15/300
+[2012-12-04 15:56:14,383] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:56:14,383] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:56:14,383] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:56:14,384] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:20/300
+[2012-12-04 15:56:19,389] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:56:19,389] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:56:19,390] [i-F7EB3D08-10.101.52.10] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 111] Connection refused
+[2012-12-04 15:56:19,390] [i-F7EB3D08-10.101.52.10] [DEBUG]: retrying ssh connection, elapsed:25/300
+[2012-12-04 15:56:24,395] [i-F7EB3D08-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665222.72.pem
+[2012-12-04 15:56:24,396] [i-F7EB3D08-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665222.72.pem
+[2012-12-04 15:56:34,715] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# 
+[2012-12-04 15:56:34,934] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+
+[2012-12-04 15:56:34,934] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:56:34,934] [i-F7EB3D08-10.101.52.10] [DEBUG]: i-F7EB3D08 reboot_instance_and_verify Success
+[2012-12-04 15:56:35,094] [EUTESTER] [DEBUG]: Sent detach for volume: vol-61223C28 which is currently in state: in-use
+[2012-12-04 15:56:35,163] [EUTESTER] [DEBUG]: Volume:vol-61223C28 state:in-use pause:10 elapsed:0
+[2012-12-04 15:56:35,163] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-12-04 15:56:45,257] [EUTESTER] [DEBUG]: Volume:vol-61223C28 state:in-use pause:10 elapsed:10
+[2012-12-04 15:56:45,257] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-12-04 15:56:55,362] [EUTESTER] [DEBUG]: Volume:vol-61223C28 state:in-use pause:10 elapsed:20
+[2012-12-04 15:56:55,362] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-12-04 15:57:05,471] [EUTESTER] [DEBUG]: Volume:vol-61223C28 left in available
+[2012-12-04 15:57:05,471] [i-F7EB3D08-10.101.52.10] [DEBUG]: Wait for device:/dev/vdb to be removed on guest...
+[2012-12-04 15:57:05,471] [i-F7EB3D08-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls /dev/vdb
+[2012-12-04 15:57:05,528] [i-F7EB3D08-10.101.52.10] [DEBUG]: 
+ls: cannot access /dev/vdb: No such file or directory
+
+[2012-12-04 15:57:05,528] [i-F7EB3D08-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:57:05,528] [i-F7EB3D08-10.101.52.10] [DEBUG]: exit code:2
+[2012-12-04 15:57:05,620] [EUTESTER] [DEBUG]: Sent delete for volume: vol-61223C28
+[2012-12-04 15:57:05,771] [EUTESTER] [DEBUG]: Volume:vol-61223C28 in deleting sleeping:10, elapsed:0
+[2012-12-04 15:57:15,841] [instancetest] [DEBUG]: (endsuccess:584): 
+-------------------------------------------------------------------------
+- UNIT ENDED - Reboot
+-------------------------------------------------------------------------
+
+[2012-12-04 15:57:15,846] [instancetest] [DEBUG]: (run_test_case_list:688): RESULTS SUMMARY FOR 'instancetest':
+[2012-12-04 15:57:15,846] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2012-12-04 15:57:15,846] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:57:15,846] [instancetest] [DEBUG]: (run_test_case_list:688): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2012-12-04 15:57:15,846] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:57:15,846] [instancetest] [DEBUG]: (run_test_case_list:688): | 3       | 1       | 2       | 0       | 211
+[2012-12-04 15:57:15,846] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:57:15,846] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2012-12-04 15:57:15,850] [instancetest] [DEBUG]: (run_test_case_list:697): Printing pre-cleanup results:
+[2012-12-04 15:57:15,853] [instancetest] [DEBUG]: (<lambda>:820): Test list results for testcase:instancetest
+[2012-12-04 15:57:15,856] [instancetest] [DEBUG]: (run_test_case_list:699): 
+-------------------------------------------------------------------------
+RUN TEST CASE LIST DONE:
+Ran 3/3 tests in 212 seconds
+TESTUNIT LIST SUMMARY FOR 'instancetest'
+
+--------------------------------------------------------------------------------
+TEST: BasicInstanceChecks                          RESULT:passed Time:66
+VALUES: BasicInstanceChecks(zone:None)
+--------------------------------------------------------------------------------
+TEST: MetaData                                     RESULT:failed Time:2
+VALUES: MetaData(zone:None)
+ERROR(MetaData): expected string or buffer
+--------------------------------------------------------------------------------
+TEST: Reboot                                       RESULT:passed Time:143
+VALUES: Reboot(zone:None)
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 3       | 1       | 2       | 0       | 211     
+------------------------------------------------------
+
+-------------------------------------------------------------------------
+Creating testunit:clean_method, args:
+[2012-12-04 15:57:15,858] [instancetest] [DEBUG]: (populate_testunit_with_args:1172): Attempting to populate testunit:clean_method, with testcase.args...
+[2012-12-04 15:57:15,860] [instancetest] [DEBUG]: (populate_testunit_with_args:1180): Testunit keyword args:{}
+[2012-12-04 15:57:15,862] [instancetest] [DEBUG]: (populate_testunit_with_args:1185): Got method args:('self',)
+[2012-12-04 15:57:15,864] [instancetest] [DEBUG]: (populate_testunit_with_args:1193): test unit total args:{}
+[2012-12-04 15:57:15,864] [EUTESTER] [DEBUG]: Sending terminate for Instance:i-F7EB3D08
+[2012-12-04 15:57:15,962] [EUTESTER] [DEBUG]: Beginning poll loop for the 1 found in Reservation:r-66593CA9
+[2012-12-04 15:57:15,962] [EUTESTER] [DEBUG]: Beginning poll loop for instance Instance:i-F7EB3D08 to go to terminated
+[2012-12-04 15:57:16,023] [EUTESTER] [DEBUG]: Instance(i-F7EB3D08) State(shutting-down), elapsed:0/480
+[2012-12-04 15:57:26,088] [EUTESTER] [DEBUG]: Instance(i-F7EB3D08) State(terminated) time elapsed (10)
+[2012-12-04 15:57:26,088] [EUTESTER] [DEBUG]: Instance:i-F7EB3D08 is now in terminated
+[2012-12-04 15:57:26,088] [EUTESTER] [DEBUG]: Sending delete for group: group-1354665222.49
+[2012-12-04 15:57:26,169] [EUTESTER] [DEBUG]: Looking up group group-1354665222.49
+[2012-12-04 15:57:26,221] [EUTESTER] [DEBUG]: Sending delete for keypair: keypair-1354665222.72
+[2012-12-04 15:57:26,324] [instancetest] [DEBUG]: (<lambda>:820): Test list results for testcase:instancetest
+[2012-12-04 15:57:26,329] [instancetest] [DEBUG]: (run_test_case_list:711): 
+-------------------------------------------------------------------------
+TESTUNIT LIST SUMMARY FOR 'instancetest'
+
+--------------------------------------------------------------------------------
+TEST: BasicInstanceChecks                          RESULT:passed Time:66
+VALUES: BasicInstanceChecks(zone:None)
+--------------------------------------------------------------------------------
+TEST: MetaData                                     RESULT:failed Time:2
+VALUES: MetaData(zone:None)
+ERROR(MetaData): expected string or buffer
+--------------------------------------------------------------------------------
+TEST: Reboot                                       RESULT:passed Time:143
+VALUES: Reboot(zone:None)
+--------------------------------------------------------------------------------
+TEST: clean_method                                 RESULT:passed Time:10
+VALUES: clean_method()
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 4       | 1       | 3       | 0       | 221     
+------------------------------------------------------
+
+-------------------------------------------------------------------------
+passed:3 out of total:4
