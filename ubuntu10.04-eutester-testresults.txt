@@ -1,0 +1,665 @@
+# Note:
+# This image is an official Ubuntu cloud image from cloud-images.ubuntu.com
+# By default the root user is disabled and users have to use the ubuntu user. Eutester instancetest runs some commands which require root permissions so
+# the root account was enabled with a cloud-init config file containing:
+# #cloud-config
+# disable_root: false
+#
+# Then eutester was told to use this on instance launch with the following line in eucaops/ec2ops.py:
+# user_data = open('/root/cloud-config.txt', 'r').read()
+#
+# The only failure show is the ramdisk ID not present in the meta-data, this is due to Ubuntu not needing a ramdisk.
+#
+# ./eutester/testcases/cloud_user/instances/instancetest.py --emi emi-66733A38 --credpath credentials/ --tests BasicInstanceChecks MetaData Reboot
+setuptestname:None
+Starting setup_debugmethodNone
+[2012-12-04 15:58:52,238] [instancetest] [DEBUG]: (get_default_userhome_config:1120): Default config not found:/root/.eutester/eutester.conf
+[2012-12-04 15:58:52,240] [instancetest] [DEBUG]: (show_self:1133): 
+-------------------------------------------------------------------------
+TESTCASE INFO:           
+----------              
+NAME:                     --->:  instancetest
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  []
+-------------------------------------------------------------------------
+[2012-12-04 15:58:52,242] [instancetest] [DEBUG]: (show_args:1154): 
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+-------------------------------------------------------------------------
+[2012-12-04 15:58:52,245] [instancetest] [DEBUG]: (get_args:1054): Unable to read config from file: [Errno 2] No such file or directory: '../input/2b_tested.lst'
+[2012-12-04 15:58:52,247] [instancetest] [DEBUG]: (show_self:1133): 
+-------------------------------------------------------------------------
+TESTCASE INFO:           
+----------              
+NAME:                     --->:  instancetest
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  ['../input/2b_tested.lst']
+-------------------------------------------------------------------------
+[2012-12-04 15:58:52,249] [instancetest] [DEBUG]: (show_args:1154): 
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+args                      --->:  Namespace(config='../input/2b_tested.lst', config_file='../input/2b_tested.lst', configblocks=[], configfile='../input/2b_tested.lst', configsections=['MEMO', 'globals', 'instancetest'], cred_path='credentials/', credpath='credentials/', emi='emi-66733A38', ignoreblocks=[], keypair=None, password='foobar', tests=['BasicInstanceChecks', 'MetaData', 'Reboot'], use_color=False, vmtype='c1.medium', zone=None)
+config                    --->:  ../input/2b_tested.lst
+config_file               --->:  ../input/2b_tested.lst
+configblocks              --->:  []
+configfile                --->:  ../input/2b_tested.lst
+configsections            --->:  ['MEMO', 'globals', 'instancetest']
+cred_path                 --->:  credentials/
+credpath                  --->:  credentials/
+emi                       --->:  emi-66733A38
+ignoreblocks              --->:  []
+keypair                   --->:  None
+password                  --->:  foobar
+tests                     --->:  ['BasicInstanceChecks', 'MetaData', 'Reboot']
+use_color                 --->:  False
+vmtype                    --->:  c1.medium
+zone                      --->:  None
+-------------------------------------------------------------------------
+[2012-12-04 15:58:52,249] [EUTESTER] [DEBUG]: Extracting keys from credentials/
+[2012-12-04 15:58:52,249] [EUTESTER] [DEBUG]: Attempting to create ec2 connection to 10.110.1.87
+[2012-12-04 15:58:52,250] [EUTESTER] [DEBUG]: Attempting to create S3 connection to 10.110.1.87
+[2012-12-04 15:58:52,250] [EUTESTER] [DEBUG]: Attempting to create IAM connection to 10.110.1.87
+[2012-12-04 15:58:52,253] [EUTESTER] [DEBUG]: Attempting to create STS connection to 10.110.1.87
+[2012-12-04 15:58:52,254] [EUTESTER] [DEBUG]: Looking up group group-1354665532.25
+[2012-12-04 15:58:52,321] [EUTESTER] [DEBUG]: Creating Security Group: group-1354665532.25
+[2012-12-04 15:58:52,374] [EUTESTER] [DEBUG]: Attempting authorization of group-1354665532.25 on port 22 tcp
+[2012-12-04 15:58:52,432] [EUTESTER] [DEBUG]: Attempting authorization of group-1354665532.25 on port -1 icmp
+[2012-12-04 15:58:52,490] [EUTESTER] [DEBUG]: Looking up keypair keypair-1354665532.49
+[2012-12-04 15:58:52,537] [EUTESTER] [DEBUG]: Creating keypair: keypair-1354665532.49
+Creating testunit:BasicInstanceChecks, args:
+[2012-12-04 15:58:52,913] [instancetest] [DEBUG]: (populate_testunit_with_args:1172): Attempting to populate testunit:BasicInstanceChecks, with testcase.args...
+[2012-12-04 15:58:52,915] [instancetest] [DEBUG]: (populate_testunit_with_args:1180): Testunit keyword args:{}
+[2012-12-04 15:58:52,917] [instancetest] [DEBUG]: (populate_testunit_with_args:1185): Got method args:('self', 'zone')
+[2012-12-04 15:58:52,919] [instancetest] [DEBUG]: (populate_testunit_with_args:1193): test unit total args:{}
+[2012-12-04 15:58:52,921] [instancetest] [DEBUG]: (populate_testunit_with_args:1199): Found matching arg for:zone
+Creating testunit:MetaData, args:
+[2012-12-04 15:58:52,923] [instancetest] [DEBUG]: (populate_testunit_with_args:1172): Attempting to populate testunit:MetaData, with testcase.args...
+[2012-12-04 15:58:52,925] [instancetest] [DEBUG]: (populate_testunit_with_args:1180): Testunit keyword args:{}
+[2012-12-04 15:58:52,927] [instancetest] [DEBUG]: (populate_testunit_with_args:1185): Got method args:('self', 'zone')
+[2012-12-04 15:58:52,929] [instancetest] [DEBUG]: (populate_testunit_with_args:1193): test unit total args:{}
+[2012-12-04 15:58:52,931] [instancetest] [DEBUG]: (populate_testunit_with_args:1199): Found matching arg for:zone
+Creating testunit:Reboot, args:
+[2012-12-04 15:58:52,933] [instancetest] [DEBUG]: (populate_testunit_with_args:1172): Attempting to populate testunit:Reboot, with testcase.args...
+[2012-12-04 15:58:52,935] [instancetest] [DEBUG]: (populate_testunit_with_args:1180): Testunit keyword args:{}
+[2012-12-04 15:58:52,937] [instancetest] [DEBUG]: (populate_testunit_with_args:1185): Got method args:('self', 'zone')
+[2012-12-04 15:58:52,939] [instancetest] [DEBUG]: (populate_testunit_with_args:1193): test unit total args:{}
+[2012-12-04 15:58:52,941] [instancetest] [DEBUG]: (populate_testunit_with_args:1199): Found matching arg for:zone
+[2012-12-04 15:58:52,943] [instancetest] [DEBUG]: (run_test_case_list:676): 
+-------------------------------------------------------------------------
+- STARTING TESTUNIT:  - 
+METHOD:BasicInstanceChecks, TEST DESCRIPTION:
+
+        This Case Was Developed To Run Through A Series Of Basic Instance Tests.
+             The Tests Are As Follows:
+                   - Execute Run_Instances Command
+                   - Make Sure That Public Dns Name And Private Ip Aren'T The Same
+                       (This Is For Managed/Managed-Novlan Networking Modes)
+                   - Test To See If Instance Is Ping-Able
+                   - Test To Make Sure That Instance Is Accessible Via Ssh
+                       (Ssh Into Instance And Run Basic Ls Command)
+             If Any Of These Tests Fail, The Test Case Will Error Out, Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "BasicInstanceChecks(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2012-12-04 15:58:52,943] [EUTESTER] [DEBUG]: Looking for image prefix: emi-66733A38
+[2012-12-04 15:58:53,096] [EUTESTER] [DEBUG]: Returning image:emi-66733A38
+[2012-12-04 15:58:53,096] [EUTESTER] [DEBUG]: Attempting to run instance-store image Image:emi-66733A38 in group group-1354665532.25
+[2012-12-04 15:58:53,360] [EUTESTER] [DEBUG]: Beginning poll loop for the 1 found in Reservation:r-B03140F8
+[2012-12-04 15:58:53,361] [EUTESTER] [DEBUG]: Beginning poll loop for instance Instance:i-A67A4211 to go to running
+[2012-12-04 15:58:53,446] [EUTESTER] [DEBUG]: Instance(i-A67A4211) State(pending), elapsed:0/480
+[2012-12-04 15:59:03,520] [EUTESTER] [DEBUG]: Instance(i-A67A4211) State(pending), elapsed:10/480
+[2012-12-04 15:59:13,622] [EUTESTER] [DEBUG]: Instance(i-A67A4211) State(pending), elapsed:20/480
+[2012-12-04 15:59:23,714] [EUTESTER] [DEBUG]: Instance(i-A67A4211) State(pending), elapsed:30/480
+[2012-12-04 15:59:33,790] [EUTESTER] [DEBUG]: Instance(i-A67A4211) State(running) time elapsed (40)
+[2012-12-04 15:59:33,790] [EUTESTER] [DEBUG]: Instance:i-A67A4211 is now in running
+[2012-12-04 15:59:33,790] [EUTESTER] [DEBUG]: Instance i-A67A4211 now in running state  in zone: cluster1
+[2012-12-04 15:59:33,790] [EUTESTER] [DEBUG]: Instance:i-A67A4211 got Public IP: 10.101.52.10 Private IP: 172.19.57.203 Public DNS Name: 10.101.52.10 Private DNS Name: 172.19.57.203
+[2012-12-04 15:59:33,791] [EUTESTER] [DEBUG]: Attempting to ping 10.101.52.10
+[2012-12-04 15:59:33,795] [EUTESTER] [DEBUG]: Was able to ping address
+[2012-12-04 15:59:33,795] [EUTESTER] [DEBUG]: Converting Reservation:r-B03140F8 into euinstances
+[2012-12-04 15:59:33,853] [i-A67A4211-10.101.52.10] [DEBUG]: Attempting to reconnect_to_instance:i-A67A4211
+[2012-12-04 15:59:33,854] [i-A67A4211-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665532.49.pem
+[2012-12-04 15:59:33,854] [i-A67A4211-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665532.49.pem
+[2012-12-04 15:59:44,328] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# 
+[2012-12-04 15:59:45,048] [i-A67A4211-10.101.52.10] [DEBUG]: 
+
+[2012-12-04 15:59:45,049] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:45,049] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# dmesg | grep vda
+[2012-12-04 15:59:45,107] [i-A67A4211-10.101.52.10] [DEBUG]: 
+[    0.000000] Command line: root=/dev/vda1 console=ttyS0
+[    0.000000] Kernel command line: root=/dev/vda1 console=ttyS0
+[    0.135516]  vda: vda1 vda2 vda3
+[    1.610445] EXT3 FS on vda1, internal journal
+
+[2012-12-04 15:59:45,107] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:45,107] [EUTESTER] [DEBUG]: Beginning poll loop for the 1 found in Reservation:r-B03140F8
+[2012-12-04 15:59:45,108] [EUTESTER] [DEBUG]: Beginning poll loop for instance Instance:i-A67A4211 to go to running
+[2012-12-04 15:59:45,201] [EUTESTER] [DEBUG]: Instance(i-A67A4211) State(running) time elapsed (0)
+[2012-12-04 15:59:45,201] [EUTESTER] [DEBUG]: Instance:i-A67A4211 is now in running
+[2012-12-04 15:59:45,201] [EUTESTER] [DEBUG]: Attempting to ping 10.101.52.10
+[2012-12-04 15:59:45,205] [EUTESTER] [DEBUG]: Was able to ping address
+[2012-12-04 15:59:45,206] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls -1 /dev/vda2
+[2012-12-04 15:59:45,264] [i-A67A4211-10.101.52.10] [DEBUG]: 
+/dev/vda2
+
+[2012-12-04 15:59:45,264] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:45,267] [instancetest] [DEBUG]: (endsuccess:584): 
+-------------------------------------------------------------------------
+- UNIT ENDED - BasicInstanceChecks
+-------------------------------------------------------------------------
+
+[2012-12-04 15:59:45,270] [instancetest] [DEBUG]: (run_test_case_list:688): RESULTS SUMMARY FOR 'instancetest':
+[2012-12-04 15:59:45,270] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2012-12-04 15:59:45,270] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:59:45,270] [instancetest] [DEBUG]: (run_test_case_list:688): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2012-12-04 15:59:45,270] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:59:45,270] [instancetest] [DEBUG]: (run_test_case_list:688): | 3       | 0       | 1       | 2       | 52
+[2012-12-04 15:59:45,270] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:59:45,270] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2012-12-04 15:59:45,274] [instancetest] [DEBUG]: (run_test_case_list:676): 
+-------------------------------------------------------------------------
+- STARTING TESTUNIT:  - 
+METHOD:MetaData, TEST DESCRIPTION:
+
+        This Case Was Developed To Test The Metadata Service Of An Instance For Consistency.
+        The Following Meta-Data Attributes Are Tested:
+           - Public-Keys/0/Openssh-Key
+           - Security-Groups
+           - Instance-Id
+           - Local-Ipv4
+           - Public-Ipv4
+           - Ami-Id
+           - Ami-Launch-Index
+           - Reservation-Id
+           - Placement/Availability-Zone
+           - Kernel-Id
+           - Public-Hostname
+           - Local-Hostname
+           - Hostname
+           - Ramdisk-Id
+           - Instance-Type
+           - Any Bad Metadata That Shouldn'T Be Present.
+        Missing Nodes
+         ['Block-Device-Mapping/',  'Ami-Manifest-Path']
+        If Any Of These Tests Fail, The Test Case Will Error Out; Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "MetaData(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2012-12-04 15:59:45,274] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:45,331] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.353 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.353/0.353/0.353/0.000 ms
+
+[2012-12-04 15:59:45,331] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:45,331] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/public-keys/0/openssh-key
+[2012-12-04 15:59:45,437] [i-A67A4211-10.101.52.10] [DEBUG]: 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCdqCg7GVrvgywP3vMxGZ76Iq5oj84FTjbbYlADUPrP4r1BEvDY592ZdhsCW1yf09Ewag/i1hpYnpAIHZp5/rfC69b9XPOvsTpge/qlQoqLZSNV9tFBjUHsbeD1NBJwtvRWdtXoahVXXVPnuSF53Z8Qio9KtQXxlMvq2qKrCOFzKsIIx8SRP01m+KsXxOkAeONZ+GEiKT6kDPlk1Et4DtkHte2j+Y7XUAb56cjx08/Yn6IMUIe+7grSN+TnLgSUeK4mV1tfwzyTwxA9Ws71Lv1zERMYsata2aPn6AMhaP2fNDqQZD2qcMLDEbvrFNAIwRY8n5eXYQNBezVAELjPbGmD 285839779360@eucalyptus.keypair-1354665532.49
+[2012-12-04 15:59:45,437] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:45,438] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:45,493] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.280 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.280/0.280/0.280/0.000 ms
+
+[2012-12-04 15:59:45,493] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:45,494] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/security-groups
+[2012-12-04 15:59:45,588] [i-A67A4211-10.101.52.10] [DEBUG]: 
+group-1354665532.25
+[2012-12-04 15:59:45,589] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:45,589] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:45,645] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.294 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.294/0.294/0.294/0.000 ms
+
+[2012-12-04 15:59:45,646] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:45,646] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/instance-id
+[2012-12-04 15:59:45,751] [i-A67A4211-10.101.52.10] [DEBUG]: 
+i-A67A4211
+[2012-12-04 15:59:45,751] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:45,751] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:45,808] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.302 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.302/0.302/0.302/0.000 ms
+
+[2012-12-04 15:59:45,808] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:45,808] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/local-ipv4
+[2012-12-04 15:59:45,901] [i-A67A4211-10.101.52.10] [DEBUG]: 
+172.19.57.203
+[2012-12-04 15:59:45,901] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:45,902] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:45,959] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.377 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.377/0.377/0.377/0.000 ms
+
+[2012-12-04 15:59:45,959] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:45,960] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/public-ipv4
+[2012-12-04 15:59:46,059] [i-A67A4211-10.101.52.10] [DEBUG]: 
+10.101.52.10
+[2012-12-04 15:59:46,059] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,060] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:46,116] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.345 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.345/0.345/0.345/0.000 ms
+
+[2012-12-04 15:59:46,116] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,116] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/ami-id
+[2012-12-04 15:59:46,209] [i-A67A4211-10.101.52.10] [DEBUG]: 
+emi-66733A38
+[2012-12-04 15:59:46,209] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,209] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:46,265] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.391 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.391/0.391/0.391/0.000 ms
+
+[2012-12-04 15:59:46,266] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,266] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/ami-launch-index
+[2012-12-04 15:59:46,365] [i-A67A4211-10.101.52.10] [DEBUG]: 
+0
+[2012-12-04 15:59:46,365] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,365] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:46,422] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.343 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.343/0.343/0.343/0.000 ms
+
+[2012-12-04 15:59:46,422] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,422] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/reservation-id
+[2012-12-04 15:59:46,522] [i-A67A4211-10.101.52.10] [DEBUG]: 
+r-B03140F8
+[2012-12-04 15:59:46,522] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,522] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:46,580] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.382 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.382/0.382/0.382/0.000 ms
+
+[2012-12-04 15:59:46,580] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,580] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/placement/availability-zone
+[2012-12-04 15:59:46,673] [i-A67A4211-10.101.52.10] [DEBUG]: 
+cluster1
+[2012-12-04 15:59:46,673] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,673] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:46,729] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.329 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.329/0.329/0.329/0.000 ms
+
+[2012-12-04 15:59:46,730] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,730] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/kernel-id
+[2012-12-04 15:59:46,830] [i-A67A4211-10.101.52.10] [DEBUG]: 
+eki-345E35A3
+[2012-12-04 15:59:46,830] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,830] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:46,887] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.366 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.366/0.366/0.366/0.000 ms
+
+[2012-12-04 15:59:46,887] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,887] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/public-hostname
+[2012-12-04 15:59:46,979] [i-A67A4211-10.101.52.10] [DEBUG]: 
+10.101.52.10
+[2012-12-04 15:59:46,979] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:46,980] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:47,037] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.324 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.324/0.324/0.324/0.000 ms
+
+[2012-12-04 15:59:47,037] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:47,037] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/local-hostname
+[2012-12-04 15:59:47,129] [i-A67A4211-10.101.52.10] [DEBUG]: 
+172.19.57.203
+[2012-12-04 15:59:47,129] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:47,129] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:47,186] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.333 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.333/0.333/0.333/0.000 ms
+
+[2012-12-04 15:59:47,187] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:47,187] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/hostname
+[2012-12-04 15:59:47,280] [i-A67A4211-10.101.52.10] [DEBUG]: 
+10.101.52.10
+[2012-12-04 15:59:47,280] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:47,281] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ping -c 1 169.254.169.254
+[2012-12-04 15:59:47,337] [i-A67A4211-10.101.52.10] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_seq=1 ttl=64 time=0.350 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.350/0.350/0.350/0.000 ms
+
+[2012-12-04 15:59:47,337] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:47,337] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# curl http://169.254.169.254/latest/meta-data/ramdisk-id
+[2012-12-04 15:59:47,431] [i-A67A4211-10.101.52.10] [DEBUG]: 
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>404 - Not Found</title>
+ </head>
+ <body>
+  <h1>404 - Not Found: failed to find meta-data/ramdisk-id</h1>
+  <pre></pre>
+ </body>
+</html>
+
+[2012-12-04 15:59:47,431] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[101mTraceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/eutester-0.0.5-py2.6.egg/eutester/eutestcase.py", line 264, in run
+    ret = self.method(*self.args, **self.kwargs)
+  File "./eutester/testcases/cloud_user/instances/instancetest.py", line 188, in MetaData
+    self.assertTrue(re.match(instance.get_metadata("ramdisk-id")[0], instance.ramdisk ), 'Incorrect ramdisk in metadata') #instance-type
+  File "/usr/lib64/python2.6/re.py", line 137, in match
+    return _compile(pattern, flags).match(string)
+TypeError: expected string or buffer
+[0m
+[2012-12-04 15:59:47,436] [instancetest] [DEBUG]: (endsuccess:584): 
+-------------------------------------------------------------------------
+- UNIT ENDED - MetaData
+-------------------------------------------------------------------------
+
+[2012-12-04 15:59:47,440] [instancetest] [DEBUG]: (run_test_case_list:688): RESULTS SUMMARY FOR 'instancetest':
+[2012-12-04 15:59:47,441] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2012-12-04 15:59:47,441] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:59:47,441] [instancetest] [DEBUG]: (run_test_case_list:688): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2012-12-04 15:59:47,441] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:59:47,441] [instancetest] [DEBUG]: (run_test_case_list:688): | 3       | 1       | 1       | 1       | 54
+[2012-12-04 15:59:47,441] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 15:59:47,441] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2012-12-04 15:59:47,444] [instancetest] [DEBUG]: (run_test_case_list:676): 
+-------------------------------------------------------------------------
+- STARTING TESTUNIT:  - 
+METHOD:Reboot, TEST DESCRIPTION:
+
+        This Case Was Developed To Test Ip Connectivity And Volume Attachment After
+        Instance Reboot.  The Following Tests Are Done For This Test Case:
+                   - Creates A 1 Gig Ebs Volume, Then Attach Volume
+                   - Reboot Instance
+                   - Attempts To Connect To Instance Via Ssh
+                   - Checks To See If Ebs Volume Is Attached
+                   - Detaches Volume
+                   - Deletes Volume
+        If Any Of These Tests Fail, The Test Case Will Error Out; Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "Reboot(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2012-12-04 15:59:47,444] [EUTESTER] [DEBUG]: Sending create volume request, count:1
+[2012-12-04 15:59:47,604] [EUTESTER] [DEBUG]: 1/1 requests for volume creation succeeded.
+[2012-12-04 15:59:47,604] [EUTESTER] [DEBUG]: 
+
+------------------------------------------------------------------------------------------------------------------------------
+     VOL_ID    |ORDER|LASTSTATUS|TESTSTATUS|AGE@STATUS|SIZE|   FROM_SNAP   |             MD5_SUM             |MD5LEN|INFO_MSG
+------------------------------------------------------------------------------------------------------------------------------
+  vol-2DCC3EEF |  0  | creating | creating |    0     | 1  |      None     |               None              |  32  |None
+------------------------------------------------------------------------------------------------------------------------------
+
+[2012-12-04 15:59:47,604] [EUTESTER] [DEBUG]: Monitoring 1 volumes for at least 1 to reach state:available
+[2012-12-04 15:59:47,604] [EUTESTER] [DEBUG]: Monitoring 1 volumes for at least 1 to reach state:available
+[2012-12-04 15:59:47,605] [EUTESTER] [DEBUG]: Polling 1 volumes for status:"available"...
+[2012-12-04 15:59:47,706] [EUTESTER] [DEBUG]: Volume #0 (vol-2DCC3EEF) State(creating), seconds elapsed: 0/120
+[2012-12-04 15:59:47,706] [EUTESTER] [DEBUG]: ----Time Elapsed:0, Waiting on 1 volumes to enter state:available-----
+[2012-12-04 15:59:57,808] [EUTESTER] [DEBUG]: Volume #0 (vol-2DCC3EEF) State(available), seconds elapsed: 10/120
+[2012-12-04 15:59:57,808] [EUTESTER] [DEBUG]: ----Time Elapsed:10, Waiting on 0 volumes to enter state:available-----
+[2012-12-04 15:59:57,808] [EUTESTER] [DEBUG]: 
+
+------------------------------------------------------------------------------------------------------------------------------
+     VOL_ID    |ORDER|LASTSTATUS|TESTSTATUS|AGE@STATUS|SIZE|   FROM_SNAP   |             MD5_SUM             |MD5LEN|INFO_MSG
+------------------------------------------------------------------------------------------------------------------------------
+  vol-2DCC3EEF |  0  |available |available |  10.36   | 1  |      None     |               None              |  32  |None
+------------------------------------------------------------------------------------------------------------------------------
+
+[2012-12-04 15:59:57,808] [i-A67A4211-10.101.52.10] [DEBUG]: Attempting to attach volume:vol-2DCC3EEF to instance:i-A67A4211 to dev:None
+[2012-12-04 15:59:57,808] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls -1 /dev/ | grep '^sd\|^vd\|^xd\|^xvd'
+[2012-12-04 15:59:57,867] [i-A67A4211-10.101.52.10] [DEBUG]: 
+vda
+vda1
+vda2
+vda3
+
+[2012-12-04 15:59:57,868] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 15:59:58,032] [i-A67A4211-10.101.52.10] [DEBUG]: Instance:i-A67A4211 returning available scsi dev:/dev/sde
+[2012-12-04 15:59:58,032] [EUTESTER] [DEBUG]: Sending attach for Volume:vol-2DCC3EEF to be attached to Instance:i-A67A4211 at requested device  /dev/sde
+[2012-12-04 15:59:58,722] [EUTESTER] [DEBUG]: Volume:vol-2DCC3EEF, state:in-use, attached status:attaching, elapsed:0/60
+[2012-12-04 15:59:58,722] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-12-04 16:00:08,816] [EUTESTER] [DEBUG]: Volume:vol-2DCC3EEF, state:in-use, attached status:attaching, elapsed:10/60
+[2012-12-04 16:00:08,816] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-12-04 16:00:18,912] [EUTESTER] [DEBUG]: Volume:vol-2DCC3EEF, state:in-use, attached status:attaching, elapsed:20/60
+[2012-12-04 16:00:18,912] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-12-04 16:00:28,980] [EUTESTER] [DEBUG]: Volume:vol-2DCC3EEF, Attached: in-use - attached, elapsed:30
+[2012-12-04 16:00:28,980] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# dmesg | grep vda
+[2012-12-04 16:00:29,039] [i-A67A4211-10.101.52.10] [DEBUG]: 
+[    0.000000] Command line: root=/dev/vda1 console=ttyS0
+[    0.000000] Kernel command line: root=/dev/vda1 console=ttyS0
+[    0.135516]  vda: vda1 vda2 vda3
+[    1.610445] EXT3 FS on vda1, internal journal
+
+[2012-12-04 16:00:29,039] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 16:00:29,039] [i-A67A4211-10.101.52.10] [DEBUG]: Checking for volume attachment on guest, elapsed time(0)
+[2012-12-04 16:00:29,039] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls -1 /dev/ | grep '^sd\|^vd\|^xd\|^xvd'
+[2012-12-04 16:00:29,097] [i-A67A4211-10.101.52.10] [DEBUG]: 
+vda
+vda1
+vda2
+vda3
+vdb
+
+[2012-12-04 16:00:29,098] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 16:00:29,098] [i-A67A4211-10.101.52.10] [DEBUG]: dev_list_after:vda vda1 vda2 vda3 vdb
+[2012-12-04 16:00:29,098] [i-A67A4211-10.101.52.10] [DEBUG]: Volume:vol-2DCC3EEF guest device:/dev/vdb
+[2012-12-04 16:00:29,098] [i-A67A4211-10.101.52.10] [DEBUG]: vol-2DCC3EEF Requested dev:/dev/sde, attached to guest device:/dev/vdb
+[2012-12-04 16:00:29,098] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# head -c 32 /dev/vdb | xargs -0 printf %s | wc -c
+[2012-12-04 16:00:29,160] [i-A67A4211-10.101.52.10] [DEBUG]: 
+0
+
+[2012-12-04 16:00:29,160] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 16:00:29,161] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls /dev/vdb
+[2012-12-04 16:00:29,217] [i-A67A4211-10.101.52.10] [DEBUG]: 
+/dev/vdb
+
+[2012-12-04 16:00:29,217] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 16:00:29,218] [i-A67A4211-10.101.52.10] [DEBUG]: exit code:0
+[2012-12-04 16:00:29,218] [i-A67A4211-10.101.52.10] [DEBUG]: File /dev/vdb is present on i-A67A4211
+[2012-12-04 16:00:29,218] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls /dev/urandom
+[2012-12-04 16:00:29,274] [i-A67A4211-10.101.52.10] [DEBUG]: 
+/dev/urandom
+
+[2012-12-04 16:00:29,274] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 16:00:29,275] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# head -c 32 /dev/urandom > /dev/vdb; sync
+[2012-12-04 16:00:29,359] [i-A67A4211-10.101.52.10] [DEBUG]: 
+
+[2012-12-04 16:00:29,359] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 16:00:29,360] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls /dev/vdb
+[2012-12-04 16:00:29,416] [i-A67A4211-10.101.52.10] [DEBUG]: 
+/dev/vdb
+
+[2012-12-04 16:00:29,416] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 16:00:29,416] [i-A67A4211-10.101.52.10] [DEBUG]: exit code:0
+[2012-12-04 16:00:29,416] [i-A67A4211-10.101.52.10] [DEBUG]: File /dev/vdb is present on i-A67A4211
+[2012-12-04 16:00:29,417] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# head -c 32 /dev/vdb | md5sum
+[2012-12-04 16:00:29,474] [i-A67A4211-10.101.52.10] [DEBUG]: 
+b247fe1ffd57416582fc72532340de01  -
+
+[2012-12-04 16:00:29,474] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 16:00:29,474] [i-A67A4211-10.101.52.10] [DEBUG]: Got MD5 for Volume:vol-2DCC3EEF dev:/dev/vdb md5:b247fe1ffd57416582fc72532340de01
+[2012-12-04 16:00:29,475] [i-A67A4211-10.101.52.10] [DEBUG]: Filled Volume:vol-2DCC3EEF dev:/dev/vdb md5:b247fe1ffd57416582fc72532340de01
+[2012-12-04 16:00:29,475] [i-A67A4211-10.101.52.10] [DEBUG]: Success attaching volume:vol-2DCC3EEF to instance:i-A67A4211, cloud dev:/dev/sde, attached dev:/dev/vdb
+[2012-12-04 16:00:29,475] [i-A67A4211-10.101.52.10] [DEBUG]: Attempting to reboot instance:i-A67A4211
+[2012-12-04 16:00:49,566] [i-A67A4211-10.101.52.10] [DEBUG]: Attempting to reconnect_to_instance:i-A67A4211
+[2012-12-04 16:00:49,660] [i-A67A4211-10.101.52.10] [DEBUG]: SSH connection has hostname:10.101.52.10 user:root and keypath: /root/keypair-1354665532.49.pem
+[2012-12-04 16:00:49,660] [i-A67A4211-10.101.52.10] [DEBUG]: Using Keypath:/root/keypair-1354665532.49.pem
+[2012-12-04 16:01:00,084] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# 
+[2012-12-04 16:01:01,504] [i-A67A4211-10.101.52.10] [DEBUG]: 
+
+[2012-12-04 16:01:01,504] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 16:01:01,504] [i-A67A4211-10.101.52.10] [DEBUG]: i-A67A4211 reboot_instance_and_verify Success
+[2012-12-04 16:01:01,664] [EUTESTER] [DEBUG]: Sent detach for volume: vol-2DCC3EEF which is currently in state: in-use
+[2012-12-04 16:01:01,713] [EUTESTER] [DEBUG]: Volume:vol-2DCC3EEF state:in-use pause:10 elapsed:0
+[2012-12-04 16:01:01,713] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-12-04 16:01:11,806] [EUTESTER] [DEBUG]: Volume:vol-2DCC3EEF state:in-use pause:10 elapsed:10
+[2012-12-04 16:01:11,806] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-12-04 16:01:21,898] [EUTESTER] [DEBUG]: Volume:vol-2DCC3EEF state:in-use pause:10 elapsed:20
+[2012-12-04 16:01:21,898] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-12-04 16:01:31,992] [EUTESTER] [DEBUG]: Volume:vol-2DCC3EEF left in available
+[2012-12-04 16:01:31,992] [i-A67A4211-10.101.52.10] [DEBUG]: Wait for device:/dev/vdb to be removed on guest...
+[2012-12-04 16:01:31,992] [i-A67A4211-10.101.52.10] [DEBUG]: [root@10.101.52.10]# ls /dev/vdb
+[2012-12-04 16:01:32,049] [i-A67A4211-10.101.52.10] [DEBUG]: 
+ls: cannot access /dev/vdb: No such file or directory
+
+[2012-12-04 16:01:32,049] [i-A67A4211-10.101.52.10] [DEBUG]: done with exec
+[2012-12-04 16:01:32,049] [i-A67A4211-10.101.52.10] [DEBUG]: exit code:2
+[2012-12-04 16:01:32,107] [EUTESTER] [DEBUG]: Sent delete for volume: vol-2DCC3EEF
+[2012-12-04 16:01:32,176] [EUTESTER] [DEBUG]: Volume:vol-2DCC3EEF in deleting sleeping:10, elapsed:0
+[2012-12-04 16:01:42,259] [instancetest] [DEBUG]: (endsuccess:584): 
+-------------------------------------------------------------------------
+- UNIT ENDED - Reboot
+-------------------------------------------------------------------------
+
+[2012-12-04 16:01:42,263] [instancetest] [DEBUG]: (run_test_case_list:688): RESULTS SUMMARY FOR 'instancetest':
+[2012-12-04 16:01:42,263] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2012-12-04 16:01:42,263] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 16:01:42,263] [instancetest] [DEBUG]: (run_test_case_list:688): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2012-12-04 16:01:42,263] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 16:01:42,263] [instancetest] [DEBUG]: (run_test_case_list:688): | 3       | 1       | 2       | 0       | 168
+[2012-12-04 16:01:42,263] [instancetest] [DEBUG]: (run_test_case_list:688): ------------------------------------------------------
+[2012-12-04 16:01:42,263] [instancetest] [DEBUG]: (run_test_case_list:688): 
+[2012-12-04 16:01:42,266] [instancetest] [DEBUG]: (run_test_case_list:697): Printing pre-cleanup results:
+[2012-12-04 16:01:42,268] [instancetest] [DEBUG]: (<lambda>:820): Test list results for testcase:instancetest
+[2012-12-04 16:01:42,270] [instancetest] [DEBUG]: (run_test_case_list:699): 
+-------------------------------------------------------------------------
+RUN TEST CASE LIST DONE:
+Ran 3/3 tests in 169 seconds
+TESTUNIT LIST SUMMARY FOR 'instancetest'
+
+--------------------------------------------------------------------------------
+TEST: BasicInstanceChecks                          RESULT:passed Time:52
+VALUES: BasicInstanceChecks(zone:None)
+--------------------------------------------------------------------------------
+TEST: MetaData                                     RESULT:failed Time:2
+VALUES: MetaData(zone:None)
+ERROR(MetaData): expected string or buffer
+--------------------------------------------------------------------------------
+TEST: Reboot                                       RESULT:passed Time:114
+VALUES: Reboot(zone:None)
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 3       | 1       | 2       | 0       | 168     
+------------------------------------------------------
+
+-------------------------------------------------------------------------
+Creating testunit:clean_method, args:
+[2012-12-04 16:01:42,272] [instancetest] [DEBUG]: (populate_testunit_with_args:1172): Attempting to populate testunit:clean_method, with testcase.args...
+[2012-12-04 16:01:42,274] [instancetest] [DEBUG]: (populate_testunit_with_args:1180): Testunit keyword args:{}
+[2012-12-04 16:01:42,276] [instancetest] [DEBUG]: (populate_testunit_with_args:1185): Got method args:('self',)
+[2012-12-04 16:01:42,279] [instancetest] [DEBUG]: (populate_testunit_with_args:1193): test unit total args:{}
+[2012-12-04 16:01:42,279] [EUTESTER] [DEBUG]: Sending terminate for Instance:i-A67A4211
+[2012-12-04 16:01:42,383] [EUTESTER] [DEBUG]: Beginning poll loop for the 1 found in Reservation:r-B03140F8
+[2012-12-04 16:01:42,383] [EUTESTER] [DEBUG]: Beginning poll loop for instance Instance:i-A67A4211 to go to terminated
+[2012-12-04 16:01:42,434] [EUTESTER] [DEBUG]: Instance(i-A67A4211) State(shutting-down), elapsed:0/480
+[2012-12-04 16:01:52,543] [EUTESTER] [DEBUG]: Instance(i-A67A4211) State(shutting-down), elapsed:10/480
+[2012-12-04 16:02:02,621] [EUTESTER] [DEBUG]: Instance(i-A67A4211) State(terminated) time elapsed (20)
+[2012-12-04 16:02:02,621] [EUTESTER] [DEBUG]: Instance:i-A67A4211 is now in terminated
+[2012-12-04 16:02:02,621] [EUTESTER] [DEBUG]: Sending delete for group: group-1354665532.25
+[2012-12-04 16:02:02,699] [EUTESTER] [DEBUG]: Looking up group group-1354665532.25
+[2012-12-04 16:02:02,758] [EUTESTER] [DEBUG]: Sending delete for keypair: keypair-1354665532.49
+[2012-12-04 16:02:02,856] [instancetest] [DEBUG]: (<lambda>:820): Test list results for testcase:instancetest
+[2012-12-04 16:02:02,860] [instancetest] [DEBUG]: (run_test_case_list:711): 
+-------------------------------------------------------------------------
+TESTUNIT LIST SUMMARY FOR 'instancetest'
+
+--------------------------------------------------------------------------------
+TEST: BasicInstanceChecks                          RESULT:passed Time:52
+VALUES: BasicInstanceChecks(zone:None)
+--------------------------------------------------------------------------------
+TEST: MetaData                                     RESULT:failed Time:2
+VALUES: MetaData(zone:None)
+ERROR(MetaData): expected string or buffer
+--------------------------------------------------------------------------------
+TEST: Reboot                                       RESULT:passed Time:114
+VALUES: Reboot(zone:None)
+--------------------------------------------------------------------------------
+TEST: clean_method                                 RESULT:passed Time:20
+VALUES: clean_method()
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 4       | 1       | 3       | 0       | 188     
+------------------------------------------------------
+
+-------------------------------------------------------------------------
+passed:3 out of total:4

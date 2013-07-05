@@ -1,0 +1,499 @@
+# ./eutester/testcases/cloud_user/instances/instancetest.py  --emi emi-7CB53C36 --credpath creds/ --tests BasicInstanceChecks MetaData Reboot
+setuptestname:None
+Starting setup_debugmethodNone
+[2012-11-20 12:28:12,039] [instancetest] [DEBUG]: (get_default_userhome_config:1119): Default config not found:/root/.eutester/eutester.conf
+[2012-11-20 12:28:12,041] [instancetest] [DEBUG]: (show_self:1132): 
+-------------------------------------------------------------------------
+TESTCASE INFO:           
+----------              
+NAME:                     --->:  instancetest
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  []
+-------------------------------------------------------------------------
+[2012-11-20 12:28:12,044] [instancetest] [DEBUG]: (show_args:1153): 
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+-------------------------------------------------------------------------
+[2012-11-20 12:28:12,049] [instancetest] [DEBUG]: (get_args:1053): Unable to read config from file: [Errno 2] No such file or directory: '../input/2b_tested.lst'
+[2012-11-20 12:28:12,052] [instancetest] [DEBUG]: (show_self:1132): 
+-------------------------------------------------------------------------
+TESTCASE INFO:           
+----------              
+NAME:                     --->:  instancetest
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  ['../input/2b_tested.lst']
+-------------------------------------------------------------------------
+[2012-11-20 12:28:12,056] [instancetest] [DEBUG]: (show_args:1153): 
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+args                      --->:  Namespace(config='../input/2b_tested.lst', config_file='../input/2b_tested.lst', configblocks=[], configfile='../input/2b_tested.lst', configsections=['MEMO', 'globals', 'instancetest'], cred_path='creds/', credpath='creds/', emi='emi-7CB53C36', ignoreblocks=[], keypair=None, password='foobar', tests=['BasicInstanceChecks', 'MetaData', 'Reboot'], use_color=False, vmtype='c1.medium', zone=None)
+config                    --->:  ../input/2b_tested.lst
+config_file               --->:  ../input/2b_tested.lst
+configblocks              --->:  []
+configfile                --->:  ../input/2b_tested.lst
+configsections            --->:  ['MEMO', 'globals', 'instancetest']
+cred_path                 --->:  creds/
+credpath                  --->:  creds/
+emi                       --->:  emi-7CB53C36
+ignoreblocks              --->:  []
+keypair                   --->:  None
+password                  --->:  foobar
+tests                     --->:  ['BasicInstanceChecks', 'MetaData', 'Reboot']
+use_color                 --->:  False
+vmtype                    --->:  c1.medium
+zone                      --->:  None
+-------------------------------------------------------------------------
+[2012-11-20 12:28:12,056] [EUTESTER] [DEBUG]: Extracting keys from creds/
+[2012-11-20 12:28:12,057] [EUTESTER] [DEBUG]: Attempting to create ec2 connection to eucalyptus.euca-hasp.eucalyptus-systems.com
+[2012-11-20 12:28:12,058] [EUTESTER] [DEBUG]: Attempting to create S3 connection to walrus.euca-hasp.eucalyptus-systems.com
+[2012-11-20 12:28:12,058] [EUTESTER] [DEBUG]: Attempting to create IAM connection to eucalyptus.euca-hasp.eucalyptus-systems.com
+[2012-11-20 12:28:12,059] [EUTESTER] [DEBUG]: Attempting to create STS connection to eucalyptus.euca-hasp.eucalyptus-systems.com
+[2012-11-20 12:28:12,060] [EUTESTER] [DEBUG]: Looking up group group-1353443292.06
+[2012-11-20 12:28:12,787] [EUTESTER] [DEBUG]: Creating Security Group: group-1353443292.06
+[2012-11-20 12:28:13,168] [EUTESTER] [DEBUG]: Attempting authorization of group-1353443292.06 on port 22 tcp
+[2012-11-20 12:28:13,509] [EUTESTER] [DEBUG]: Attempting authorization of group-1353443292.06 on port -1 icmp
+[2012-11-20 12:28:13,955] [EUTESTER] [DEBUG]: Looking up keypair keypair-1353443293.96
+[2012-11-20 12:28:14,326] [EUTESTER] [DEBUG]: Creating keypair: keypair-1353443293.96
+Creating testunit:BasicInstanceChecks, args:
+[2012-11-20 12:28:15,463] [instancetest] [DEBUG]: (populate_testunit_with_args:1171): Attempting to populate testunit:BasicInstanceChecks, with testcase.args...
+[2012-11-20 12:28:15,467] [instancetest] [DEBUG]: (populate_testunit_with_args:1179): Testunit keyword args:{}
+[2012-11-20 12:28:15,471] [instancetest] [DEBUG]: (populate_testunit_with_args:1184): Got method args:('self', 'zone')
+[2012-11-20 12:28:15,474] [instancetest] [DEBUG]: (populate_testunit_with_args:1192): test unit total args:{}
+[2012-11-20 12:28:15,476] [instancetest] [DEBUG]: (populate_testunit_with_args:1198): Found matching arg for:zone
+Creating testunit:MetaData, args:
+[2012-11-20 12:28:15,479] [instancetest] [DEBUG]: (populate_testunit_with_args:1171): Attempting to populate testunit:MetaData, with testcase.args...
+[2012-11-20 12:28:15,481] [instancetest] [DEBUG]: (populate_testunit_with_args:1179): Testunit keyword args:{}
+[2012-11-20 12:28:15,483] [instancetest] [DEBUG]: (populate_testunit_with_args:1184): Got method args:('self', 'zone')
+[2012-11-20 12:28:15,485] [instancetest] [DEBUG]: (populate_testunit_with_args:1192): test unit total args:{}
+[2012-11-20 12:28:15,487] [instancetest] [DEBUG]: (populate_testunit_with_args:1198): Found matching arg for:zone
+Creating testunit:Reboot, args:
+[2012-11-20 12:28:15,489] [instancetest] [DEBUG]: (populate_testunit_with_args:1171): Attempting to populate testunit:Reboot, with testcase.args...
+[2012-11-20 12:28:15,491] [instancetest] [DEBUG]: (populate_testunit_with_args:1179): Testunit keyword args:{}
+[2012-11-20 12:28:15,493] [instancetest] [DEBUG]: (populate_testunit_with_args:1184): Got method args:('self', 'zone')
+[2012-11-20 12:28:15,495] [instancetest] [DEBUG]: (populate_testunit_with_args:1192): test unit total args:{}
+[2012-11-20 12:28:15,497] [instancetest] [DEBUG]: (populate_testunit_with_args:1198): Found matching arg for:zone
+[2012-11-20 12:28:15,499] [instancetest] [DEBUG]: (run_test_case_list:676): 
+-------------------------------------------------------------------------
+- STARTING TESTUNIT:  - 
+METHOD:BasicInstanceChecks, TEST DESCRIPTION:
+
+        This Case Was Developed To Run Through A Series Of Basic Instance Tests.
+             The Tests Are As Follows:
+                   - Execute Run_Instances Command
+                   - Make Sure That Public Dns Name And Private Ip Aren'T The Same
+                       (This Is For Managed/Managed-Novlan Networking Modes)
+                   - Test To See If Instance Is Ping-Able
+                   - Test To Make Sure That Instance Is Accessible Via Ssh
+                       (Ssh Into Instance And Run Basic Ls Command)
+             If Any Of These Tests Fail, The Test Case Will Error Out, Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "BasicInstanceChecks(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2012-11-20 12:28:15,500] [EUTESTER] [DEBUG]: Looking for image prefix: emi-7CB53C36
+[2012-11-20 12:28:16,784] [EUTESTER] [DEBUG]: Returning image:emi-7CB53C36
+[2012-11-20 12:28:16,784] [EUTESTER] [DEBUG]: Attempting to run instance-store image Image:emi-7CB53C36 in group group-1353443292.06
+[2012-11-20 12:28:18,610] [EUTESTER] [DEBUG]: Beginning poll loop for the 1 found in Reservation:r-845F4700
+[2012-11-20 12:28:18,610] [EUTESTER] [DEBUG]: Beginning poll loop for instance Instance:i-B3B73F98 to go to running
+[2012-11-20 12:28:18,959] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(pending), elapsed:0/480
+[2012-11-20 12:28:29,230] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(pending), elapsed:10/480
+[2012-11-20 12:28:39,701] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(pending), elapsed:20/480
+[2012-11-20 12:28:50,303] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(pending), elapsed:31/480
+[2012-11-20 12:29:00,723] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(pending), elapsed:41/480
+[2012-11-20 12:29:11,186] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(pending), elapsed:52/480
+[2012-11-20 12:29:21,625] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(pending), elapsed:62/480
+[2012-11-20 12:29:32,216] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(pending), elapsed:73/480
+[2012-11-20 12:29:42,541] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(pending), elapsed:83/480
+[2012-11-20 12:29:52,857] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(running) time elapsed (93)
+[2012-11-20 12:29:52,857] [EUTESTER] [DEBUG]: Instance:i-B3B73F98 is now in running
+[2012-11-20 12:29:52,857] [EUTESTER] [DEBUG]: Instance i-B3B73F98 now in running state  in zone: enter-the-wu
+[2012-11-20 12:29:52,857] [EUTESTER] [DEBUG]: Instance:i-B3B73F98 got Public IP: euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com Private IP: euca-10-106-17-42.wu-tang.internal Public DNS Name: euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com Private DNS Name: euca-10-106-17-42.wu-tang.internal
+[2012-11-20 12:29:52,857] [EUTESTER] [DEBUG]: Attempting to ping euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com
+[2012-11-20 12:29:52,880] [EUTESTER] [DEBUG]: Was able to ping address
+[2012-11-20 12:29:52,880] [EUTESTER] [DEBUG]: Converting Reservation:r-845F4700 into euinstances
+[2012-11-20 12:29:53,319] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Attempting to reconnect_to_instance:i-B3B73F98
+[2012-11-20 12:29:53,319] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: SSH connection has hostname:euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com user:root and keypath: /root/keypair-1353443293.96.pem
+[2012-11-20 12:29:53,320] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Using Keypath:/root/keypair-1353443293.96.pem
+[2012-11-20 12:29:55,314] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# 
+[2012-11-20 12:29:55,384] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+
+[2012-11-20 12:29:55,384] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:29:55,384] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# dmesg | grep vda
+[2012-11-20 12:29:55,493] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+[    0.000000] Command line: root=/dev/vda1 console=ttyS0
+[    0.000000] Kernel command line: root=/dev/vda1 console=ttyS0
+[    0.865807]  vda: vda1 vda2 vda3
+[    0.944397] EXT4-fs (vda1): mounting ext3 file system using the ext4 subsystem
+[    0.949460] EXT4-fs (vda1): mounted filesystem with ordered data mode. Opts: (null)
+[    0.975156] dracut: Checking ext3: /dev/vda1
+[    0.976210] dracut: issuing e2fsck -a  /dev/vda1
+[    0.993417] dracut: Remounting /dev/vda1 with -o ro
+[    1.031175] EXT4-fs (vda1): mounting ext3 file system using the ext4 subsystem
+[    1.033506] EXT4-fs (vda1): mounted filesystem with ordered data mode. Opts: (null)
+[    1.043382] dracut: Mounted root filesystem /dev/vda1
+[    1.346195] EXT4-fs (vda1): re-mounted. Opts: (null)
+[   15.971553] Adding 524284k swap on /dev/vda3.  Priority:-1 extents:1 across:524284k 
+[   15.986967] EXT4-fs (vda2): mounting ext3 file system using the ext4 subsystem
+[   16.024964] EXT4-fs (vda2): mounted filesystem with ordered data mode. Opts: (null)
+
+[2012-11-20 12:29:55,493] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:29:55,494] [EUTESTER] [DEBUG]: Beginning poll loop for the 1 found in Reservation:r-845F4700
+[2012-11-20 12:29:55,494] [EUTESTER] [DEBUG]: Beginning poll loop for instance Instance:i-B3B73F98 to go to running
+[2012-11-20 12:29:55,853] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(running) time elapsed (0)
+[2012-11-20 12:29:55,854] [EUTESTER] [DEBUG]: Instance:i-B3B73F98 is now in running
+[2012-11-20 12:29:55,854] [EUTESTER] [DEBUG]: Attempting to ping euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com
+[2012-11-20 12:29:55,860] [EUTESTER] [DEBUG]: Was able to ping address
+[2012-11-20 12:29:55,860] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# ls -1 /dev/vda2
+[2012-11-20 12:29:55,923] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+/dev/vda2
+
+[2012-11-20 12:29:55,923] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:29:55,927] [instancetest] [DEBUG]: (endsuccess:584): 
+-------------------------------------------------------------------------
+- SUCCESS ENDED - BasicInstanceChecks
+-------------------------------------------------------------------------
+
+[2012-11-20 12:29:55,932] [instancetest] [DEBUG]: (run_test_case_list:676): 
+-------------------------------------------------------------------------
+- STARTING TESTUNIT:  - 
+METHOD:MetaData, TEST DESCRIPTION:
+
+        This Case Was Developed To Test The Metadata Service Of An Instance For Consistency.
+        The Following Meta-Data Attributes Are Tested:
+           - Public-Keys/0/Openssh-Key
+           - Security-Groups
+           - Instance-Id
+           - Local-Ipv4
+           - Public-Ipv4
+           - Ami-Id
+           - Ami-Launch-Index
+           - Reservation-Id
+           - Placement/Availability-Zone
+           - Kernel-Id
+           - Public-Hostname
+           - Local-Hostname
+           - Hostname
+           - Ramdisk-Id
+           - Instance-Type
+           - Any Bad Metadata That Shouldn'T Be Present.
+        Missing Nodes
+         ['Block-Device-Mapping/',  'Ami-Manifest-Path']
+        If Any Of These Tests Fail, The Test Case Will Error Out; Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "MetaData(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2012-11-20 12:29:55,932] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# ping -c 1 169.254.169.254
+[2012-11-20 12:29:56,142] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.320 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.320/0.320/0.320/0.000 ms
+
+[2012-11-20 12:29:56,142] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:29:56,142] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# curl http://169.254.169.254/latest/meta-data/public-keys/0/openssh-key
+[2012-11-20 12:29:56,307] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCQlkqAB/udPjRgnycQD5Hrk93sTX4TTNwHUP6iT1Z0HBo2yKtCqlEoobStXI0V41hynIbzX1CyF/L6PDpezoxEnLPuIwP4Uu/clFuJZ6Pbg7YE6C10iOcSYWF8Pamia9elvk8HgofVmZEggT5m25sqPCEFHHIUKsnBRDZLifCbvSrLwprHLVEfInqcH7jgqKuUGrpnUKsT9+t23LZPuAblLmezn1ERbFIMiV4iGJf2WzV5baw4Ty6rxNDxJg8ROMKVCL95l7CiJsibuRahlWtPNEC3yVyDFpjvLcGRYBFy9RAYwmq7rr2hitmu3rfTMZ9lyGRlq4QwYuGbUmdlGxN7 345590850920@eucalyptus.keypair-1353443293.96
+[2012-11-20 12:29:56,307] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:29:56,308] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# ping -c 1 169.254.169.254
+[2012-11-20 12:29:56,371] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.238 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.238/0.238/0.238/0.000 ms
+
+[2012-11-20 12:29:56,371] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:29:56,371] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# curl http://169.254.169.254/latest/meta-data/security-groups
+[2012-11-20 12:29:56,576] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+group-1353443292.06
+[2012-11-20 12:29:56,576] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:29:56,576] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# ping -c 1 169.254.169.254
+[2012-11-20 12:29:56,639] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.275 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.275/0.275/0.275/0.000 ms
+
+[2012-11-20 12:29:56,640] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:29:56,640] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# curl http://169.254.169.254/latest/meta-data/instance-id
+[2012-11-20 12:29:56,769] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+i-B3B73F98
+[2012-11-20 12:29:56,769] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:29:56,769] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# ping -c 1 169.254.169.254
+[2012-11-20 12:29:56,829] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+PING 169.254.169.254 (169.254.169.254) 56(84) bytes of data.
+64 bytes from 169.254.169.254: icmp_req=1 ttl=64 time=0.265 ms
+
+--- 169.254.169.254 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.265/0.265/0.265/0.000 ms
+
+[2012-11-20 12:29:56,829] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:29:56,829] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# curl http://169.254.169.254/latest/meta-data/local-ipv4
+[2012-11-20 12:29:56,981] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+10.106.17.42
+[2012-11-20 12:29:56,981] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+Traceback (most recent call last):
+  File "/usr/lib/python2.6/site-packages/eutester-0.0.5-py2.6.egg/eutester/eutestcase.py", line 264, in run
+    ret = self.method(*self.args, **self.kwargs)
+  File "./eutester/testcases/cloud_user/instances/instancetest.py", line 178, in MetaData
+    self.assertTrue(re.match(instance.get_metadata("local-ipv4")[0] , instance.private_ip_address), 'Incorrect private ip in metadata')
+  File "/usr/lib64/python2.6/unittest.py", line 324, in failUnless
+    if not expr: raise self.failureException, msg
+AssertionError: Incorrect private ip in metadata
+
+[2012-11-20 12:29:56,985] [instancetest] [DEBUG]: (endsuccess:584): 
+-------------------------------------------------------------------------
+- SUCCESS ENDED - MetaData
+-------------------------------------------------------------------------
+
+[2012-11-20 12:29:56,987] [instancetest] [DEBUG]: (run_test_case_list:676): 
+-------------------------------------------------------------------------
+- STARTING TESTUNIT:  - 
+METHOD:Reboot, TEST DESCRIPTION:
+
+        This Case Was Developed To Test Ip Connectivity And Volume Attachment After
+        Instance Reboot.  The Following Tests Are Done For This Test Case:
+                   - Creates A 1 Gig Ebs Volume, Then Attach Volume
+                   - Reboot Instance
+                   - Attempts To Connect To Instance Via Ssh
+                   - Checks To See If Ebs Volume Is Attached
+                   - Detaches Volume
+                   - Deletes Volume
+        If Any Of These Tests Fail, The Test Case Will Error Out; Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "Reboot(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2012-11-20 12:29:56,987] [EUTESTER] [DEBUG]: Sending create volume request, count:1
+[2012-11-20 12:29:57,546] [EUTESTER] [DEBUG]: 1/1 requests for volume creation succeeded.
+[2012-11-20 12:29:57,547] [EUTESTER] [DEBUG]: Polling 1 volumes for status:"available"...
+[2012-11-20 12:29:57,868] [EUTESTER] [DEBUG]: Volume #0 (vol-9BD837DE) State(creating), seconds elapsed: 0/120
+[2012-11-20 12:29:57,868] [EUTESTER] [DEBUG]: ----Time Elapsed:0, Waiting on 1 volumes to enter state:available-----
+[2012-11-20 12:30:08,189] [EUTESTER] [DEBUG]: Volume #0 (vol-9BD837DE) State(available), seconds elapsed: 10/120
+[2012-11-20 12:30:08,189] [EUTESTER] [DEBUG]: ----Time Elapsed:10, Waiting on 0 volumes to enter state:available-----
+[2012-11-20 12:30:08,190] [EUTESTER] [DEBUG]: 
+
+------------------------------------------------------------------------------------------------------------------------------
+     VOL_ID    |ORDER|LASTSTATUS|TESTSTATUS|AGE@STATUS|SIZE|   FROM_SNAP   |             MD5_SUM             |MD5LEN|INFO_MSG
+------------------------------------------------------------------------------------------------------------------------------
+  vol-9BD837DE |  0  |available |available |  11.20   | 1  |      None     |               None              |  32  |None
+------------------------------------------------------------------------------------------------------------------------------
+
+[2012-11-20 12:30:08,190] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Attempting to attach volume:vol-9BD837DE to instance:i-B3B73F98 to dev:None
+[2012-11-20 12:30:08,190] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# ls -1 /dev/ | grep '^sd\|^vd\|^xd\|^xvd'
+[2012-11-20 12:30:08,255] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+vda
+vda1
+vda2
+vda3
+
+[2012-11-20 12:30:08,255] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:30:11,149] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Instance:i-B3B73F98 returning available scsi dev:/dev/sde
+[2012-11-20 12:30:11,149] [EUTESTER] [DEBUG]: Sending attach for Volume:vol-9BD837DE to be attached to Instance:i-B3B73F98 at requested device  /dev/sde
+[2012-11-20 12:30:13,189] [EUTESTER] [DEBUG]: Volume:vol-9BD837DE, state:in-use, attached status:attaching, elapsed:0/60
+[2012-11-20 12:30:13,189] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-11-20 12:30:23,511] [EUTESTER] [DEBUG]: Volume:vol-9BD837DE, state:in-use, attached status:attaching, elapsed:11/60
+[2012-11-20 12:30:23,512] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-11-20 12:30:33,951] [EUTESTER] [DEBUG]: Volume:vol-9BD837DE, Attached: in-use - attached, elapsed:21
+[2012-11-20 12:30:33,951] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# dmesg | grep vda
+[2012-11-20 12:30:34,016] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+[    0.000000] Command line: root=/dev/vda1 console=ttyS0
+[    0.000000] Kernel command line: root=/dev/vda1 console=ttyS0
+[    0.865807]  vda: vda1 vda2 vda3
+[    0.944397] EXT4-fs (vda1): mounting ext3 file system using the ext4 subsystem
+[    0.949460] EXT4-fs (vda1): mounted filesystem with ordered data mode. Opts: (null)
+[    0.975156] dracut: Checking ext3: /dev/vda1
+[    0.976210] dracut: issuing e2fsck -a  /dev/vda1
+[    0.993417] dracut: Remounting /dev/vda1 with -o ro
+[    1.031175] EXT4-fs (vda1): mounting ext3 file system using the ext4 subsystem
+[    1.033506] EXT4-fs (vda1): mounted filesystem with ordered data mode. Opts: (null)
+[    1.043382] dracut: Mounted root filesystem /dev/vda1
+[    1.346195] EXT4-fs (vda1): re-mounted. Opts: (null)
+[   15.971553] Adding 524284k swap on /dev/vda3.  Priority:-1 extents:1 across:524284k 
+[   15.986967] EXT4-fs (vda2): mounting ext3 file system using the ext4 subsystem
+[   16.024964] EXT4-fs (vda2): mounted filesystem with ordered data mode. Opts: (null)
+
+[2012-11-20 12:30:34,016] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:30:34,017] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Checking for volume attachment on guest, elapsed time(0)
+[2012-11-20 12:30:34,017] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# ls -1 /dev/ | grep '^sd\|^vd\|^xd\|^xvd'
+[2012-11-20 12:30:34,082] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+vda
+vda1
+vda2
+vda3
+vdb
+
+[2012-11-20 12:30:34,083] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:30:34,083] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: dev_list_after:vda vda1 vda2 vda3 vdb
+[2012-11-20 12:30:34,083] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Volume:vol-9BD837DE guest device:/dev/vdb
+[2012-11-20 12:30:34,083] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: vol-9BD837DE Requested dev:/dev/sde, attached to guest device:/dev/vdb
+[2012-11-20 12:30:34,083] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# head -c 32 /dev/vdb | xargs -0 printf %s | wc -c
+[2012-11-20 12:30:34,208] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+0
+
+[2012-11-20 12:30:34,208] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:30:34,208] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# ls /dev/vdb
+[2012-11-20 12:30:34,271] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+/dev/vdb
+
+[2012-11-20 12:30:34,271] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:30:34,271] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: exit code:0
+[2012-11-20 12:30:34,271] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: File /dev/vdb is present on i-B3B73F98
+[2012-11-20 12:30:34,271] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# ls /dev/urandom
+[2012-11-20 12:30:34,334] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+/dev/urandom
+
+[2012-11-20 12:30:34,384] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:30:34,385] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# head -c 32 /dev/urandom > /dev/vdb; sync
+[2012-11-20 12:30:34,676] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+
+[2012-11-20 12:30:34,676] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:30:34,676] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# []
+[2012-11-20 12:30:34,737] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+bash: []: command not found
+
+[2012-11-20 12:30:34,737] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:30:34,737] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Volume has existing data, skipping random data fill
+[2012-11-20 12:30:34,738] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# ls /dev/vdb
+[2012-11-20 12:30:34,823] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+/dev/vdb
+
+[2012-11-20 12:30:34,823] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:30:34,823] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: exit code:0
+[2012-11-20 12:30:34,823] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: File /dev/vdb is present on i-B3B73F98
+[2012-11-20 12:30:34,823] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# head -c 32 /dev/vdb | md5sum
+[2012-11-20 12:30:35,010] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+1b8af0fa3cd4de5c67c973ea01211340  -
+
+[2012-11-20 12:30:35,010] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:30:35,010] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Got MD5 for Volume:vol-9BD837DE dev:/dev/vdb md5:1b8af0fa3cd4de5c67c973ea01211340
+[2012-11-20 12:30:35,010] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Filled Volume:vol-9BD837DE dev:/dev/vdb md5:1b8af0fa3cd4de5c67c973ea01211340
+[2012-11-20 12:30:35,010] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Success attaching volume:vol-9BD837DE to instance:i-B3B73F98, cloud dev:/dev/sde, attached dev:/dev/vdb
+[2012-11-20 12:30:35,011] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Attempting to reboot instance:i-B3B73F98
+[2012-11-20 12:30:55,270] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Attempting to reconnect_to_instance:i-B3B73F98
+[2012-11-20 12:30:55,295] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: SSH connection has hostname:euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com user:root and keypath: /root/keypair-1353443293.96.pem
+[2012-11-20 12:30:55,296] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Using Keypath:/root/keypair-1353443293.96.pem
+[2012-11-20 12:30:58,296] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Caught exception attempting to reconnect ssh[Errno 113] No route to host
+[2012-11-20 12:30:58,296] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: retrying ssh connection, elapsed:3/300
+[2012-11-20 12:31:03,302] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: SSH connection has hostname:euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com user:root and keypath: /root/keypair-1353443293.96.pem
+[2012-11-20 12:31:03,302] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Using Keypath:/root/keypair-1353443293.96.pem
+[2012-11-20 12:31:05,095] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# 
+[2012-11-20 12:31:05,364] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+
+[2012-11-20 12:31:05,365] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:31:05,365] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: i-B3B73F98 reboot_instance_and_verify Success
+[2012-11-20 12:31:06,128] [EUTESTER] [DEBUG]: Sent detach for volume: vol-9BD837DE which is currently in state: in-use
+[2012-11-20 12:31:06,449] [EUTESTER] [DEBUG]: Volume:vol-9BD837DE state:in-use pause:10 elapsed:0
+[2012-11-20 12:31:06,449] [EUTESTER] [DEBUG]: Sleeping for 10 seconds
+[2012-11-20 12:31:16,831] [EUTESTER] [DEBUG]: Volume:vol-9BD837DE left in available
+[2012-11-20 12:31:16,831] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: Wait for device:/dev/vdb to be removed on guest...
+[2012-11-20 12:31:16,831] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: [root@euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com]# ls /dev/vdb
+[2012-11-20 12:31:16,894] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: 
+ls: cannot access /dev/vdb: No such file or directory
+
+[2012-11-20 12:31:16,895] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: done with exec
+[2012-11-20 12:31:16,895] [i-B3B73F98-euca-192-168-55-101.wu-tang.euca-hasp.eucalyptus-systems.com] [DEBUG]: exit code:2
+[2012-11-20 12:31:17,475] [EUTESTER] [DEBUG]: Sent delete for volume: vol-9BD837DE
+[2012-11-20 12:31:17,777] [EUTESTER] [DEBUG]: Volume:vol-9BD837DE in deleting sleeping:10, elapsed:0
+[2012-11-20 12:31:28,125] [instancetest] [DEBUG]: (endsuccess:584): 
+-------------------------------------------------------------------------
+- SUCCESS ENDED - Reboot
+-------------------------------------------------------------------------
+
+[2012-11-20 12:31:28,129] [instancetest] [DEBUG]: (run_test_case_list:696): Printing pre-cleanup results:
+[2012-11-20 12:31:28,133] [instancetest] [DEBUG]: (<lambda>:819): Test list results for testcase:instancetest
+[2012-11-20 12:31:28,136] [instancetest] [DEBUG]: (run_test_case_list:698): 
+-------------------------------------------------------------------------
+RUN TEST CASE LIST DONE:
+Ran 3/3 tests in 192 seconds
+TESTUNIT LIST SUMMARY FOR 'instancetest'
+
+--------------------------------------------------------------------------------
+TEST: BasicInstanceChecks                          RESULT:passed Time:100
+VALUES: BasicInstanceChecks(zone:None)
+--------------------------------------------------------------------------------
+TEST: MetaData                                     RESULT:failed Time:1
+VALUES: MetaData(zone:None)
+ERROR(MetaData): Incorrect private ip in metadata
+--------------------------------------------------------------------------------
+TEST: Reboot                                       RESULT:passed Time:91
+VALUES: Reboot(zone:None)
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 3       | 1       | 2       | 0       | 192     
+------------------------------------------------------
+
+-------------------------------------------------------------------------
+Creating testunit:clean_method, args:
+[2012-11-20 12:31:28,138] [instancetest] [DEBUG]: (populate_testunit_with_args:1171): Attempting to populate testunit:clean_method, with testcase.args...
+[2012-11-20 12:31:28,140] [instancetest] [DEBUG]: (populate_testunit_with_args:1179): Testunit keyword args:{}
+[2012-11-20 12:31:28,143] [instancetest] [DEBUG]: (populate_testunit_with_args:1184): Got method args:('self',)
+[2012-11-20 12:31:28,145] [instancetest] [DEBUG]: (populate_testunit_with_args:1192): test unit total args:{}
+[2012-11-20 12:31:28,145] [EUTESTER] [DEBUG]: Sending terminate for Instance:i-B3B73F98
+[2012-11-20 12:31:28,488] [EUTESTER] [DEBUG]: Beginning poll loop for the 1 found in Reservation:r-845F4700
+[2012-11-20 12:31:28,488] [EUTESTER] [DEBUG]: Beginning poll loop for instance Instance:i-B3B73F98 to go to terminated
+[2012-11-20 12:31:28,745] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(shutting-down), elapsed:0/480
+[2012-11-20 12:31:39,012] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(shutting-down), elapsed:10/480
+[2012-11-20 12:31:49,297] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(shutting-down), elapsed:20/480
+[2012-11-20 12:31:59,576] [EUTESTER] [DEBUG]: Instance(i-B3B73F98) State(terminated) time elapsed (30)
+[2012-11-20 12:31:59,577] [EUTESTER] [DEBUG]: Instance:i-B3B73F98 is now in terminated
+[2012-11-20 12:31:59,577] [EUTESTER] [DEBUG]: Sending delete for group: group-1353443292.06
+[2012-11-20 12:31:59,909] [EUTESTER] [DEBUG]: Looking up group group-1353443292.06
+[2012-11-20 12:32:00,186] [EUTESTER] [DEBUG]: Sending delete for keypair: keypair-1353443293.96
+[2012-11-20 12:32:00,769] [instancetest] [DEBUG]: (<lambda>:819): Test list results for testcase:instancetest
+[2012-11-20 12:32:00,773] [instancetest] [DEBUG]: (run_test_case_list:710): 
+-------------------------------------------------------------------------
+TESTUNIT LIST SUMMARY FOR 'instancetest'
+
+--------------------------------------------------------------------------------
+TEST: BasicInstanceChecks                          RESULT:passed Time:100
+VALUES: BasicInstanceChecks(zone:None)
+--------------------------------------------------------------------------------
+TEST: MetaData                                     RESULT:failed Time:1
+VALUES: MetaData(zone:None)
+ERROR(MetaData): Incorrect private ip in metadata
+--------------------------------------------------------------------------------
+TEST: Reboot                                       RESULT:passed Time:91
+VALUES: Reboot(zone:None)
+--------------------------------------------------------------------------------
+TEST: clean_method                                 RESULT:passed Time:32
+VALUES: clean_method()
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 4       | 1       | 3       | 0       | 224     
+------------------------------------------------------
+
+-------------------------------------------------------------------------
+passed:3 out of total:4
