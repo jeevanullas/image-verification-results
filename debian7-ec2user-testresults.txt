@@ -1,0 +1,672 @@
+$ ./testcases/cloud_user/instances/instancetest.py --credpath=/home/hspencer/admin-creds/ --emi emi-7B4F364E --tests BasicInstanceChecks MetaData Reboot --instance-user ec2-user
+setuptestname:None
+setup_debugmethod:
+testcasename:None
+log_level:None
+logfile:None
+logfile_level:debug
+Starting setup_debugmethod, name:instancetest
+After populating... setup_debugmethod: testcasename:Nonelog_level:debuglogfile:Nonelogfile_level:debug
+[2013-07-11 15:37:48,567] [instancetest] [DEBUG]: instancetest: Eulogger init test message. Init complete
+[2013-07-11 15:37:48,570] [instancetest] [DEBUG]: (setuptestcase:335): <pre>
+[2013-07-11 15:37:48,572] [instancetest] [DEBUG]: (show_self:1307):
+-------------------------------------------------------------------------
+TESTCASE INFO:
+----------
+NAME:                     --->:  instancetest
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  []
+-------------------------------------------------------------------------
+[2013-07-11 15:37:48,575] [instancetest] [DEBUG]: (show_args:1328):
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+debug_method              --->:  <bound method InstanceBasics.debug of <__main__.InstanceBasics testMethod=instancetest>>
+logger                    --->:  <eutester.eulogger.Eulogger object at 0x2171510>
+-------------------------------------------------------------------------
+setup_debugmethod:
+testcasename:None
+log_level:None
+logfile:None
+logfile_level:None
+Starting setup_debugmethod, name:instancetest
+After populating... setup_debugmethod: testcasename:Nonelog_level:debuglogfile:Nonelogfile_level:debug
+[2013-07-11 15:37:48,577] [instancetest] [DEBUG]: instancetest: Eulogger init test message. Init complete
+[2013-07-11 15:37:48,579] [instancetest] [DEBUG]: (show_self:1307):
+-------------------------------------------------------------------------
+TESTCASE INFO:
+----------
+NAME:                     --->:  instancetest
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  []
+-------------------------------------------------------------------------
+[2013-07-11 15:37:48,582] [instancetest] [DEBUG]: (show_args:1328):
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+args                      --->:  Namespace(config=None, config_file=None, configblocks=[], configfile=None, configsections=['MEMO', 'globals', 'instancetest'], cred_path='/home/hspencer/admin-creds/', credpath='/home/hspencer/admin-creds/', emi='emi-7B4F364E', html_anchors=False, ignoreblocks=[], instance_passsword=None, instance_user='ec2-user', keypair=None, log_level='debug', logfile=None, logfile_level='debug', password=None, region=None, tests=['BasicInstanceChecks', 'MetaData', 'Reboot'], use_color=False, user_data=None, user_data_file=None, vmtype='c1.medium', zone=None)
+config                    --->:  None
+config_file               --->:  None
+configblocks              --->:  []
+configfile                --->:  None
+configsections            --->:  ['MEMO', 'globals', 'instancetest']
+cred_path                 --->:  /home/hspencer/admin-creds/
+credpath                  --->:  /home/hspencer/admin-creds/
+debug_method              --->:  <bound method InstanceBasics.debug of <__main__.InstanceBasics testMethod=instancetest>>
+emi                       --->:  emi-7B4F364E
+html_anchors              --->:  False
+ignoreblocks              --->:  []
+instance_passsword        --->:  None
+instance_user             --->:  ec2-user
+keypair                   --->:  None
+log_level                 --->:  debug
+logfile                   --->:  None
+logfile_level             --->:  debug
+logger                    --->:  <eutester.eulogger.Eulogger object at 0x2171d50>
+password                  --->:  None
+region                    --->:  None
+tests                     --->:  ['BasicInstanceChecks', 'MetaData', 'Reboot']
+use_color                 --->:  False
+user_data                 --->:  None
+user_data_file            --->:  None
+vmtype                    --->:  c1.medium
+zone                      --->:  None
+-------------------------------------------------------------------------
+[2013-07-11 15:37:48,582] [EUCAOPS] [DEBUG]: EUCAOPS: Eulogger init test message. Init complete
+[2013-07-11 15:37:48,583] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:124)Starting method: setup_ec2_connection(self, endpoint=10.104.1.216, aws_access_key_id=L4836KVYWMJCXT4T6Q6B9, aws_secret_access_key=XCJ6sZVFVfFMR4DNVIUL7N7e4cgk8ebvEW0ej5dZ, is_secure=False, host=None, region=None, path=/services/Eucalyptus, port=8773, APIVersion=2011-01-01, boto_debug=0)
+[2013-07-11 15:37:48,583] [EUCAOPS] [DEBUG]: Attempting to create ec2 connection to 10.104.1.2168773/services/Eucalyptus
+[2013-07-11 15:37:48,583] [EUCAOPS] [DEBUG]: Attempting to create IAM connection to 10.104.1.216:8773/services/Euare
+[2013-07-11 15:37:48,584] [EUCAOPS] [DEBUG]: Attempting to create STS connection to 10.104.1.2168773/services/Eucalyptus
+[2013-07-11 15:37:48,585] [EUCAOPS] [DEBUG]:
+--->(cwops.py:122)Starting method: setup_cw_connection(self, endpoint=10.104.1.216, aws_access_key_id=L4836KVYWMJCXT4T6Q6B9, aws_secret_access_key=XCJ6sZVFVfFMR4DNVIUL7N7e4cgk8ebvEW0ej5dZ, is_secure=False, host=None, region=None, path=/services/CloudWatch, port=8773, boto_debug=0)
+[2013-07-11 15:37:48,585] [EUCAOPS] [DEBUG]: Attempting to create cloud watch connection to 10.104.1.2168773/services/CloudWatch
+[2013-07-11 15:37:48,585] [EUCAOPS] [DEBUG]: Attempting to create S3 connection to 10.104.1.216:8773/services/Walrus
+[2013-07-11 15:37:48,586] [EUCAOPS] [DEBUG]: Unable to create AS connection because of: Unable to find AWS_AUTO_SCALING_URL id in eucarc
+[2013-07-11 15:37:48,586] [EUCAOPS] [DEBUG]:
+--->(elbops.py:88)Starting method: setup_elb_connection(self, endpoint=10.104.1.216, aws_access_key_id=L4836KVYWMJCXT4T6Q6B9, aws_secret_access_key=XCJ6sZVFVfFMR4DNVIUL7N7e4cgk8ebvEW0ej5dZ, is_secure=False, host=None, region=None, path=/services/LoadBalancing, port=8773, boto_debug=0)
+[2013-07-11 15:37:48,586] [EUCAOPS] [DEBUG]: Attempting to create cloud watch connection to 10.104.1.2168773/services/LoadBalancing
+[2013-07-11 15:37:48,586] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:358)Starting method: add_group(self, group_name=group-1373582268.59, description=None, fail_if_exists=False)
+[2013-07-11 15:37:48,586] [EUCAOPS] [DEBUG]: Looking up group group-1373582268.59
+[2013-07-11 15:37:48,677] [EUCAOPS] [DEBUG]: Creating Security Group: group-1373582268.59
+[2013-07-11 15:37:48,789] [EUCAOPS] [DEBUG]: Found matching security group for name:group-1373582268.59 and id:None
+[2013-07-11 15:37:48,789] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:418)Starting method: authorize_group_by_name(self, group_name=group-1373582268.59, port=22, protocol=tcp, cidr_ip=0.0.0.0/0)
+[2013-07-11 15:37:48,789] [EUCAOPS] [DEBUG]: Attempting authorization of group-1373582268.59 on port 22 tcp
+[2013-07-11 15:37:48,843] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:418)Starting method: authorize_group_by_name(self, group_name=group-1373582268.59, port=-1, protocol=icmp, cidr_ip=0.0.0.0/0)
+[2013-07-11 15:37:48,843] [EUCAOPS] [DEBUG]: Attempting authorization of group-1373582268.59 on port -1 icmp
+[2013-07-11 15:37:48,893] [EUCAOPS] [DEBUG]: Looking up keypair keypair-1373582268.89
+[2013-07-11 15:37:48,941] [EUCAOPS] [DEBUG]: Creating keypair: keypair-1373582268.89
+Creating testunit:BasicInstanceChecks, args:
+[2013-07-11 15:37:49,662] [instancetest] [DEBUG]: (populate_testunit_with_args:1346): Attempting to populate testunit:BasicInstanceChecks, with testcase.args...
+[2013-07-11 15:37:49,667] [instancetest] [DEBUG]: (populate_testunit_with_args:1354): Testunit keyword args:{}
+[2013-07-11 15:37:49,672] [instancetest] [DEBUG]: (populate_testunit_with_args:1359): Got method args:('self',)
+[2013-07-11 15:37:49,675] [instancetest] [DEBUG]: (populate_testunit_with_args:1367): test unit total args:{}
+Creating testunit:MetaData, args:
+[2013-07-11 15:37:49,678] [instancetest] [DEBUG]: (populate_testunit_with_args:1346): Attempting to populate testunit:MetaData, with testcase.args...
+[2013-07-11 15:37:49,681] [instancetest] [DEBUG]: (populate_testunit_with_args:1354): Testunit keyword args:{}
+[2013-07-11 15:37:49,684] [instancetest] [DEBUG]: (populate_testunit_with_args:1359): Got method args:('self',)
+[2013-07-11 15:37:49,686] [instancetest] [DEBUG]: (populate_testunit_with_args:1367): test unit total args:{}
+Creating testunit:Reboot, args:
+[2013-07-11 15:37:49,689] [instancetest] [DEBUG]: (populate_testunit_with_args:1346): Attempting to populate testunit:Reboot, with testcase.args...
+[2013-07-11 15:37:49,692] [instancetest] [DEBUG]: (populate_testunit_with_args:1354): Testunit keyword args:{}
+[2013-07-11 15:37:49,695] [instancetest] [DEBUG]: (populate_testunit_with_args:1359): Got method args:('self', 'zone')
+[2013-07-11 15:37:49,698] [instancetest] [DEBUG]: (populate_testunit_with_args:1367): test unit total args:{}
+[2013-07-11 15:37:49,700] [instancetest] [DEBUG]: (populate_testunit_with_args:1373): Found matching arg for:zone
+[2013-07-11 15:37:49,703] [instancetest] [DEBUG]: (print_test_unit_startmsg:863):
+-------------------------------------------------------------------------
+STARTING TESTUNIT: BasicInstanceChecks
+METHOD:BasicInstanceChecks, TEST DESCRIPTION:
+
+        This Case Was Developed To Run Through A Series Of Basic Instance Tests.
+             The Tests Are As Follows:
+                   - Execute Run_Instances Command
+                   - Make Sure That Public Dns Name And Private Ip Aren'T The Same
+                       (This Is For Managed/Managed-Novlan Networking Modes)
+                   - Test To See If Instance Is Ping-Able
+                   - Test To Make Sure That Instance Is Accessible Via Ssh
+                       (Ssh Into Instance And Run Basic Ls Command)
+             If Any Of These Tests Fail, The Test Case Will Error Out, Logging The Results.
+
+End on Failure:False
+Passing ARGS:""
+Running list method: "BasicInstanceChecks()"
+-------------------------------------------------------------------------
+[2013-07-11 15:37:49,703] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:2235)Starting method: run_instance(self, image=emi-7B4F364E, keypair=keypair-1373582268.89, group=group-1373582268.59, type=None, zone=LayinDaSmackDown, min=1, max=1, user_data=None, private_addressing=False, username=ec2-user, password=None, is_reachable=True, monitoring_enabled=False, timeout=480)
+[2013-07-11 15:37:49,703] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:1881)Starting method: get_images(self, emi=emi-7B4F364E, root_device_type=None, root_device_name=None, location=None, state=available, arch=None, owner_id=None, filters=None, not_location=None, max_count=1)
+[2013-07-11 15:37:49,975] [EUCAOPS] [DEBUG]: Got 27 images matching prefix: emi-7B4F364E, now filtering...
+[2013-07-11 15:37:49,975] [EUCAOPS] [DEBUG]: Returning image:emi-7B4F364E
+[2013-07-11 15:37:49,976] [EUCAOPS] [DEBUG]: Attempting to run instance-store image Image:emi-7B4F364E in group group-1373582268.59
+[2013-07-11 15:37:50,246] [EUCAOPS] [DEBUG]: Beginning poll loop for the 1 instance found in [Instance:i-CB814504]
+[2013-07-11 15:37:50,246] [EUCAOPS] [DEBUG]: Beginning poll loop for instance Instance:i-CB814504 to go to running
+[2013-07-11 15:37:50,331] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(pending), elapsed:0/480
+[2013-07-11 15:38:00,438] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(pending), elapsed:10/480
+[2013-07-11 15:38:10,530] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(pending), elapsed:20/480
+[2013-07-11 15:38:20,630] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(pending), elapsed:30/480
+[2013-07-11 15:38:30,740] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(pending), elapsed:40/480
+[2013-07-11 15:38:40,842] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(running) time elapsed (50)
+[2013-07-11 15:38:40,842] [EUCAOPS] [DEBUG]: Instance:i-CB814504 is now in running
+[2013-07-11 15:38:40,843] [EUCAOPS] [DEBUG]: Instance i-CB814504 now in running state  in zone: LayinDaSmackDown
+[2013-07-11 15:38:40,843] [EUCAOPS] [DEBUG]: Instance:i-CB814504 got Public IP: 10.104.7.11 Private IP: 172.17.112.245 Public DNS Name: 10.104.7.11 Private DNS Name: 172.17.112.245
+[2013-07-11 15:38:40,843] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:2862)Starting method: wait_for_valid_ip(self, instances=Instance:i-CB814504, private_addressing=False, poll_interval=10, timeout=60)
+[2013-07-11 15:38:40,928] [EUCAOPS] [DEBUG]: i-CB814504: FOUND public ip. Current:10.104.7.11, elapsed:0/60
+[2013-07-11 15:38:40,929] [EUCAOPS] [DEBUG]: Check_system_for_dup_ip starting...
+[2013-07-11 15:38:41,091] [EUCAOPS] [DEBUG]: Checking reservation: r-F3013FF4
+[2013-07-11 15:38:41,091] [EUCAOPS] [DEBUG]: Checking instance i-FAE1465A          , state:running              pubip:10.104.7.10          privip:172.17.114.179
+[2013-07-11 15:38:41,091] [EUCAOPS] [DEBUG]: Checking reservation: r-8E144190
+[2013-07-11 15:38:41,091] [EUCAOPS] [DEBUG]: Checking instance i-CB814504          , state:running              pubip:10.104.7.11          privip:172.17.112.245
+[2013-07-11 15:38:41,091] [EUCAOPS] [DEBUG]: Checking reservation: r-FA913DC4
+[2013-07-11 15:38:41,092] [EUCAOPS] [DEBUG]: Checking instance i-89513E98          , state:running              pubip:10.104.7.12          privip:172.17.114.175
+[2013-07-11 15:38:41,092] [EUCAOPS] [DEBUG]: Done with check_system_for_dup_ip
+[2013-07-11 15:38:41,092] [EUCAOPS] [DEBUG]: Wait_for_valid_ip done
+[2013-07-11 15:38:41,092] [EUCAOPS] [DEBUG]: Attempting to ping 10.104.7.11
+[2013-07-11 15:38:41,115] [EUCAOPS] [DEBUG]: Was able to ping address
+[2013-07-11 15:38:41,115] [EUCAOPS] [DEBUG]: Converting Reservation:r-8E144190 into euinstances
+[2013-07-11 15:38:41,152] [i-CB814504] [DEBUG]: i-CB814504: Eulogger init test message. Init complete
+[2013-07-11 15:38:41,464] [EUCAOPS] [DEBUG]:
+--->(euzone.py:70)Starting method: get_all_vm_type_info(self)
+[2013-07-11 15:38:41,536] [i-CB814504] [DEBUG]: Attempting to reconnect_to_instance:i-CB814504
+[2013-07-11 15:38:41,672] [i-CB814504] [DEBUG]: reset_ssh_connection for:i-CB814504
+[2013-07-11 15:38:41,672] [i-CB814504] [DEBUG]: Connecting ssh i-CB814504
+[2013-07-11 15:38:41,673] [i-CB814504] [DEBUG]: SSH connection has hostname:10.104.7.11 user:ec2-user and keypath: /home/hspencer/eutester/keypair-1373582268.89.pem
+[2013-07-11 15:38:41,778] [i-CB814504] [DEBUG]: SSH connection attempt(1 of 3), host:'ec2-user@10.104.7.11', using ipv4:10.104.7.11, thru proxy:'None'
+[2013-07-11 15:38:43,446] [i-CB814504] [DEBUG]: SSH - Connected to 10.104.7.11
+[2013-07-11 15:38:43,446] [i-CB814504] [DEBUG]: Try some sys...
+[2013-07-11 15:38:43,447] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]#
+[2013-07-11 15:38:43,501] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:43,501] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:43,501] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# dmesg | grep vda
+[2013-07-11 15:38:43,556] [i-CB814504] [DEBUG]:
+[    0.000000] Command line: root=/dev/vda1 console=ttyS0
+[    0.000000] Kernel command line: root=/dev/vda1 console=ttyS0
+[    0.482207]  vda: vda1 vda2 vda3
+[    0.600151] EXT3-fs (vda1): mounted filesystem with ordered data mode
+[    1.169794] Adding 524284k swap on /dev/vda3.  Priority:-1 extents:1 across:524284k
+[    1.179182] EXT3-fs (vda1): using internal journal
+[    1.717584] EXT3-fs (vda2): using internal journal
+[    1.718092] EXT3-fs (vda2): mounted filesystem with ordered data mode
+
+[2013-07-11 15:38:43,556] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:43,556] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# dmesg | grep xvda
+[2013-07-11 15:38:43,611] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:43,611] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:43,611] [i-CB814504] [DEBUG]: []
+[2013-07-11 15:38:43,611] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# dmesg | grep sda
+[2013-07-11 15:38:43,666] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:43,666] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:43,666] [i-CB814504] [DEBUG]: []
+[2013-07-11 15:38:43,721] [EUCAOPS] [DEBUG]: Beginning poll loop for the 1 instance found in [Instance:i-CB814504]
+[2013-07-11 15:38:43,721] [EUCAOPS] [DEBUG]: Beginning poll loop for instance Instance:i-CB814504 to go to running
+[2013-07-11 15:38:43,818] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(running) time elapsed (0)
+[2013-07-11 15:38:43,818] [EUCAOPS] [DEBUG]: Instance:i-CB814504 is now in running
+[2013-07-11 15:38:43,819] [EUCAOPS] [DEBUG]: Attempting to ping 10.104.7.11
+[2013-07-11 15:38:43,823] [EUCAOPS] [DEBUG]: Was able to ping address
+[2013-07-11 15:38:43,823] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'ls -1 /dev/vda2'
+[2013-07-11 15:38:43,878] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:43,879] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:43,884] [instancetest] [DEBUG]: (endsuccess:703):
+-------------------------------------------------------------------------
+- UNIT ENDED - BasicInstanceChecks
+-------------------------------------------------------------------------
+
+[2013-07-11 15:38:43,887] [instancetest] [DEBUG]: (run_test_case_list:807): RESULTS SUMMARY FOR 'instancetest':
+[2013-07-11 15:38:43,887] [instancetest] [DEBUG]: (run_test_case_list:807):
+[2013-07-11 15:38:43,887] [instancetest] [DEBUG]: (run_test_case_list:807): ------------------------------------------------------
+[2013-07-11 15:38:43,887] [instancetest] [DEBUG]: (run_test_case_list:807): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2013-07-11 15:38:43,887] [instancetest] [DEBUG]: (run_test_case_list:807): ------------------------------------------------------
+[2013-07-11 15:38:43,887] [instancetest] [DEBUG]: (run_test_case_list:807): | 3       | 0       | 1       | 2       | 54
+[2013-07-11 15:38:43,887] [instancetest] [DEBUG]: (run_test_case_list:807): ------------------------------------------------------
+[2013-07-11 15:38:43,887] [instancetest] [DEBUG]: (run_test_case_list:807):
+[2013-07-11 15:38:43,890] [instancetest] [DEBUG]: (print_test_unit_startmsg:863):
+-------------------------------------------------------------------------
+STARTING TESTUNIT: MetaData
+METHOD:MetaData, TEST DESCRIPTION:
+
+        This Case Was Developed To Test The Metadata Service Of An Instance For Consistency.
+        The Following Meta-Data Attributes Are Tested:
+           - Public-Keys/0/Openssh-Key
+           - Security-Groups
+           - Instance-Id
+           - Local-Ipv4
+           - Public-Ipv4
+           - Ami-Id
+           - Ami-Launch-Index
+           - Reservation-Id
+           - Placement/Availability-Zone
+           - Kernel-Id
+           - Public-Hostname
+           - Local-Hostname
+           - Hostname
+           - Ramdisk-Id
+           - Instance-Type
+           - Any Bad Metadata That Shouldn'T Be Present.
+        Missing Nodes
+         ['Block-Device-Mapping/',  'Ami-Manifest-Path']
+        If Any Of These Tests Fail, The Test Case Will Error Out; Logging The Results.
+
+End on Failure:False
+Passing ARGS:""
+Running list method: "MetaData()"
+-------------------------------------------------------------------------
+[2013-07-11 15:38:43,945] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/public-keys/0/openssh-key'
+[2013-07-11 15:38:44,004] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:44,054] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:44,109] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/security-groups'
+[2013-07-11 15:38:44,165] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:44,215] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:44,270] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/instance-id'
+[2013-07-11 15:38:44,325] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:44,325] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:44,443] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/local-ipv4'
+[2013-07-11 15:38:44,505] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:44,555] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:44,610] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/public-ipv4'
+[2013-07-11 15:38:44,664] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:44,665] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:44,782] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/ami-id'
+[2013-07-11 15:38:44,837] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:44,837] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:44,954] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/ami-launch-index'
+[2013-07-11 15:38:45,009] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:45,060] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:45,115] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/reservation-id'
+[2013-07-11 15:38:45,173] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:45,224] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:45,279] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/placement/availability-zone'
+[2013-07-11 15:38:45,336] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:45,336] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:45,453] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/kernel-id'
+[2013-07-11 15:38:45,508] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:45,508] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:45,625] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/public-hostname'
+[2013-07-11 15:38:45,681] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:45,731] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:45,786] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/local-hostname'
+[2013-07-11 15:38:45,840] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:45,840] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:45,958] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'curl http://169.254.169.254/latest/meta-data/hostname'
+[2013-07-11 15:38:46,013] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:46,013] [i-CB814504] [DEBUG]: done with exec
+
+TESTUNIT FAILED: MetaDataTraceback (most recent call last):
+  File "/home/hspencer/eutester-dev/lib/python2.6/site-packages/eutester-0.0.7-py2.6.egg/eutester/eutestcase.py", line 275, in run
+    ret = self.method()
+  File "./testcases/cloud_user/instances/instancetest.py", line 195, in MetaData
+    self.assertTrue(re.match(instance.get_metadata("hostname")[0], instance.private_dns_name), 'Incorrect host name in metadata')
+  File "/usr/lib64/python2.6/unittest.py", line 324, in failUnless
+    if not expr: raise self.failureException, msg
+AssertionError: Incorrect host name in metadata
+
+[2013-07-11 15:38:46,019] [instancetest] [DEBUG]: (endsuccess:703):
+-------------------------------------------------------------------------
+- UNIT ENDED - MetaData
+-------------------------------------------------------------------------
+
+[2013-07-11 15:38:46,024] [instancetest] [DEBUG]: (run_test_case_list:807): RESULTS SUMMARY FOR 'instancetest':
+[2013-07-11 15:38:46,024] [instancetest] [DEBUG]: (run_test_case_list:807):
+[2013-07-11 15:38:46,024] [instancetest] [DEBUG]: (run_test_case_list:807): ------------------------------------------------------
+[2013-07-11 15:38:46,024] [instancetest] [DEBUG]: (run_test_case_list:807): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2013-07-11 15:38:46,024] [instancetest] [DEBUG]: (run_test_case_list:807): ------------------------------------------------------
+[2013-07-11 15:38:46,024] [instancetest] [DEBUG]: (run_test_case_list:807): | 3       | 1       | 1       | 1       | 56
+[2013-07-11 15:38:46,024] [instancetest] [DEBUG]: (run_test_case_list:807): ------------------------------------------------------
+[2013-07-11 15:38:46,024] [instancetest] [DEBUG]: (run_test_case_list:807):
+[2013-07-11 15:38:46,027] [instancetest] [DEBUG]: (print_test_unit_startmsg:863):
+-------------------------------------------------------------------------
+STARTING TESTUNIT: Reboot
+METHOD:Reboot, TEST DESCRIPTION:
+
+        This Case Was Developed To Test Ip Connectivity And Volume Attachment After
+        Instance Reboot.  The Following Tests Are Done For This Test Case:
+                   - Creates A 1 Gig Ebs Volume, Then Attach Volume
+                   - Reboot Instance
+                   - Attempts To Connect To Instance Via Ssh
+                   - Checks To See If Ebs Volume Is Attached
+                   - Detaches Volume
+                   - Deletes Volume
+        If Any Of These Tests Fail, The Test Case Will Error Out; Logging The Results.
+
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "Reboot(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2013-07-11 15:38:46,027] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:524)Starting method: create_volume(self, zone=LayinDaSmackDown, size=1, eof=True, snapshot=None, timeout=0, poll_interval=10, timepergig=120)
+[2013-07-11 15:38:46,027] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:543)Starting method: create_volumes(self, zone=LayinDaSmackDown, size=1, count=1, mincount=1, eof=True, monitor_to_state=available, delay=0, snapshot=None, timeout=0, poll_interval=10, timepergig=120)
+[2013-07-11 15:38:46,027] [EUCAOPS] [DEBUG]: Sending create volume request, count:1
+[2013-07-11 15:38:46,196] [EUCAOPS] [DEBUG]: 1/1 requests for volume creation succeeded.
+[2013-07-11 15:38:46,196] [EUCAOPS] [DEBUG]:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+VOL_ID         |ORDER|LASTSTATUS|TESTSTATUS|   AGE@STATUS  |SIZE|   FROM_SNAP   |             MD5_SUM             |MD5LEN|      ZONE     |INSTANCE
+-----------------------------------------------------------------------------------------------------------------------------------------------
+vol-C53E3C48   |  0  | creating | creating |       0       | 1  |      None     |               None              |  32  |LayinDaSmackDown|None
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+[2013-07-11 15:38:46,197] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:642)Starting method: monitor_created_euvolumes_to_state(self, volumes=[Volume:vol-C53E3C48], eof=True, mincount=1, state=available, poll_interval=10, deletefailed=True, size=1, timepergig=120)
+[2013-07-11 15:38:46,197] [EUCAOPS] [DEBUG]: Monitoring 1 volumes for at least 1 to reach state:available
+[2013-07-11 15:38:46,197] [EUCAOPS] [DEBUG]: Monitoring 1 volumes for at least 1 to reach state:available
+[2013-07-11 15:38:46,197] [EUCAOPS] [DEBUG]: Polling 1 volumes for status:"available"...
+[2013-07-11 15:38:46,314] [EUCAOPS] [DEBUG]: Volume #0 (vol-C53E3C48) State(creating), seconds elapsed: 0/120
+[2013-07-11 15:38:46,314] [EUCAOPS] [DEBUG]: ----Time Elapsed:0, Waiting on 1 volumes to enter state:available-----
+[2013-07-11 15:38:56,441] [EUCAOPS] [DEBUG]: Volume #0 (vol-C53E3C48) State(available), seconds elapsed: 10/120
+[2013-07-11 15:38:56,441] [EUCAOPS] [DEBUG]: ----Time Elapsed:10, Waiting on 0 volumes to enter state:available-----
+[2013-07-11 15:38:56,442] [EUCAOPS] [DEBUG]:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+VOL_ID         |ORDER|LASTSTATUS|TESTSTATUS|   AGE@STATUS  |SIZE|   FROM_SNAP   |             MD5_SUM             |MD5LEN|      ZONE     |INSTANCE
+-----------------------------------------------------------------------------------------------------------------------------------------------
+vol-C53E3C48   |  0  |available |available |     10.41     | 1  |      None     |               None              |  32  |LayinDaSmackDown|None
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+[2013-07-11 15:38:56,442] [i-CB814504] [DEBUG]: Attempting to attach volume:vol-C53E3C48 to instance:i-CB814504 to dev:None
+[2013-07-11 15:38:56,442] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c "ls -1 /dev/ | grep '^sd\|^vd\|^xd\|^xvd'"
+[2013-07-11 15:38:56,497] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:56,497] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:56,497] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'dmesg | grep vda'
+[2013-07-11 15:38:56,551] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:56,552] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:56,552] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'dmesg | grep xvda'
+[2013-07-11 15:38:56,613] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:56,613] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:56,613] [i-CB814504] [DEBUG]: []
+[2013-07-11 15:38:56,613] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'dmesg | grep sda'
+[2013-07-11 15:38:56,674] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:38:56,674] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:38:56,674] [i-CB814504] [DEBUG]: []
+[2013-07-11 15:38:56,674] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:2139)Starting method: get_volumes(self, volume_id=vol-, status=None, attached_instance=i-CB814504, attached_dev=None, snapid=None, zone=None, filters=None, minsize=1, maxsize=None, md5=None, eof=False)
+[2013-07-11 15:38:56,985] [i-CB814504] [DEBUG]: Instance:i-CB814504 returning available cloud scsi dev:/dev/vde
+[2013-07-11 15:38:56,985] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:1033)Starting method: attach_volume(self, instance=Instance:i-CB814504, volume=Volume:vol-C53E3C48, device_path=/dev/vde, pause=10, timeout=180)
+[2013-07-11 15:38:56,985] [EUCAOPS] [DEBUG]: Sending attach for Volume:vol-C53E3C48 to be attached to Instance:i-CB814504 at requested device  /dev/vde
+[2013-07-11 15:38:57,443] [EUCAOPS] [DEBUG]: Volume:vol-C53E3C48, state:in-use, attached status:attaching, elapsed:0/180
+[2013-07-11 15:38:57,443] [EUCAOPS] [DEBUG]: Sleeping for 10 seconds
+[2013-07-11 15:39:07,587] [EUCAOPS] [DEBUG]: Volume:vol-C53E3C48, Attached: in-use - attached, elapsed:10
+[2013-07-11 15:39:07,587] [i-CB814504] [DEBUG]: Checking for volume attachment on guest, elapsed time(0)
+[2013-07-11 15:39:07,588] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c "ls -1 /dev/ | grep '^sd\|^vd\|^xd\|^xvd'"
+[2013-07-11 15:39:07,643] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:07,643] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:07,643] [i-CB814504] [DEBUG]: dev_list_after:sda sda1 sda2 sda3 sdb vda vda1 vda2 vda3 vdb
+[2013-07-11 15:39:07,643] [i-CB814504] [DEBUG]: Volume:vol-C53E3C48 guest device:/dev/vdb
+[2013-07-11 15:39:07,643] [i-CB814504] [DEBUG]: vol-C53E3C48 Requested dev:/dev/vde, attached to guest device:/dev/vdb
+[2013-07-11 15:39:07,644] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'head -c 32 /dev/vdb | xargs -0 printf %s | wc -c'
+[2013-07-11 15:39:07,704] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:07,704] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:07,704] [i-CB814504] [DEBUG]:
+--->(euinstance.py:792)Starting method: random_fill_volume(self, euvolume=Volume:vol-C53E3C48, srcdev=None, length=32, timepergig=90)
+[2013-07-11 15:39:07,705] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'ls /dev/vdb'
+[2013-07-11 15:39:07,774] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:07,774] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:07,774] [i-CB814504] [DEBUG]: exit code:0
+[2013-07-11 15:39:07,774] [i-CB814504] [DEBUG]: File /dev/vdb is present on i-CB814504
+[2013-07-11 15:39:07,774] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'ls /dev/urandom'
+[2013-07-11 15:39:07,830] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:07,830] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:07,830] [i-CB814504] [DEBUG]:
+--->(euinstance.py:857)Starting method: dd_monitor(self, ddif=None, ddof=None, ddcount=None, ddbs=1024, ddbytes=None, ddcmd=echo vol-C53E3C48 | dd of=/dev/vdb, ddseek=None, timeout=90, poll_interval=1, tmpfile=None)
+[2013-07-11 15:39:07,831] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'nohup echo vol-C53E3C48 | dd of=/dev/vdb 2> /tmp/eutesterddcmd.1373582347 & echo $! && sleep 2'
+[2013-07-11 15:39:07,885] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:09,892] [i-CB814504] [DEBUG]: done with exec
+
+----------------------------------------------------------------------------------------------------------------------------
+DD DATA INFO                            |     DD TIME INFO    |       DD RATE INFO      |     DD RECORDS FULL/PARTIAL INFO
+----------------------------------------------------------------------------------------------------------------------------
+BYTES          |      MBs      |  GIGs  | DD TIME  |TEST TIME |  DD RATE   | TEST RATE  |      REC_IN      |     REC_OUT
+----------------------------------------------------------------------------------------------------------------------------
+13             |      0.0      |  0.0   |0.00264262|  2.1719  |  4.9 kB/s  |  0.0 MB/s  |     F:0 P:1      |     F:0 P:1
+----------------------------------------------------------------------------------------------------------------------------
+[2013-07-11 15:39:11,003] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'sync'
+[2013-07-11 15:39:11,084] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:11,135] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:11,135] [i-CB814504] [DEBUG]: Done with dd, copied 13 over elapsed:3
+[2013-07-11 15:39:11,135] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'rm -f /tmp/eutesterddcmd.1373582347'
+[2013-07-11 15:39:11,190] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:11,191] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:11,191] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'rm -f /tmp/eutesterddcmd.1373582347.pid'
+[2013-07-11 15:39:11,245] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:11,246] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:11,246] [i-CB814504] [DEBUG]: length remaining to write after adding volumeid:19
+[2013-07-11 15:39:11,246] [i-CB814504] [DEBUG]:
+--->(euinstance.py:857)Starting method: dd_monitor(self, ddif=/dev/urandom, ddof=/dev/vdb, ddcount=None, ddbs=19, ddbytes=19, ddcmd=None, ddseek=13, timeout=90, poll_interval=1, tmpfile=None)
+[2013-07-11 15:39:11,246] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'nohup dd if=/dev/urandom of=/dev/vdb seek=13  bs=19  count=1  2> /tmp/eutesterddcmd.1373582351 & echo $! && sleep 2'
+[2013-07-11 15:39:11,301] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:13,262] [i-CB814504] [DEBUG]: done with exec
+
+----------------------------------------------------------------------------------------------------------------------------
+DD DATA INFO                            |     DD TIME INFO    |       DD RATE INFO      |     DD RECORDS FULL/PARTIAL INFO
+----------------------------------------------------------------------------------------------------------------------------
+BYTES          |      MBs      |  GIGs  | DD TIME  |TEST TIME |  DD RATE   | TEST RATE  |      REC_IN      |     REC_OUT
+----------------------------------------------------------------------------------------------------------------------------
+19             |      0.0      |  0.0   |0.00164922|  2.1884  | 11.5 kB/s  |  0.0 MB/s  |     F:1 P:0      |     F:1 P:0
+----------------------------------------------------------------------------------------------------------------------------
+[2013-07-11 15:39:14,436] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'sync'
+[2013-07-11 15:39:14,517] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:14,567] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:14,567] [i-CB814504] [DEBUG]: Done with dd, copied 19 over elapsed:3
+[2013-07-11 15:39:14,567] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'rm -f /tmp/eutesterddcmd.1373582351'
+[2013-07-11 15:39:14,622] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:14,622] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:14,622] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'rm -f /tmp/eutesterddcmd.1373582351.pid'
+[2013-07-11 15:39:14,676] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:14,676] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:14,677] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'ls /dev/vdb'
+[2013-07-11 15:39:14,730] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:14,731] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:14,731] [i-CB814504] [DEBUG]: exit code:0
+[2013-07-11 15:39:14,731] [i-CB814504] [DEBUG]: File /dev/vdb is present on i-CB814504
+[2013-07-11 15:39:14,731] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'head -c 32 /dev/vdb | md5sum'
+[2013-07-11 15:39:14,785] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:14,786] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:14,786] [i-CB814504] [DEBUG]: Got MD5 for Volume:vol-C53E3C48 dev:/dev/vdb md5:024fd0691c0bbc4ec0ad1b14ace06dd2
+[2013-07-11 15:39:14,786] [i-CB814504] [DEBUG]: Filled Volume:vol-C53E3C48 dev:/dev/vdb md5:024fd0691c0bbc4ec0ad1b14ace06dd2
+[2013-07-11 15:39:14,786] [i-CB814504] [DEBUG]: Success attaching volume:vol-C53E3C48 to instance:i-CB814504, cloud dev:/dev/vde, attached dev:/dev/vdb
+[2013-07-11 15:39:14,786] [i-CB814504] [DEBUG]: Attempting to reboot instance:i-CB814504, check attached volume state first
+[2013-07-11 15:39:14,786] [EUCAOPS] [DEBUG]: Beginning poll loop for result get_safe_uptime to go to None
+[2013-07-11 15:39:14,786] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'cat /proc/uptime'
+[2013-07-11 15:39:14,841] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:14,841] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:14,841] [EUCAOPS] [DEBUG]: get_safe_uptime returned: "42" after 0 minutes 0 seconds.
+[2013-07-11 15:39:14,841] [i-CB814504] [DEBUG]: Rebooting now...
+[2013-07-11 15:39:34,962] [i-CB814504] [DEBUG]: Attempting to reconnect_to_instance:i-CB814504
+[2013-07-11 15:39:35,126] [i-CB814504] [DEBUG]: reset_ssh_connection for:i-CB814504
+[2013-07-11 15:39:35,126] [i-CB814504] [DEBUG]: Connecting ssh i-CB814504
+[2013-07-11 15:39:35,126] [i-CB814504] [DEBUG]: SSH connection has hostname:10.104.7.11 user:ec2-user and keypath: /home/hspencer/eutester/keypair-1373582268.89.pem
+[2013-07-11 15:39:35,231] [i-CB814504] [DEBUG]: SSH connection attempt(1 of 3), host:'ec2-user@10.104.7.11', using ipv4:10.104.7.11, thru proxy:'None'
+[2013-07-11 15:39:36,971] [i-CB814504] [DEBUG]: SSH - Connected to 10.104.7.11
+[2013-07-11 15:39:36,971] [i-CB814504] [DEBUG]: Try some sys...
+[2013-07-11 15:39:36,972] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c ''
+[2013-07-11 15:39:37,026] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:37,026] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:37,026] [EUCAOPS] [DEBUG]: Beginning poll loop for result get_safe_uptime to go to None
+[2013-07-11 15:39:37,026] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'cat /proc/uptime'
+[2013-07-11 15:39:37,081] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:37,081] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:37,081] [EUCAOPS] [DEBUG]: get_safe_uptime returned: "64" after 0 minutes 0 seconds.
+[2013-07-11 15:39:37,081] [i-CB814504] [DEBUG]: i-CB814504 reboot_instance_and_verify Success
+[2013-07-11 15:39:37,305] [EUCAOPS] [DEBUG]: Sent detach for volume: vol-C53E3C48 which is currently in state: in-use
+[2013-07-11 15:39:37,412] [EUCAOPS] [DEBUG]: Volume:vol-C53E3C48 state:in-use, attached_data:detaching, pause:10, instance:i-CB814504, elapsed:0
+[2013-07-11 15:39:37,412] [EUCAOPS] [DEBUG]: Sleeping for 10 seconds
+[2013-07-11 15:39:47,559] [EUCAOPS] [DEBUG]: Volume:vol-C53E3C48 left in available
+[2013-07-11 15:39:47,559] [i-CB814504] [DEBUG]: Wait for device:/dev/vdb to be removed on guest...
+[2013-07-11 15:39:47,559] [i-CB814504] [DEBUG]: [ec2-user@10.104.7.11]# sudo sh -c 'ls /dev/vdb'
+[2013-07-11 15:39:47,614] [i-CB814504] [DEBUG]:
+
+[2013-07-11 15:39:47,614] [i-CB814504] [DEBUG]: done with exec
+[2013-07-11 15:39:47,615] [i-CB814504] [DEBUG]: exit code:2
+[2013-07-11 15:39:47,809] [EUCAOPS] [DEBUG]: Sent delete for volume: vol-C53E3C48, monitor to deleted state or failure
+[2013-07-11 15:39:47,906] [EUCAOPS] [DEBUG]:
+--->(ec2ops.py:2139)Starting method: get_volumes(self, volume_id=vol-C53E3C48, status=None, attached_instance=None, attached_dev=None, snapid=None, zone=None, filters=None, minsize=1, maxsize=None, md5=None, eof=True)
+[2013-07-11 15:39:48,313] [EUCAOPS] [DEBUG]: Volume:vol-C53E3C48 in deleting sleeping:10, elapsed:0
+[2013-07-11 15:39:58,329] [instancetest] [DEBUG]: (endsuccess:703):
+-------------------------------------------------------------------------
+- UNIT ENDED - Reboot
+-------------------------------------------------------------------------
+
+[2013-07-11 15:39:58,334] [instancetest] [DEBUG]: (run_test_case_list:807): RESULTS SUMMARY FOR 'instancetest':
+[2013-07-11 15:39:58,334] [instancetest] [DEBUG]: (run_test_case_list:807):
+[2013-07-11 15:39:58,334] [instancetest] [DEBUG]: (run_test_case_list:807): ------------------------------------------------------
+[2013-07-11 15:39:58,334] [instancetest] [DEBUG]: (run_test_case_list:807): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2013-07-11 15:39:58,334] [instancetest] [DEBUG]: (run_test_case_list:807): ------------------------------------------------------
+[2013-07-11 15:39:58,334] [instancetest] [DEBUG]: (run_test_case_list:807): | 3       | 1       | 2       | 0       | 128
+[2013-07-11 15:39:58,334] [instancetest] [DEBUG]: (run_test_case_list:807): ------------------------------------------------------
+[2013-07-11 15:39:58,334] [instancetest] [DEBUG]: (run_test_case_list:807):
+[2013-07-11 15:39:58,337] [instancetest] [DEBUG]: (run_test_case_list:816): Printing pre-cleanup results:
+[2013-07-11 15:39:58,340] [instancetest] [DEBUG]: (<lambda>:959): Test list results for testcase:instancetest
+[2013-07-11 15:39:58,343] [instancetest] [DEBUG]: (run_test_case_list:818):
+-------------------------------------------------------------------------
+RUN TEST CASE LIST DONE:
+Ran 3/3 tests in 128 seconds
+
+TESTUNIT LIST SUMMARY FOR instancetest
+
+--------------------------------------------------------------------------------
+                    | RESULT: passed
+                    | TEST NAME: BasicInstanceChecks
+                    | TIME : 54
+                    | ARGS: BasicInstanceChecks()
+--------------------------------------------------------------------------------
+                    | RESULT: failed
+                    | TEST NAME: MetaData
+                    | TIME : 2
+                    | ARGS: MetaData()
+ERROR:(MetaData): Incorrect host name in metadata
+
+--------------------------------------------------------------------------------
+                    | RESULT: passed
+                    | TEST NAME: Reboot
+                    | TIME : 72
+                    | ARGS: Reboot(zone:None)
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 3       | 1       | 2       | 0       | 128
+------------------------------------------------------
+
+
+-------------------------------------------------------------------------
+Creating testunit:clean_method, args:
+[2013-07-11 15:39:58,346] [instancetest] [DEBUG]: (populate_testunit_with_args:1346): Attempting to populate testunit:clean_method, with testcase.args...
+[2013-07-11 15:39:58,349] [instancetest] [DEBUG]: (populate_testunit_with_args:1354): Testunit keyword args:{}
+[2013-07-11 15:39:58,352] [instancetest] [DEBUG]: (populate_testunit_with_args:1359): Got method args:('self',)
+[2013-07-11 15:39:58,355] [instancetest] [DEBUG]: (populate_testunit_with_args:1367): test unit total args:{}
+[2013-07-11 15:39:58,358] [instancetest] [DEBUG]: (print_test_unit_startmsg:863):
+-------------------------------------------------------------------------
+STARTING TESTUNIT: clean_method
+METHOD:clean_method, TEST DESCRIPTION:
+
+End on Failure:False
+Passing ARGS:""
+Running list method: "clean_method()"
+-------------------------------------------------------------------------
+[2013-07-11 15:39:58,358] [EUCAOPS] [DEBUG]: Starting cleanup of artifacts
+[2013-07-11 15:39:58,358] [EUCAOPS] [DEBUG]: Sending terminate for Instance:i-CB814504
+[2013-07-11 15:39:58,479] [EUCAOPS] [DEBUG]: Beginning poll loop for the 1 instance found in [Instance:i-CB814504]
+[2013-07-11 15:39:58,480] [EUCAOPS] [DEBUG]: Beginning poll loop for instance Instance:i-CB814504 to go to terminated
+[2013-07-11 15:39:58,560] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(shutting-down), elapsed:0/480
+[2013-07-11 15:40:08,694] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(shutting-down), elapsed:10/480
+[2013-07-11 15:40:18,802] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(shutting-down), elapsed:20/480
+[2013-07-11 15:40:28,901] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(shutting-down), elapsed:30/480
+[2013-07-11 15:40:38,970] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(terminated) time elapsed (40)
+[2013-07-11 15:40:38,970] [EUCAOPS] [DEBUG]: Instance:i-CB814504 is now in terminated
+[2013-07-11 15:40:38,970] [EUCAOPS] [DEBUG]: clean_up_test_volumes starting, volumes:test_resources['volumes']
+[2013-07-11 15:40:38,970] [EUCAOPS] [DEBUG]: Deleting SecurityGroup:group-1373582268.59
+[2013-07-11 15:40:39,053] [EUCAOPS] [DEBUG]: Deleting Reservation:r-8E144190
+[2013-07-11 15:40:39,053] [EUCAOPS] [DEBUG]: Sending terminate for Instance:i-CB814504
+[2013-07-11 15:40:39,095] [EUCAOPS] [DEBUG]: Beginning poll loop for the 1 instance found in [Instance:i-CB814504]
+[2013-07-11 15:40:39,095] [EUCAOPS] [DEBUG]: Beginning poll loop for instance Instance:i-CB814504 to go to terminated
+[2013-07-11 15:40:39,153] [EUCAOPS] [DEBUG]: Instance(i-CB814504) State(terminated) time elapsed (0)
+[2013-07-11 15:40:39,154] [EUCAOPS] [DEBUG]: Instance:i-CB814504 is now in terminated
+[2013-07-11 15:40:39,154] [EUCAOPS] [DEBUG]: Deleting KeyPair:keypair-1373582268.89
+[2013-07-11 15:40:39,232] [instancetest] [DEBUG]: (<lambda>:959): Test list results for testcase:instancetest
+[2013-07-11 15:40:39,236] [instancetest] [DEBUG]: (run_test_case_list:834):
+-------------------------------------------------------------------------
+
+TESTUNIT LIST SUMMARY FOR instancetest
+
+--------------------------------------------------------------------------------
+                    | RESULT: passed
+                    | TEST NAME: BasicInstanceChecks
+                    | TIME : 54
+                    | ARGS: BasicInstanceChecks()
+--------------------------------------------------------------------------------
+                    | RESULT: failed
+                    | TEST NAME: MetaData
+                    | TIME : 2
+                    | ARGS: MetaData()
+ERROR:(MetaData): Incorrect host name in metadata
+
+--------------------------------------------------------------------------------
+                    | RESULT: passed
+                    | TEST NAME: Reboot
+                    | TIME : 72
+                    | ARGS: Reboot(zone:None)
+--------------------------------------------------------------------------------
+                    | RESULT: passed
+                    | TEST NAME: clean_method
+                    | TIME : 40
+                    | ARGS: clean_method()
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 4       | 1       | 3       | 0       | 168
+------------------------------------------------------
+
+
+-------------------------------------------------------------------------
+passed:3 out of total:4
+[2013-07-11 15:40:39,240] [instancetest] [DEBUG]: (run_test_case_list:845): </pre>
