@@ -1,0 +1,1155 @@
+./instancetest.py --emi emi-94CD36CC --credpath /root/.euca/ --tests BasicInstanceChecks MetaData Reboot --instance-user root
+setup_debugmethod: 
+testcasename:None
+log_level:None
+logfile:None
+logfile_level:debug
+Starting setup_debugmethod, name:instancetest
+After populating... setup_debugmethod: testcasename:Nonelog_level:debuglogfile:Nonelogfile_level:debug
+[2013-12-18 00:24:22,045] [instancetest] [DEBUG]: instancetest: Eulogger init test message. Init complete
+[2013-12-18 00:24:22,048] [instancetest] [DEBUG]: (setuptestcase:335): <pre>
+[2013-12-18 00:24:22,051] [instancetest] [DEBUG]: (show_self:1304): 
+-------------------------------------------------------------------------
+TESTCASE INFO:           
+----------              
+NAME:                     --->:  instancetest
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  []
+-------------------------------------------------------------------------
+[2013-12-18 00:24:22,055] [instancetest] [DEBUG]: (show_args:1325): 
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+debug_method              --->:  <bound method EutesterTestCase.debug of <eutester.eutestcase.EutesterTestCase testMethod=instancetest>>
+logger                    --->:  <eutester.eulogger.Eulogger object at 0x2596b10>
+-------------------------------------------------------------------------
+setup_debugmethod: 
+testcasename:None
+log_level:None
+logfile:None
+logfile_level:None
+Starting setup_debugmethod, name:instancetest
+After populating... setup_debugmethod: testcasename:Nonelog_level:debuglogfile:Nonelogfile_level:debug
+[2013-12-18 00:24:22,056] [instancetest] [DEBUG]: instancetest: Eulogger init test message. Init complete
+[2013-12-18 00:24:22,059] [instancetest] [DEBUG]: (show_self:1304): 
+-------------------------------------------------------------------------
+TESTCASE INFO:           
+----------              
+NAME:                     --->:  instancetest
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  []
+-------------------------------------------------------------------------
+[2013-12-18 00:24:22,063] [instancetest] [DEBUG]: (show_args:1325): 
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+args                      --->:  Namespace(config=None, config_file=None, configblocks=[], configfile=None, configsections=['MEMO', 'globals', 'instancetest'], cred_path='/root/.euca/', credpath='/root/.euca/', emi='emi-94CD36CC', html_anchors=False, ignoreblocks=[], instance_passsword=None, instance_user='root', keypair=None, log_level='debug', logfile=None, logfile_level='debug', password=None, region=None, tests=['BasicInstanceChecks', 'MetaData', 'Reboot'], use_color=False, user_data=None, vmtype='c1.medium', zone=None)
+config                    --->:  None
+config_file               --->:  None
+configblocks              --->:  []
+configfile                --->:  None
+configsections            --->:  ['MEMO', 'globals', 'instancetest']
+cred_path                 --->:  /root/.euca/
+credpath                  --->:  /root/.euca/
+debug_method              --->:  <bound method EutesterTestCase.debug of <eutester.eutestcase.EutesterTestCase testMethod=instancetest>>
+emi                       --->:  emi-94CD36CC
+html_anchors              --->:  False
+ignoreblocks              --->:  []
+instance_passsword        --->:  None
+instance_user             --->:  root
+keypair                   --->:  None
+log_level                 --->:  debug
+logfile                   --->:  None
+logfile_level             --->:  debug
+logger                    --->:  <eutester.eulogger.Eulogger object at 0x259a3d0>
+password                  --->:  None
+region                    --->:  None
+tests                     --->:  ['BasicInstanceChecks', 'MetaData', 'Reboot']
+use_color                 --->:  False
+user_data                 --->:  None
+vmtype                    --->:  c1.medium
+zone                      --->:  None
+-------------------------------------------------------------------------
+[2013-12-18 00:24:22,066] [instancetest] [DEBUG]: (do_with_args:1406): do_with_args: Method:__init__, Vars:('self', 'name', 'credpath', 'region', 'config_file', 'password', 'emi', 'zone', 'user_data', 'instance_user')
+[2013-12-18 00:24:22,069] [instancetest] [DEBUG]: (do_with_args:1421): create_with_args: running __init__({'config_file'= None, 'zone'= None, 'instance_user'= 'root', 'region'= None, 'emi'= 'emi-94CD36CC', 'credpath'= '/root/.euca/', 'user_data'= None, 'password'= None})
+setup_debugmethod: 
+testcasename:None
+log_level:None
+logfile:None
+logfile_level:debug
+Starting setup_debugmethod, name:InstanceBasics
+After populating... setup_debugmethod: testcasename:Nonelog_level:debuglogfile:Nonelogfile_level:debug
+[2013-12-18 00:24:22,070] [InstanceBasics] [DEBUG]: InstanceBasics: Eulogger init test message. Init complete
+[2013-12-18 00:24:22,073] [InstanceBasics] [DEBUG]: (setuptestcase:335): <pre>
+[2013-12-18 00:24:22,076] [InstanceBasics] [DEBUG]: (show_self:1304): 
+-------------------------------------------------------------------------
+TESTCASE INFO:           
+----------              
+NAME:                     --->:  InstanceBasics
+TEST LIST:                --->:  []
+CONFIG FILES:             --->:  []
+-------------------------------------------------------------------------
+[2013-12-18 00:24:22,079] [InstanceBasics] [DEBUG]: (show_args:1325): 
+-------------------------------------------------------------------------
+TEST ARGS:                       VALUE:
+----------                      ------
+debug_method              --->:  <bound method InstanceBasics.debug of <__main__.InstanceBasics testMethod=InstanceBasics>>
+logger                    --->:  <eutester.eulogger.Eulogger object at 0x259a4d0>
+-------------------------------------------------------------------------
+[2013-12-18 00:24:22,080] [EUCAOPS] [DEBUG]: EUCAOPS: Eulogger init test message. Init complete
+[2013-12-18 00:24:22,080] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:131)Starting method: setup_ec2_connection(self, endpoint=10.104.1.210, aws_access_key_id=AKI7I05T1P7US34SGHT9, aws_secret_access_key=mLUodXtFQzGbRB6ziBYTsD9MNfM07IE0UtPiADTr, is_secure=False, host=None, region=None, path=/services/Eucalyptus, port=8773, APIVersion=2011-01-01, boto_debug=0)
+[2013-12-18 00:24:22,080] [EUCAOPS] [DEBUG]: Attempting to create ec2 connection to 10.104.1.210:8773/services/Eucalyptus
+[2013-12-18 00:24:22,081] [EUCAOPS] [DEBUG]: Attempting to create IAM connection to 10.104.1.210:8773/services/Euare
+[2013-12-18 00:24:22,082] [EUCAOPS] [DEBUG]: Attempting to create STS connection to 10.104.1.210:8773/services/Eucalyptus
+[2013-12-18 00:24:22,082] [EUCAOPS] [DEBUG]: 
+--->(cwops.py:122)Starting method: setup_cw_connection(self, endpoint=10.104.1.210, aws_access_key_id=AKI7I05T1P7US34SGHT9, aws_secret_access_key=mLUodXtFQzGbRB6ziBYTsD9MNfM07IE0UtPiADTr, is_secure=False, host=None, region=None, path=/services/CloudWatch, port=8773, boto_debug=0)
+[2013-12-18 00:24:22,082] [EUCAOPS] [DEBUG]: Attempting to create cloud watch connection to 10.104.1.210:8773/services/CloudWatch
+[2013-12-18 00:24:22,083] [EUCAOPS] [DEBUG]: Unable to create S3 connection because of: 'Eucaops' object has no attribute 'service_manager'
+[2013-12-18 00:24:22,083] [EUCAOPS] [DEBUG]: 
+--->(asops.py:94)Starting method: setup_as_connection(self, endpoint=10.104.1.210, aws_access_key_id=AKI7I05T1P7US34SGHT9, aws_secret_access_key=mLUodXtFQzGbRB6ziBYTsD9MNfM07IE0UtPiADTr, is_secure=False, host=None, region=None, path=/services/AutoScaling, port=8773, boto_debug=0)
+[2013-12-18 00:24:22,083] [EUCAOPS] [DEBUG]: Attempting to create auto scale connection to 10.104.1.210:8773/services/AutoScaling
+[2013-12-18 00:24:22,083] [EUCAOPS] [DEBUG]: 
+--->(elbops.py:90)Starting method: setup_elb_connection(self, endpoint=10.104.1.210, aws_access_key_id=AKI7I05T1P7US34SGHT9, aws_secret_access_key=mLUodXtFQzGbRB6ziBYTsD9MNfM07IE0UtPiADTr, is_secure=False, host=None, region=None, path=/services/LoadBalancing, port=8773, boto_debug=0)
+[2013-12-18 00:24:22,083] [EUCAOPS] [DEBUG]: Attempting to create load balancer connection to 10.104.1.210:8773/services/LoadBalancing
+[2013-12-18 00:24:22,084] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:365)Starting method: add_group(self, group_name=group-1387355062.08, description=None, fail_if_exists=False)
+[2013-12-18 00:24:22,084] [EUCAOPS] [DEBUG]: Looking up group group-1387355062.08
+[2013-12-18 00:24:22,150] [EUCAOPS] [DEBUG]: Creating Security Group: group-1387355062.08
+[2013-12-18 00:24:22,291] [EUCAOPS] [DEBUG]: Found matching security group for name:group-1387355062.08 and id:None
+[2013-12-18 00:24:22,291] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:425)Starting method: authorize_group_by_name(self, group_name=group-1387355062.08, port=22, protocol=tcp, cidr_ip=0.0.0.0/0, src_security_group=None, src_security_group_name=None, src_security_group_owner_id=None, force_args=False)
+[2013-12-18 00:24:22,291] [EUCAOPS] [DEBUG]: Attempting authorization of group-1387355062.08 on port 22 tcp
+[2013-12-18 00:24:22,364] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:425)Starting method: authorize_group_by_name(self, group_name=group-1387355062.08, port=-1, protocol=icmp, cidr_ip=0.0.0.0/0, src_security_group=None, src_security_group_name=None, src_security_group_owner_id=None, force_args=False)
+[2013-12-18 00:24:22,364] [EUCAOPS] [DEBUG]: Attempting authorization of group-1387355062.08 on port -1 icmp
+[2013-12-18 00:24:22,446] [EUCAOPS] [DEBUG]: Looking up keypair keypair-1387355062.45
+[2013-12-18 00:24:22,481] [EUCAOPS] [DEBUG]: Creating keypair: keypair-1387355062.45
+Creating testunit:BasicInstanceChecks, args:
+[2013-12-18 00:24:22,750] [instancetest] [DEBUG]: (populate_testunit_with_args:1343): Attempting to populate testunit:BasicInstanceChecks, with testcase.args...
+[2013-12-18 00:24:22,753] [instancetest] [DEBUG]: (populate_testunit_with_args:1351): Testunit keyword args:{}
+[2013-12-18 00:24:22,757] [instancetest] [DEBUG]: (populate_testunit_with_args:1356): Got method args:('self',)
+[2013-12-18 00:24:22,760] [instancetest] [DEBUG]: (populate_testunit_with_args:1364): test unit total args:{}
+Creating testunit:MetaData, args:
+[2013-12-18 00:24:22,763] [instancetest] [DEBUG]: (populate_testunit_with_args:1343): Attempting to populate testunit:MetaData, with testcase.args...
+[2013-12-18 00:24:22,767] [instancetest] [DEBUG]: (populate_testunit_with_args:1351): Testunit keyword args:{}
+[2013-12-18 00:24:22,770] [instancetest] [DEBUG]: (populate_testunit_with_args:1356): Got method args:('self',)
+[2013-12-18 00:24:22,774] [instancetest] [DEBUG]: (populate_testunit_with_args:1364): test unit total args:{}
+Creating testunit:Reboot, args:
+[2013-12-18 00:24:22,777] [instancetest] [DEBUG]: (populate_testunit_with_args:1343): Attempting to populate testunit:Reboot, with testcase.args...
+[2013-12-18 00:24:22,780] [instancetest] [DEBUG]: (populate_testunit_with_args:1351): Testunit keyword args:{}
+[2013-12-18 00:24:22,784] [instancetest] [DEBUG]: (populate_testunit_with_args:1356): Got method args:('self', 'zone')
+[2013-12-18 00:24:22,787] [instancetest] [DEBUG]: (populate_testunit_with_args:1364): test unit total args:{}
+[2013-12-18 00:24:22,790] [instancetest] [DEBUG]: (populate_testunit_with_args:1370): Found matching arg for:zone
+[2013-12-18 00:24:22,794] [instancetest] [DEBUG]: (print_test_unit_startmsg:860): 
+-------------------------------------------------------------------------
+STARTING TESTUNIT: BasicInstanceChecks
+METHOD:BasicInstanceChecks, TEST DESCRIPTION:
+
+        This Case Was Developed To Run Through A Series Of Basic Instance Tests.
+             The Tests Are As Follows:
+                   - Execute Run_Instances Command
+                   - Make Sure That Public Dns Name And Private Ip Aren'T The Same
+                       (This Is For Managed/Managed-Novlan Networking Modes)
+                   - Test To See If Instance Is Ping-Able
+                   - Test To Make Sure That Instance Is Accessible Via Ssh
+                       (Ssh Into Instance And Run Basic Ls Command)
+             If Any Of These Tests Fail, The Test Case Will Error Out, Logging The Results.
+        
+End on Failure:False
+Passing ARGS:""
+Running list method: "BasicInstanceChecks()"
+-------------------------------------------------------------------------
+[2013-12-18 00:24:22,794] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:2382)Starting method: run_instance(self, image=emi-94CD36CC, keypair=keypair-1387355062.45, group=group-1387355062.08, type=None, zone=cloud34, min=1, max=1, user_data=None, private_addressing=False, username=root, password=None, is_reachable=True, monitoring_enabled=False, timeout=480)
+[2013-12-18 00:24:22,794] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:1941)Starting method: get_images(self, emi=emi-94CD36CC, root_device_type=None, root_device_name=None, virtualization_type=None, location=None, state=available, arch=None, owner_id=None, filters=None, not_location=None, max_count=1)
+[2013-12-18 00:24:22,885] [EUCAOPS] [DEBUG]: Got 1 total images emi-94CD36CC, now filtering...
+[2013-12-18 00:24:22,885] [EUCAOPS] [DEBUG]: Returning image:emi-94CD36CC
+[2013-12-18 00:24:22,885] [EUCAOPS] [DEBUG]: Attempting to run instance-store image Image:emi-94CD36CC in group group-1387355062.08
+[2013-12-18 00:24:23,153] [EUCAOPS] [DEBUG]: Beginning poll loop for the 1 instance found in [Instance:i-171C429F]
+[2013-12-18 00:24:23,153] [EUCAOPS] [DEBUG]: Beginning poll loop for instance Instance:i-171C429F to go to running
+[2013-12-18 00:24:23,287] [EUCAOPS] [DEBUG]: Instance(i-171C429F) State(pending), elapsed:0/480
+[2013-12-18 00:24:33,414] [EUCAOPS] [DEBUG]: Instance(i-171C429F) State(pending), elapsed:10/480
+[2013-12-18 00:24:43,555] [EUCAOPS] [DEBUG]: Instance(i-171C429F) State(pending), elapsed:20/480
+[2013-12-18 00:24:53,690] [EUCAOPS] [DEBUG]: Instance(i-171C429F) State(running) time elapsed (30)
+[2013-12-18 00:24:53,690] [EUCAOPS] [DEBUG]: Instance:i-171C429F is now in running
+[2013-12-18 00:24:53,690] [EUCAOPS] [DEBUG]: Instance i-171C429F now in running state  in zone: cloud34
+[2013-12-18 00:24:53,690] [EUCAOPS] [DEBUG]: Instance:i-171C429F got Public IP: 10.104.3.11 Private IP: 192.168.254.23 Public DNS Name: euca-10-104-3-11.eucalyptus.localhost Private DNS Name: euca-192-168-254-23.eucalyptus.internal
+[2013-12-18 00:24:53,690] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:3039)Starting method: wait_for_valid_ip(self, instances=Instance:i-171C429F, regex=0.0.0.0, poll_interval=10, timeout=60)
+[2013-12-18 00:24:53,817] [EUCAOPS] [DEBUG]: i-171C429F: FOUND public ip. Current:10.104.3.11, elapsed:0/60
+[2013-12-18 00:24:53,817] [EUCAOPS] [DEBUG]: Check_system_for_dup_ip starting...
+[2013-12-18 00:24:54,069] [EUCAOPS] [DEBUG]: Checking reservation: r-78D23C23
+[2013-12-18 00:24:54,069] [EUCAOPS] [DEBUG]: Checking instance i-692D4081          , state:running              pubip:10.104.3.10          privip:192.168.235.49      
+[2013-12-18 00:24:54,070] [EUCAOPS] [DEBUG]: Checking reservation: r-542C425A
+[2013-12-18 00:24:54,070] [EUCAOPS] [DEBUG]: Checking instance i-E977425C          , state:running              pubip:10.104.3.1           privip:192.168.235.60      
+[2013-12-18 00:24:54,070] [EUCAOPS] [DEBUG]: Checking reservation: r-523E413B
+[2013-12-18 00:24:54,070] [EUCAOPS] [DEBUG]: Checking instance i-171C429F          , state:running              pubip:10.104.3.11          privip:192.168.254.23      
+[2013-12-18 00:24:54,070] [EUCAOPS] [DEBUG]: Done with check_system_for_dup_ip
+[2013-12-18 00:24:54,070] [EUCAOPS] [DEBUG]: Wait_for_valid_ip done
+[2013-12-18 00:24:54,070] [EUCAOPS] [DEBUG]: Attempting to ping 10.104.3.11
+[2013-12-18 00:24:54,074] [EUCAOPS] [DEBUG]: Was able to ping address
+[2013-12-18 00:24:54,075] [EUCAOPS] [DEBUG]: Converting Reservation:r-523E413B into euinstances
+[2013-12-18 00:24:54,118] [i-171C429F] [DEBUG]: i-171C429F: Eulogger init test message. Init complete
+[2013-12-18 00:24:54,319] [EUCAOPS] [DEBUG]: 
+--->(euzone.py:70)Starting method: get_all_vm_type_info(self)
+[2013-12-18 00:24:54,392] [i-171C429F] [DEBUG]: Attempting to reconnect_to_instance:i-171C429F
+[2013-12-18 00:24:54,526] [i-171C429F] [DEBUG]: reset_ssh_connection for:i-171C429F
+[2013-12-18 00:24:54,526] [i-171C429F] [DEBUG]: Connecting ssh i-171C429F
+[2013-12-18 00:24:54,526] [i-171C429F] [DEBUG]: SSH connection has hostname:10.104.3.11 user:root and keypath: /root/eutester/testcases/cloud_user/instances/keypair-1387355062.45.pem
+[2013-12-18 00:24:54,611] [i-171C429F] [DEBUG]: SSH connection attempt(1 of 3), host:'root@10.104.3.11', using ipv4:10.104.3.11, thru proxy:'None'
+[2013-12-18 00:24:55,012] [i-171C429F] [DEBUG]: SSH - Connected to 10.104.3.11
+[2013-12-18 00:24:55,012] [i-171C429F] [DEBUG]: Try some sys...
+[2013-12-18 00:24:55,012] [i-171C429F] [DEBUG]: [root@10.104.3.11]# 
+[2013-12-18 00:24:55,174] [i-171C429F] [DEBUG]: 
+
+[2013-12-18 00:24:55,174] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:55,174] [i-171C429F] [DEBUG]: [root@10.104.3.11]# dmesg | grep vda
+[2013-12-18 00:24:55,235] [i-171C429F] [DEBUG]: 
+[    0.000000] Command line: root=/dev/vda1 console=ttyS0
+[    0.000000] Kernel command line: root=/dev/vda1 console=ttyS0
+[    0.494487] systemd[1]: Expecting device dev-vda1.device...
+[    0.658069]  vda: vda1 vda2 vda3
+[    1.139630] EXT4-fs (vda1): mounted filesystem with ordered data mode. Opts: (null)
+[    1.375591] SELinux: initialized (dev vda1, type ext4), uses xattr
+[    1.630799] EXT4-fs (vda1): re-mounted. Opts: (null)
+[    9.099477] Adding 524284k swap on /dev/vda3.  Priority:-1 extents:1 across:524284k FS
+[    9.117717] EXT4-fs (vda2): mounting ext3 file system using the ext4 subsystem
+[    9.121692] EXT4-fs (vda2): mounted filesystem with ordered data mode. Opts: (null)
+[    9.123193] SELinux: initialized (dev vda2, type ext3), uses xattr
+
+[2013-12-18 00:24:55,235] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:55,236] [i-171C429F] [DEBUG]: [root@10.104.3.11]# dmesg | grep xvda
+[2013-12-18 00:24:55,296] [i-171C429F] [DEBUG]: 
+
+[2013-12-18 00:24:55,296] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:55,297] [i-171C429F] [DEBUG]: []
+[2013-12-18 00:24:55,297] [i-171C429F] [DEBUG]: [root@10.104.3.11]# dmesg | grep sda
+[2013-12-18 00:24:55,358] [i-171C429F] [DEBUG]: 
+
+[2013-12-18 00:24:55,358] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:55,358] [i-171C429F] [DEBUG]: []
+[2013-12-18 00:24:55,358] [EUCAOPS] [DEBUG]: Beginning poll loop for the 1 instance found in [Instance:i-171C429F]
+[2013-12-18 00:24:55,358] [EUCAOPS] [DEBUG]: Beginning poll loop for instance Instance:i-171C429F to go to running
+[2013-12-18 00:24:55,496] [EUCAOPS] [DEBUG]: Instance(i-171C429F) State(running) time elapsed (0)
+[2013-12-18 00:24:55,496] [EUCAOPS] [DEBUG]: Instance:i-171C429F is now in running
+[2013-12-18 00:24:55,496] [EUCAOPS] [DEBUG]: Attempting to ping 10.104.3.11
+[2013-12-18 00:24:55,500] [EUCAOPS] [DEBUG]: Was able to ping address
+[2013-12-18 00:24:55,501] [i-171C429F] [DEBUG]: [root@10.104.3.11]# ls -1 /dev/vda2
+[2013-12-18 00:24:55,556] [i-171C429F] [DEBUG]: 
+/dev/vda2
+
+[2013-12-18 00:24:55,557] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:55,562] [instancetest] [DEBUG]: (endsuccess:696): 
+-------------------------------------------------------------------------
+- UNIT ENDED - BasicInstanceChecks
+-------------------------------------------------------------------------
+
+[2013-12-18 00:24:55,565] [instancetest] [DEBUG]: (run_test_case_list:800): RESULTS SUMMARY FOR 'instancetest':
+[2013-12-18 00:24:55,565] [instancetest] [DEBUG]: (run_test_case_list:800): 
+[2013-12-18 00:24:55,566] [instancetest] [DEBUG]: (run_test_case_list:800): ------------------------------------------------------
+[2013-12-18 00:24:55,566] [instancetest] [DEBUG]: (run_test_case_list:800): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2013-12-18 00:24:55,566] [instancetest] [DEBUG]: (run_test_case_list:800): ------------------------------------------------------
+[2013-12-18 00:24:55,566] [instancetest] [DEBUG]: (run_test_case_list:800): | 3       | 0       | 1       | 2       | 32
+[2013-12-18 00:24:55,566] [instancetest] [DEBUG]: (run_test_case_list:800): ------------------------------------------------------
+[2013-12-18 00:24:55,566] [instancetest] [DEBUG]: (run_test_case_list:800): 
+[2013-12-18 00:24:55,569] [instancetest] [DEBUG]: (print_test_unit_startmsg:860): 
+-------------------------------------------------------------------------
+STARTING TESTUNIT: MetaData
+METHOD:MetaData, TEST DESCRIPTION:
+
+        This Case Was Developed To Test The Metadata Service Of An Instance For Consistency.
+        The Following Meta-Data Attributes Are Tested:
+           - Public-Keys/0/Openssh-Key
+           - Security-Groups
+           - Instance-Id
+           - Local-Ipv4
+           - Public-Ipv4
+           - Ami-Id
+           - Ami-Launch-Index
+           - Reservation-Id
+           - Placement/Availability-Zone
+           - Kernel-Id
+           - Public-Hostname
+           - Local-Hostname
+           - Hostname
+           - Ramdisk-Id
+           - Instance-Type
+           - Any Bad Metadata That Shouldn'T Be Present.
+        Missing Nodes
+         ['Block-Device-Mapping/',  'Ami-Manifest-Path']
+        If Any Of These Tests Fail, The Test Case Will Error Out; Logging The Results.
+        
+End on Failure:False
+Passing ARGS:""
+Running list method: "MetaData()"
+-------------------------------------------------------------------------
+[2013-12-18 00:24:55,569] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/public-keys/0/openssh-key
+[2013-12-18 00:24:55,659] [i-171C429F] [DEBUG]: 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCC61syM3b5Gd7WwcOJbZIv5HMH2zD/7tkL73cZfFxQkdyzF7LTBQPDXsU3rNiPkcfiuU5ylbsXlfyUyMnlc77RJGRQ+AIm7P5aXQF2240Uv7mTtaXpNJrq2E0wK7B8sgl53r2r+91ay+LL59FWlr4PIgLJL+Uu6kxt7UdEecCkJOrZTUGqOM0KjHmSNIhycajapz8qOROz3wnMEIdgv8E0azmxNCjm+wp8qyTDGrCoanxNHTPrn5Fzi/qfg6IzvFPloxjzzylXiH4DAVp9G0CtHzU98FFlrOEygMfOaVGpYmu9MTxBRkRMULP9nW6tDqiU+5rLbRBL4bonet3OrBbD 331215544299@eucalyptus.keypair-1387355062.45
+[2013-12-18 00:24:55,709] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:55,710] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/security-groups
+[2013-12-18 00:24:55,787] [i-171C429F] [DEBUG]: 
+group-1387355062.08
+[2013-12-18 00:24:55,838] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:55,838] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/instance-id
+[2013-12-18 00:24:55,914] [i-171C429F] [DEBUG]: 
+i-171C429F
+[2013-12-18 00:24:55,965] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:55,966] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/local-ipv4
+[2013-12-18 00:24:56,043] [i-171C429F] [DEBUG]: 
+192.168.254.23
+[2013-12-18 00:24:56,094] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:56,094] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/public-ipv4
+[2013-12-18 00:24:56,173] [i-171C429F] [DEBUG]: 
+10.104.3.11
+[2013-12-18 00:24:56,224] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:56,224] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/ami-id
+[2013-12-18 00:24:56,309] [i-171C429F] [DEBUG]: 
+emi-94CD36CC
+[2013-12-18 00:24:56,360] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:56,360] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/ami-launch-index
+[2013-12-18 00:24:56,467] [i-171C429F] [DEBUG]: 
+0
+[2013-12-18 00:24:56,518] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:56,518] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/reservation-id
+[2013-12-18 00:24:56,608] [i-171C429F] [DEBUG]: 
+r-523E413B
+[2013-12-18 00:24:56,659] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:56,659] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/placement/availability-zone
+[2013-12-18 00:24:56,745] [i-171C429F] [DEBUG]: 
+cloud34
+[2013-12-18 00:24:56,795] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:56,795] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/kernel-id
+[2013-12-18 00:24:56,887] [i-171C429F] [DEBUG]: 
+eki-8EF53A0E
+[2013-12-18 00:24:56,937] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:56,938] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/public-hostname
+[2013-12-18 00:24:57,017] [i-171C429F] [DEBUG]: 
+euca-10-104-3-11.eucalyptus.localhost
+[2013-12-18 00:24:57,068] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:57,068] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/local-hostname
+[2013-12-18 00:24:57,156] [i-171C429F] [DEBUG]: 
+euca-192-168-254-23.eucalyptus.internal
+[2013-12-18 00:24:57,206] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:57,207] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/hostname
+[2013-12-18 00:24:57,284] [i-171C429F] [DEBUG]: 
+euca-192-168-254-23.eucalyptus.internal
+[2013-12-18 00:24:57,335] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:57,335] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/ramdisk-id
+[2013-12-18 00:24:57,415] [i-171C429F] [DEBUG]: 
+eri-78C03455
+[2013-12-18 00:24:57,465] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:57,466] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/instance-type
+[2013-12-18 00:24:57,558] [i-171C429F] [DEBUG]: 
+m1.small
+[2013-12-18 00:24:57,608] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:57,609] [i-171C429F] [DEBUG]: [root@10.104.3.11]# curl http://169.254.169.254/latest/meta-data/foobar
+[2013-12-18 00:24:57,703] [i-171C429F] [DEBUG]: 
+<?xml version="1.0" encoding="iso-8859-1"?>
+[2013-12-18 00:24:57,754] [i-171C429F] [DEBUG]: 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>404 - Not Found</title>
+ </head>
+ <body>
+  <h1>404 - Not Found: failed to find meta-data/foobar</h1>
+  <pre>com.eucalyptus.context.ServiceDispatchException: Failed to send message String to service VmMetadata because: Component that caused exception is: DefaultJavaComponent{VmMetadata.component}. Message payload is of type: String
+Caused by: org.mule.component.ComponentException: Component that caused exception is: DefaultJavaComponent{VmMetadata.component}. Message payload is of type: String
+Caused by: java.util.NoSuchElementException: Failed to lookup path: foobar
+com.eucalyptus.context.ServiceDispatchException: Failed to send message String to service VmMetadata because: Component that caused exception is: DefaultJavaComponent{VmMetadata.component}. Message payload is of type: String
+	at com.eucalyptus.context.ServiceContext.send(ServiceContext.java:206)
+	at com.eucalyptus.ws.server.MetadataPipeline.handleUpstream(MetadataPipeline.java:161)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.SimpleChannelHandler.messageReceived(SimpleChannelHandler.java:142)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at com.eucalyptus.ws.server.NioServerHandler.messageReceived(NioServerHandler.java:132)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at com.eucalyptus.ws.Handlers$BootstrapStateCheck.handleUpstream(Handlers.java:237)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at com.eucalyptus.ws.Handlers$NioSslHandler.handleUpstream(Handlers.java:346)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:109)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:90)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at org.jboss.netty.handler.execution.MemoryAwareThreadPoolExecutor$MemoryAwareRunnable.run(MemoryAwareThreadPoolExecutor.java:622)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.mule.component.ComponentException: Component that caused exception is: DefaultJavaComponent{VmMetadata.component}. Message payload is of type: String
+	at org.mule.component.DefaultComponentLifecycleAdapter.invoke(DefaultComponentLifecycleAdapter.java:352)
+	at org.mule.component.AbstractJavaComponent.invokeComponentInstance(AbstractJavaComponent.java:86)
+	at org.mule.component.AbstractJavaComponent.doInvoke(AbstractJavaComponent.java:77)
+	at org.mule.component.AbstractComponent.invokeInternal(AbstractComponent.java:126)
+	at org.mule.component.AbstractComponent.access$000(AbstractComponent.java:61)
+	at org.mule.component.AbstractComponent$1$1.process(AbstractComponent.java:242)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:95)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.doProcess(InterceptingChainLifecycleWrapper.java:54)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.access$001(InterceptingChainLifecycleWrapper.java:26)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper$1.process(InterceptingChainLifecycleWrapper.java:70)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.process(InterceptingChainLifecycleWrapper.java:65)
+	at org.mule.component.AbstractComponent.process(AbstractComponent.java:160)
+	at org.mule.service.processor.ServiceInternalMessageProcessor.process(ServiceInternalMessageProcessor.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:106)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.process(AsyncInterceptingMessageProcessor.java:101)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:95)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:106)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.process(AbstractEnvelopeInterceptor.java:55)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:106)
+	at org.mule.lifecycle.processor.ProcessIfStartedWaitIfSyncPausedMessageProcessor.process(ProcessIfStartedWaitIfSyncPausedMessageProcessor.java:56)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:95)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.doProcess(InterceptingChainLifecycleWrapper.java:54)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.access$001(InterceptingChainLifecycleWrapper.java:26)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper$1.process(InterceptingChainLifecycleWrapper.java:70)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.process(InterceptingChainLifecycleWrapper.java:65)
+	at org.mule.service.AbstractService.sendEvent(AbstractService.java:517)
+	at org.mule.module.client.MuleClient.sendDirect(MuleClient.java:325)
+	at org.mule.module.client.MuleClient.sendDirect(MuleClient.java:289)
+	at com.eucalyptus.context.ServiceContext.send(ServiceContext.java:197)
+	... 40 more
+Caused by: java.util.NoSuchElementException: Failed to lookup path: foobar
+	at com.eucalyptus.compute.metadata.VmMetadata$3.apply(VmMetadata.java:105)
+	at com.eucalyptus.compute.metadata.VmMetadata$3.apply(VmMetadata.java:98)
+	at com.eucalyptus.compute.metadata.VmMetadata.handle(VmMetadata.java:174)
+	at sun.reflect.GeneratedMethodAccessor888.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.mule.model.resolvers.AbstractEntryPointResolver.invokeMethod(AbstractEntryPointResolver.java:151)
+	at org.mule.model.resolvers.ReflectionEntryPointResolver.invoke(ReflectionEntryPointResolver.java:121)
+	at org.mule.model.resolvers.DefaultEntryPointResolverSet.invoke(DefaultEntryPointResolverSet.java:39)
+	at org.mule.component.DefaultComponentLifecycleAdapter.invoke(DefaultComponentLifecycleAdapter.java:343)
+	... 96 more
+Caused by: org.mule.component.ComponentException: Component that caused exception is: DefaultJavaComponent{VmMetadata.component}. Message payload is of type: String
+	at org.mule.component.DefaultComponentLifecycleAdapter.invoke(DefaultComponentLifecycleAdapter.java:352)
+	at org.mule.component.AbstractJavaComponent.invokeComponentInstance(AbstractJavaComponent.java:86)
+	at org.mule.component.AbstractJavaComponent.doInvoke(AbstractJavaComponent.java:77)
+	at org.mule.component.AbstractComponent.invokeInternal(AbstractComponent.java:126)
+	at org.mule.component.AbstractComponent.access$000(AbstractComponent.java:61)
+	at org.mule.component.AbstractComponent$1$1.process(AbstractComponent.java:242)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:95)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.doProcess(InterceptingChainLifecycleWrapper.java:54)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.access$001(InterceptingChainLifecycleWrapper.java:26)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper$1.process(InterceptingChainLifecycleWrapper.java:70)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.process(InterceptingChainLifecycleWrapper.java:65)
+	at org.mule.component.AbstractComponent.process(AbstractComponent.java:160)
+	at org.mule.service.processor.ServiceInternalMessageProcessor.process(ServiceInternalMessageProcessor.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:106)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.process(AsyncInterceptingMessageProcessor.java:101)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:95)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:106)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.process(AbstractEnvelopeInterceptor.java:55)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:106)
+	at org.mule.lifecycle.processor.ProcessIfStartedWaitIfSyncPausedMessageProcessor.process(ProcessIfStartedWaitIfSyncPausedMessageProcessor.java:56)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:95)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.doProcess(InterceptingChainLifecycleWrapper.java:54)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.access$001(InterceptingChainLifecycleWrapper.java:26)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper$1.process(InterceptingChainLifecycleWrapper.java:70)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.process(InterceptingChainLifecycleWrapper.java:65)
+	at org.mule.service.AbstractService.sendEvent(AbstractService.java:517)
+	at org.mule.module.client.MuleClient.sendDirect(MuleClient.java:325)
+	at org.mule.module.client.MuleClient.sendDirect(MuleClient.java:289)
+	at com.eucalyptus.context.ServiceContext.send(ServiceContext.java:197)
+	at com.eucalyptus.ws.server.MetadataPipeline.handleUpstream(MetadataPipeline.java:161)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.SimpleChannelHandler.messageReceived(SimpleChannelHandler.java:142)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at com.eucalyptus.ws.server.NioServerHandler.messageReceived(NioServerHandler.java:132)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at com.eucalyptus.ws.Handlers$BootstrapStateCheck.handleUpstream(Handlers.java:237)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at com.eucalyptus.ws.Handlers$NioSslHandler.handleUpstream(Handlers.java:346)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:109)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:90)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at org.jboss.netty.handler.execution.MemoryAwareThreadPoolExecutor$MemoryAwareRunnable.run(MemoryAwareThreadPoolExecutor.java:622)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.util.NoSuchElementException: Failed to lookup path: foobar
+	at com.eucalyptus.compute.metadata.VmMetadata$3.apply(VmMetadata.java:105)
+	at com.eucalyptus.compute.metadata.VmMetadata$3.apply(VmMetadata.java:98)
+	at com.eucalyptus.compute.metadata.VmMetadata.handle(VmMetadata.java:174)
+	at sun.reflect.GeneratedMethodAccessor888.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.mule.model.resolvers.AbstractEntryPointResolver.invokeMethod(AbstractEntryPointResolver.java:151)
+	at org.mule.model.resolvers.ReflectionEntryPointResolver.invoke(ReflectionEntryPointResolver.java:121)
+	at org.mule.model.resolvers.DefaultEntryPointResolverSet.invoke(DefaultEntryPointResolverSet.java:39)
+	at org.mule.component.DefaultComponentLifecycleAdapter.invoke(DefaultComponentLifecycleAdapter.java:343)
+	... 96 more
+Caused by: java.util.NoSuchElementException: Failed to lookup path: foobar
+	at com.eucalyptus.compute.metadata.VmMetadata$3.apply(VmMetadata.java:105)
+	at com.eucalyptus.compute.metadata.VmMetadata$3.apply(VmMetadata.java:98)
+	at com.eucalyptus.compute.metadata.VmMetadata.handle(VmMetadata.java:174)
+	at sun.reflect.GeneratedMethodAccessor888.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.mule.model.resolvers.AbstractEntryPointResolver.invokeMethod(AbstractEntryPointResolver.java:151)
+	at org.mule.model.resolvers.ReflectionEntryPointResolver.invoke(ReflectionEntryPointResolver.java:121)
+	at org.mule.model.resolvers.DefaultEntryPointResolverSet.invoke(DefaultEntryPointResolverSet.java:39)
+	at org.mule.component.DefaultComponentLifecycleAdapter.invoke(DefaultComponentLifecycleAdapter.java:343)
+	at org.mule.component.AbstractJavaComponent.invokeComponentInstance(AbstractJavaComponent.java:86)
+	at org.mule.component.AbstractJavaComponent.doInvoke(AbstractJavaComponent.java:77)
+	at org.mule.component.AbstractComponent.invokeInternal(AbstractComponent.java:126)
+	at org.mule.component.AbstractComponent.access$000(AbstractComponent.java:61)
+	at org.mule.component.AbstractComponent$1$1.process(AbstractComponent.java:242)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:95)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.doProcess(InterceptingChainLifecycleWrapper.java:54)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.access$001(InterceptingChainLifecycleWrapper.java:26)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper$1.process(InterceptingChainLifecycleWrapper.java:70)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.process(InterceptingChainLifecycleWrapper.java:65)
+	at org.mule.component.AbstractComponent.process(AbstractComponent.java:160)
+	at org.mule.service.processor.ServiceInternalMessageProcessor.process(ServiceInternalMessageProcessor.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:106)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.process(AsyncInterceptingMessageProcessor.java:101)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:95)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:106)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.process(AbstractEnvelopeInterceptor.java:55)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:106)
+	at org.mule.lifecycle.processor.ProcessIfStartedWaitIfSyncPausedMessageProcessor.process(ProcessIfStartedWaitIfSyncPausedMessageProcessor.java:56)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:95)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.doProcess(InterceptingChainLifecycleWrapper.java:54)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:70)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.access$001(InterceptingChainLifecycleWrapper.java:26)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper$1.process(InterceptingChainLifecycleWrapper.java:70)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:61)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:47)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.process(InterceptingChainLifecycleWrapper.java:65)
+	at org.mule.service.AbstractService.sendEvent(AbstractService.java:517)
+	at org.mule.module.client.MuleClient.sendDirect(MuleClient.java:325)
+	at org.mule.module.client.MuleClient.sendDirect(MuleClient.java:289)
+	at com.eucalyptus.context.ServiceContext.send(ServiceContext.java:197)
+	at com.eucalyptus.ws.server.MetadataPipeline.handleUpstream(MetadataPipeline.java:161)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.SimpleChannelHandler.messageReceived(SimpleChannelHandler.java:142)
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at com.eucalyptus.ws.server.NioServerHandler.messageReceived(NioServerHandler.java:132)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at com.eucalyptus.ws.Handlers$BootstrapStateCheck.handleUpstream(Handlers.java:237)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleUpstream(ChunkedWriteHandler.java:142)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296)
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536)
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435)
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791)
+	at com.eucalyptus.ws.Handlers$NioSslHandler.handleUpstream(Handlers.java:346)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564)
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268)
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255)
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:109)
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:312)
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:90)
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178)
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)
+	at org.jboss.netty.handler.execution.MemoryAwareThreadPoolExecutor$MemoryAwareRunnable.run(MemoryAwareThreadPoolExecutor.java:622)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+</pre>
+ </body>
+</html>
+
+[2013-12-18 00:24:57,756] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:24:57,762] [instancetest] [DEBUG]: (endsuccess:696): 
+-------------------------------------------------------------------------
+- UNIT ENDED - MetaData
+-------------------------------------------------------------------------
+
+[2013-12-18 00:24:57,769] [instancetest] [DEBUG]: (run_test_case_list:800): RESULTS SUMMARY FOR 'instancetest':
+[2013-12-18 00:24:57,769] [instancetest] [DEBUG]: (run_test_case_list:800): 
+[2013-12-18 00:24:57,769] [instancetest] [DEBUG]: (run_test_case_list:800): ------------------------------------------------------
+[2013-12-18 00:24:57,769] [instancetest] [DEBUG]: (run_test_case_list:800): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2013-12-18 00:24:57,769] [instancetest] [DEBUG]: (run_test_case_list:800): ------------------------------------------------------
+[2013-12-18 00:24:57,769] [instancetest] [DEBUG]: (run_test_case_list:800): | 3       | 0       | 2       | 1       | 34
+[2013-12-18 00:24:57,769] [instancetest] [DEBUG]: (run_test_case_list:800): ------------------------------------------------------
+[2013-12-18 00:24:57,769] [instancetest] [DEBUG]: (run_test_case_list:800): 
+[2013-12-18 00:24:57,773] [instancetest] [DEBUG]: (print_test_unit_startmsg:860): 
+-------------------------------------------------------------------------
+STARTING TESTUNIT: Reboot
+METHOD:Reboot, TEST DESCRIPTION:
+
+        This Case Was Developed To Test Ip Connectivity And Volume Attachment After
+        Instance Reboot.  The Following Tests Are Done For This Test Case:
+                   - Creates A 1 Gig Ebs Volume, Then Attach Volume
+                   - Reboot Instance
+                   - Attempts To Connect To Instance Via Ssh
+                   - Checks To See If Ebs Volume Is Attached
+                   - Detaches Volume
+                   - Deletes Volume
+        If Any Of These Tests Fail, The Test Case Will Error Out; Logging The Results.
+        
+End on Failure:False
+Passing ARGS:
+---------------------
+zone : None
+---------------------
+Running list method: "Reboot(zone:None)"
+-------------------------------------------------------------------------
+KWARG:zone = None
+[2013-12-18 00:24:57,773] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:581)Starting method: create_volume(self, zone=cloud34, size=1, eof=True, snapshot=None, timeout=0, poll_interval=10, timepergig=180)
+[2013-12-18 00:24:57,773] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:600)Starting method: create_volumes(self, zone=cloud34, size=1, count=1, mincount=1, eof=True, monitor_to_state=available, delay=0, snapshot=None, timeout=0, poll_interval=10, timepergig=180)
+[2013-12-18 00:24:57,773] [EUCAOPS] [DEBUG]: Sending create volume request, count:1
+[2013-12-18 00:24:58,038] [EUCAOPS] [DEBUG]: 1/1 requests for volume creation succeeded.
+[2013-12-18 00:24:58,038] [EUCAOPS] [DEBUG]: 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+VOL_ID         |ORDER|LASTSTATUS|TESTSTATUS|   AGE@STATUS  |SIZE|   FROM_SNAP   |             MD5_SUM             |MD5LEN|      ZONE     |INSTANCE
+-----------------------------------------------------------------------------------------------------------------------------------------------
+vol-11AE3DFC   |  0  | creating | creating |       0       | 1  |      None     |               None              | 1024 |    cloud34    |None
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+[2013-12-18 00:24:58,038] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:699)Starting method: monitor_created_euvolumes_to_state(self, volumes=[Volume:vol-11AE3DFC], eof=True, mincount=1, state=available, poll_interval=10, deletefailed=True, size=1, timepergig=180)
+[2013-12-18 00:24:58,038] [EUCAOPS] [DEBUG]: Monitoring 1 volumes for at least 1 to reach state:available
+[2013-12-18 00:24:58,038] [EUCAOPS] [DEBUG]: Monitoring 1 volumes for at least 1 to reach state:available
+[2013-12-18 00:24:58,038] [EUCAOPS] [DEBUG]: Polling 1 volumes for status:"available"...
+[2013-12-18 00:24:58,222] [EUCAOPS] [DEBUG]: Volume #0 (vol-11AE3DFC) State(creating), seconds elapsed: 0/180
+[2013-12-18 00:24:58,222] [EUCAOPS] [DEBUG]: ----Time Elapsed:0, Waiting on 1 volumes to enter state:available-----
+[2013-12-18 00:25:08,392] [EUCAOPS] [DEBUG]: Volume #0 (vol-11AE3DFC) State(available), seconds elapsed: 10/180
+[2013-12-18 00:25:08,392] [EUCAOPS] [DEBUG]: ----Time Elapsed:10, Waiting on 0 volumes to enter state:available-----
+[2013-12-18 00:25:08,393] [EUCAOPS] [DEBUG]: 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+VOL_ID         |ORDER|LASTSTATUS|TESTSTATUS|   AGE@STATUS  |SIZE|   FROM_SNAP   |             MD5_SUM             |MD5LEN|      ZONE     |INSTANCE
+-----------------------------------------------------------------------------------------------------------------------------------------------
+vol-11AE3DFC   |  0  |available |available |     10.62     | 1  |      None     |               None              | 1024 |    cloud34    |None
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+[2013-12-18 00:25:08,393] [i-171C429F] [DEBUG]: Attempting to attach volume:vol-11AE3DFC to instance:i-171C429F to dev:None
+[2013-12-18 00:25:08,393] [i-171C429F] [DEBUG]: [root@10.104.3.11]# ls -1 /dev/ | grep '^sd\|^vd\|^xd\|^xvd'
+[2013-12-18 00:25:08,448] [i-171C429F] [DEBUG]: 
+vda
+vda1
+vda2
+vda3
+
+[2013-12-18 00:25:08,448] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:08,448] [i-171C429F] [DEBUG]: [root@10.104.3.11]# dmesg | grep vda
+[2013-12-18 00:25:08,505] [i-171C429F] [DEBUG]: 
+[    0.000000] Command line: root=/dev/vda1 console=ttyS0
+[    0.000000] Kernel command line: root=/dev/vda1 console=ttyS0
+[    0.494487] systemd[1]: Expecting device dev-vda1.device...
+[    0.658069]  vda: vda1 vda2 vda3
+[    1.139630] EXT4-fs (vda1): mounted filesystem with ordered data mode. Opts: (null)
+[    1.375591] SELinux: initialized (dev vda1, type ext4), uses xattr
+[    1.630799] EXT4-fs (vda1): re-mounted. Opts: (null)
+[    9.099477] Adding 524284k swap on /dev/vda3.  Priority:-1 extents:1 across:524284k FS
+[    9.117717] EXT4-fs (vda2): mounting ext3 file system using the ext4 subsystem
+[    9.121692] EXT4-fs (vda2): mounted filesystem with ordered data mode. Opts: (null)
+[    9.123193] SELinux: initialized (dev vda2, type ext3), uses xattr
+
+[2013-12-18 00:25:08,505] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:08,505] [i-171C429F] [DEBUG]: [root@10.104.3.11]# dmesg | grep xvda
+[2013-12-18 00:25:08,562] [i-171C429F] [DEBUG]: 
+
+[2013-12-18 00:25:08,562] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:08,562] [i-171C429F] [DEBUG]: []
+[2013-12-18 00:25:08,562] [i-171C429F] [DEBUG]: [root@10.104.3.11]# dmesg | grep sda
+[2013-12-18 00:25:08,616] [i-171C429F] [DEBUG]: 
+
+[2013-12-18 00:25:08,617] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:08,617] [i-171C429F] [DEBUG]: []
+[2013-12-18 00:25:08,617] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:2284)Starting method: get_volumes(self, volume_id=vol-, status=None, attached_instance=i-171C429F, attached_dev=None, snapid=None, zone=None, filters=None, minsize=1, maxsize=None, md5=None, eof=False)
+[2013-12-18 00:25:09,182] [i-171C429F] [DEBUG]: Instance:i-171C429F returning available cloud scsi dev:/dev/vde
+[2013-12-18 00:25:09,182] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:1095)Starting method: attach_volume(self, instance=Instance:i-171C429F, volume=Volume:vol-11AE3DFC, device_path=/dev/vde, pause=10, timeout=180)
+[2013-12-18 00:25:09,182] [EUCAOPS] [DEBUG]: Sending attach for Volume:vol-11AE3DFC to be attached to Instance:i-171C429F at requested device  /dev/vde
+[2013-12-18 00:25:09,862] [EUCAOPS] [DEBUG]: Volume:vol-11AE3DFC, state:in-use, attached status:attaching, elapsed:0/180
+[2013-12-18 00:25:09,862] [EUCAOPS] [DEBUG]: Sleeping for 10 seconds
+[2013-12-18 00:25:20,029] [EUCAOPS] [DEBUG]: Volume:vol-11AE3DFC, Attached: in-use - attached, elapsed:10
+[2013-12-18 00:25:20,029] [i-171C429F] [DEBUG]: Checking for volume attachment on guest, elapsed time(0)
+[2013-12-18 00:25:20,029] [i-171C429F] [DEBUG]: [root@10.104.3.11]# ls -1 /dev/ | grep '^sd\|^vd\|^xd\|^xvd'
+[2013-12-18 00:25:20,084] [i-171C429F] [DEBUG]: 
+vda
+vda1
+vda2
+vda3
+vdb
+
+[2013-12-18 00:25:20,084] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:20,085] [i-171C429F] [DEBUG]: dev_list_after:vda vda1 vda2 vda3 vdb
+[2013-12-18 00:25:20,085] [i-171C429F] [DEBUG]: Volume:vol-11AE3DFC guest device:/dev/vdb
+[2013-12-18 00:25:20,085] [i-171C429F] [DEBUG]: vol-11AE3DFC Requested dev:/dev/vde, attached to guest device:/dev/vdb
+[2013-12-18 00:25:20,085] [i-171C429F] [DEBUG]: vol-11AE3DFCFound attached to guest at dev:/dev/vdb, after elapsed:0
+[2013-12-18 00:25:20,085] [i-171C429F] [DEBUG]: [root@10.104.3.11]# head -c 32 /dev/vdb | xargs -0 printf %s | wc -c
+[2013-12-18 00:25:20,142] [i-171C429F] [DEBUG]: 
+0
+
+[2013-12-18 00:25:20,142] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:20,142] [i-171C429F] [DEBUG]: 
+--->(euinstance.py:840)Starting method: random_fill_volume(self, euvolume=Volume:vol-11AE3DFC, srcdev=None, length=32, timepergig=90)
+[2013-12-18 00:25:20,143] [i-171C429F] [DEBUG]: [root@10.104.3.11]# ls /dev/vdb
+[2013-12-18 00:25:20,212] [i-171C429F] [DEBUG]: 
+/dev/vdb
+
+[2013-12-18 00:25:20,212] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:20,212] [i-171C429F] [DEBUG]: exit code:0
+[2013-12-18 00:25:20,212] [i-171C429F] [DEBUG]: File /dev/vdb is present on i-171C429F
+[2013-12-18 00:25:20,213] [i-171C429F] [DEBUG]: [root@10.104.3.11]# ls /dev/urandom
+[2013-12-18 00:25:20,267] [i-171C429F] [DEBUG]: 
+/dev/urandom
+
+[2013-12-18 00:25:20,268] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:20,268] [i-171C429F] [DEBUG]: 
+--->(euinstance.py:906)Starting method: dd_monitor(self, ddif=None, ddof=None, ddcount=None, ddbs=1024, ddbytes=None, ddcmd=echo vol-11AE3DFC | dd of=/dev/vdb, ddseek=None, timeout=90, poll_interval=1, tmpfile=None, sync=False)
+[2013-12-18 00:25:20,268] [i-171C429F] [DEBUG]: [root@10.104.3.11]# nohup echo vol-11AE3DFC | dd of=/dev/vdb 2> /tmp/eutesterddcmd.1387355120 & echo $! && sleep 2
+[2013-12-18 00:25:20,323] [i-171C429F] [DEBUG]: 
+709
+nohup: ignoring input and redirecting stderr to stdout
+
+[2013-12-18 00:25:22,334] [i-171C429F] [DEBUG]: done with exec
+
+----------------------------------------------------------------------------------------------------------------------------
+DD DATA INFO                            |     DD TIME INFO    |       DD RATE INFO      |     DD RECORDS FULL/PARTIAL INFO    
+----------------------------------------------------------------------------------------------------------------------------
+BYTES          |      MBs      |  GIGs  | DD TIME  |TEST TIME |  DD RATE   | TEST RATE  |      REC_IN      |     REC_OUT      
+----------------------------------------------------------------------------------------------------------------------------
+13             |      0.0      |  0.0   |0.0052464 |  2.1759  |  2.5 kB/s  |  0.0 MB/s  |     F:0 P:1      |     F:0 P:1      
+----------------------------------------------------------------------------------------------------------------------------
+[2013-12-18 00:25:23,445] [i-171C429F] [DEBUG]: Done with dd, copied 13 over elapsed:3
+[2013-12-18 00:25:23,446] [i-171C429F] [DEBUG]: [root@10.104.3.11]# rm -f /tmp/eutesterddcmd.1387355120
+[2013-12-18 00:25:23,502] [i-171C429F] [DEBUG]: 
+
+[2013-12-18 00:25:23,502] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:23,502] [i-171C429F] [DEBUG]: [root@10.104.3.11]# rm -f /tmp/eutesterddcmd.1387355120.pid
+[2013-12-18 00:25:23,557] [i-171C429F] [DEBUG]: 
+
+[2013-12-18 00:25:23,557] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:23,557] [i-171C429F] [DEBUG]: length remaining to write after adding volumeid:19
+[2013-12-18 00:25:23,557] [i-171C429F] [DEBUG]: 
+--->(euinstance.py:906)Starting method: dd_monitor(self, ddif=/dev/urandom, ddof=/dev/vdb, ddcount=None, ddbs=19, ddbytes=19, ddcmd=None, ddseek=13, timeout=90, poll_interval=1, tmpfile=None, sync=True)
+[2013-12-18 00:25:23,557] [i-171C429F] [DEBUG]: [root@10.104.3.11]# nohup dd if=/dev/urandom of=/dev/vdb seek=13  bs=19  count=1  2> /tmp/eutesterddcmd.1387355123 & echo $! && sleep 2
+[2013-12-18 00:25:23,612] [i-171C429F] [DEBUG]: 
+731
+
+[2013-12-18 00:25:25,621] [i-171C429F] [DEBUG]: done with exec
+
+----------------------------------------------------------------------------------------------------------------------------
+DD DATA INFO                            |     DD TIME INFO    |       DD RATE INFO      |     DD RECORDS FULL/PARTIAL INFO    
+----------------------------------------------------------------------------------------------------------------------------
+BYTES          |      MBs      |  GIGs  | DD TIME  |TEST TIME |  DD RATE   | TEST RATE  |      REC_IN      |     REC_OUT      
+----------------------------------------------------------------------------------------------------------------------------
+19             |      0.0      |  0.0   |0.00172764|  2.1748  | 11.0 kB/s  |  0.0 MB/s  |     F:1 P:0      |     F:1 P:0      
+----------------------------------------------------------------------------------------------------------------------------
+[2013-12-18 00:25:26,733] [i-171C429F] [DEBUG]: [root@10.104.3.11]# sync
+[2013-12-18 00:25:26,815] [i-171C429F] [DEBUG]: 
+
+[2013-12-18 00:25:26,865] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:26,866] [i-171C429F] [DEBUG]: Done with dd, copied 19 over elapsed:3
+[2013-12-18 00:25:26,866] [i-171C429F] [DEBUG]: [root@10.104.3.11]# rm -f /tmp/eutesterddcmd.1387355123
+[2013-12-18 00:25:26,921] [i-171C429F] [DEBUG]: 
+
+[2013-12-18 00:25:26,921] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:26,921] [i-171C429F] [DEBUG]: [root@10.104.3.11]# rm -f /tmp/eutesterddcmd.1387355123.pid
+[2013-12-18 00:25:26,976] [i-171C429F] [DEBUG]: 
+
+[2013-12-18 00:25:26,976] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:26,976] [i-171C429F] [DEBUG]: [root@10.104.3.11]# ls /dev/vdb
+[2013-12-18 00:25:27,031] [i-171C429F] [DEBUG]: 
+/dev/vdb
+
+[2013-12-18 00:25:27,031] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:27,031] [i-171C429F] [DEBUG]: exit code:0
+[2013-12-18 00:25:27,032] [i-171C429F] [DEBUG]: File /dev/vdb is present on i-171C429F
+[2013-12-18 00:25:27,032] [i-171C429F] [DEBUG]: [root@10.104.3.11]# head -c 32 /dev/vdb | md5sum
+[2013-12-18 00:25:27,086] [i-171C429F] [DEBUG]: 
+4c47b2ea97183eaca63ac4a6559f47a0  -
+
+[2013-12-18 00:25:27,086] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:27,086] [i-171C429F] [DEBUG]: Got MD5 for Volume:vol-11AE3DFC dev:/dev/vdb md5:4c47b2ea97183eaca63ac4a6559f47a0
+[2013-12-18 00:25:27,087] [i-171C429F] [DEBUG]: Filled Volume:vol-11AE3DFC dev:/dev/vdb md5:4c47b2ea97183eaca63ac4a6559f47a0
+[2013-12-18 00:25:27,087] [i-171C429F] [DEBUG]: Success attaching volume:vol-11AE3DFC to instance:i-171C429F, cloud dev:/dev/vde, attached dev:/dev/vdb
+[2013-12-18 00:25:27,087] [i-171C429F] [DEBUG]: Attempting to reboot instance:i-171C429F, check attached volume state first
+[2013-12-18 00:25:27,087] [EUCAOPS] [DEBUG]: Beginning poll loop for result get_safe_uptime to go to None
+[2013-12-18 00:25:27,087] [i-171C429F] [DEBUG]: [root@10.104.3.11]# cat /proc/uptime
+[2013-12-18 00:25:27,142] [i-171C429F] [DEBUG]: 
+43.21 36.68
+
+[2013-12-18 00:25:27,142] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:27,143] [EUCAOPS] [DEBUG]: get_safe_uptime returned: "43" after 0 minutes 0 seconds.
+[2013-12-18 00:25:27,143] [i-171C429F] [DEBUG]: Rebooting now...
+[2013-12-18 00:25:47,288] [i-171C429F] [DEBUG]: Attempting to reconnect_to_instance:i-171C429F
+[2013-12-18 00:25:47,479] [i-171C429F] [DEBUG]: reset_ssh_connection for:i-171C429F
+[2013-12-18 00:25:47,479] [i-171C429F] [DEBUG]: Connecting ssh i-171C429F
+[2013-12-18 00:25:47,480] [i-171C429F] [DEBUG]: SSH connection has hostname:10.104.3.11 user:root and keypath: /root/eutester/testcases/cloud_user/instances/keypair-1387355062.45.pem
+[2013-12-18 00:25:47,577] [i-171C429F] [DEBUG]: SSH connection attempt(1 of 3), host:'root@10.104.3.11', using ipv4:10.104.3.11, thru proxy:'None'
+[2013-12-18 00:25:47,970] [i-171C429F] [DEBUG]: SSH - Connected to 10.104.3.11
+[2013-12-18 00:25:47,971] [i-171C429F] [DEBUG]: Try some sys...
+[2013-12-18 00:25:47,971] [i-171C429F] [DEBUG]: [root@10.104.3.11]# 
+[2013-12-18 00:25:48,129] [i-171C429F] [DEBUG]: 
+
+[2013-12-18 00:25:48,129] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:48,129] [EUCAOPS] [DEBUG]: Beginning poll loop for result get_safe_uptime to go to None
+[2013-12-18 00:25:48,129] [i-171C429F] [DEBUG]: [root@10.104.3.11]# cat /proc/uptime
+[2013-12-18 00:25:48,190] [i-171C429F] [DEBUG]: 
+13.66 9.32
+
+[2013-12-18 00:25:48,190] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:48,190] [EUCAOPS] [DEBUG]: get_safe_uptime returned: "13" after 0 minutes 0 seconds.
+[2013-12-18 00:25:48,191] [i-171C429F] [DEBUG]: Instance uptime indicates a reboot. Orig:43, New:13, elapsed:21
+[2013-12-18 00:25:48,191] [i-171C429F] [DEBUG]: i-171C429F reboot_instance_and_verify Success
+[2013-12-18 00:25:48,489] [EUCAOPS] [DEBUG]: Sent detach for volume: vol-11AE3DFC which is currently in state: in-use
+[2013-12-18 00:25:48,651] [EUCAOPS] [DEBUG]: Volume:vol-11AE3DFC state:in-use, attached_data:detaching, pause:10, instance:i-171C429F, elapsed:0
+[2013-12-18 00:25:48,652] [EUCAOPS] [DEBUG]: Sleeping for 10 seconds
+[2013-12-18 00:25:58,851] [EUCAOPS] [DEBUG]: Volume:vol-11AE3DFC left in available
+[2013-12-18 00:25:58,851] [i-171C429F] [DEBUG]: Wait for device:/dev/vdb to be removed on guest...
+[2013-12-18 00:25:58,851] [i-171C429F] [DEBUG]: [root@10.104.3.11]# ls /dev/vdb
+[2013-12-18 00:25:58,907] [i-171C429F] [DEBUG]: 
+ls: cannot access /dev/vdb: No such file or directory
+
+[2013-12-18 00:25:58,907] [i-171C429F] [DEBUG]: done with exec
+[2013-12-18 00:25:58,907] [i-171C429F] [DEBUG]: exit code:2
+[2013-12-18 00:25:59,184] [EUCAOPS] [DEBUG]: Sent delete for volume: vol-11AE3DFC, monitor to deleted state or failure
+[2013-12-18 00:25:59,318] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:2284)Starting method: get_volumes(self, volume_id=vol-11AE3DFC, status=None, attached_instance=None, attached_dev=None, snapid=None, zone=None, filters=None, minsize=1, maxsize=None, md5=None, eof=True)
+[2013-12-18 00:25:59,896] [EUCAOPS] [DEBUG]: Volume:vol-11AE3DFC in deleting sleeping:10, elapsed:0
+[2013-12-18 00:26:09,909] [instancetest] [DEBUG]: (endsuccess:696): 
+-------------------------------------------------------------------------
+- UNIT ENDED - Reboot
+-------------------------------------------------------------------------
+
+[2013-12-18 00:26:09,915] [instancetest] [DEBUG]: (run_test_case_list:800): RESULTS SUMMARY FOR 'instancetest':
+[2013-12-18 00:26:09,915] [instancetest] [DEBUG]: (run_test_case_list:800): 
+[2013-12-18 00:26:09,915] [instancetest] [DEBUG]: (run_test_case_list:800): ------------------------------------------------------
+[2013-12-18 00:26:09,915] [instancetest] [DEBUG]: (run_test_case_list:800): | TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+[2013-12-18 00:26:09,916] [instancetest] [DEBUG]: (run_test_case_list:800): ------------------------------------------------------
+[2013-12-18 00:26:09,916] [instancetest] [DEBUG]: (run_test_case_list:800): | 3       | 0       | 3       | 0       | 106
+[2013-12-18 00:26:09,916] [instancetest] [DEBUG]: (run_test_case_list:800): ------------------------------------------------------
+[2013-12-18 00:26:09,916] [instancetest] [DEBUG]: (run_test_case_list:800): 
+[2013-12-18 00:26:09,921] [instancetest] [DEBUG]: (run_test_case_list:809): Printing pre-cleanup results:
+[2013-12-18 00:26:09,924] [instancetest] [DEBUG]: (<lambda>:956): Test list results for testcase:instancetest
+[2013-12-18 00:26:09,928] [instancetest] [DEBUG]: (run_test_case_list:811): 
+-------------------------------------------------------------------------
+RUN TEST CASE LIST DONE:
+Ran 3/3 tests in 107 seconds
+
+TESTUNIT LIST SUMMARY FOR instancetest
+
+--------------------------------------------------------------------------------
+                    | RESULT: passed    
+                    | TEST NAME: BasicInstanceChecks
+                    | TIME : 32
+                    | ARGS: BasicInstanceChecks()
+--------------------------------------------------------------------------------
+                    | RESULT: passed    
+                    | TEST NAME: MetaData
+                    | TIME : 2
+                    | ARGS: MetaData()
+--------------------------------------------------------------------------------
+                    | RESULT: passed    
+                    | TEST NAME: Reboot
+                    | TIME : 72
+                    | ARGS: Reboot(zone:None)
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 3       | 0       | 3       | 0       | 106     
+------------------------------------------------------
+
+
+-------------------------------------------------------------------------
+Creating testunit:clean_method, args:
+[2013-12-18 00:26:09,931] [instancetest] [DEBUG]: (populate_testunit_with_args:1343): Attempting to populate testunit:clean_method, with testcase.args...
+[2013-12-18 00:26:09,935] [instancetest] [DEBUG]: (populate_testunit_with_args:1351): Testunit keyword args:{}
+[2013-12-18 00:26:09,938] [instancetest] [DEBUG]: (populate_testunit_with_args:1356): Got method args:('self',)
+[2013-12-18 00:26:09,942] [instancetest] [DEBUG]: (populate_testunit_with_args:1364): test unit total args:{}
+[2013-12-18 00:26:09,945] [instancetest] [DEBUG]: (print_test_unit_startmsg:860): 
+-------------------------------------------------------------------------
+STARTING TESTUNIT: clean_method
+METHOD:clean_method, TEST DESCRIPTION:
+
+End on Failure:False
+Passing ARGS:""
+Running list method: "clean_method()"
+-------------------------------------------------------------------------
+[2013-12-18 00:26:09,945] [EUCAOPS] [DEBUG]: Starting cleanup of artifacts
+[2013-12-18 00:26:09,945] [EUCAOPS] [DEBUG]: Sending terminate for Instance:i-171C429F
+[2013-12-18 00:26:10,215] [EUCAOPS] [DEBUG]: 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  INST_ID  |     EMI     |   RES_ID  |LASTSTATE |PRIV_ADDR |  AGE@STATUS |   VMTYPE   |   ROOT_VOL  |         CLUSTER         |     PUB_IP     |PRIV_IP
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ i-171C429F| emi-94CD36CC| r-523E413B|shutting-down|  False   |    107.0    |  m1.small  |     None    |         cloud34         |  10.104.3.11   |192.168.254.23
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+[2013-12-18 00:26:10,215] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:2882)Starting method: monitor_euinstances_to_state(self, state=terminated, min=None, poll_interval=10, failstates=[], timeout=480, eof=True)
+[2013-12-18 00:26:10,215] [EUCAOPS] [DEBUG]: (1) monitor_instances_to_state: 'terminated' starting....
+[2013-12-18 00:26:10,215] [EUCAOPS] [DEBUG]: 
+------>Waiting for remaining 1/1 instances to go to state:terminated, elapsed:(0/480)...
+[2013-12-18 00:26:10,319] [EUCAOPS] [DEBUG]: WAITING for Intended state:terminated: i-171C429F Current state:shutting-down, type:instance-store, backing volume:None status:None, elapsed:0/480
+[2013-12-18 00:26:20,324] [EUCAOPS] [DEBUG]: 
+------>Waiting for remaining 1/1 instances to go to state:terminated, elapsed:(10/480)...
+[2013-12-18 00:26:20,445] [EUCAOPS] [DEBUG]: WAITING for Intended state:terminated: i-171C429F Current state:shutting-down, type:instance-store, backing volume:None status:None, elapsed:10/480
+[2013-12-18 00:26:30,453] [EUCAOPS] [DEBUG]: 
+------>Waiting for remaining 1/1 instances to go to state:terminated, elapsed:(20/480)...
+[2013-12-18 00:26:30,578] [EUCAOPS] [DEBUG]: WAITING for Intended state:terminated: i-171C429F Current state:shutting-down, type:instance-store, backing volume:None status:None, elapsed:20/480
+[2013-12-18 00:26:40,589] [EUCAOPS] [DEBUG]: 
+------>Waiting for remaining 1/1 instances to go to state:terminated, elapsed:(30/480)...
+[2013-12-18 00:26:40,703] [EUCAOPS] [DEBUG]: WAITING for Intended state:terminated: i-171C429F Current state:shutting-down, type:instance-store, backing volume:None status:None, elapsed:30/480
+[2013-12-18 00:26:50,714] [EUCAOPS] [DEBUG]: 
+------>Waiting for remaining 1/1 instances to go to state:terminated, elapsed:(40/480)...
+[2013-12-18 00:26:50,843] [EUCAOPS] [DEBUG]: WAITING for Intended state:terminated: i-171C429F Current state:shutting-down, type:instance-store, backing volume:None status:None, elapsed:40/480
+[2013-12-18 00:27:00,853] [EUCAOPS] [DEBUG]: 
+------>Waiting for remaining 1/1 instances to go to state:terminated, elapsed:(50/480)...
+[2013-12-18 00:27:00,972] [EUCAOPS] [DEBUG]: WAITING for Intended state:terminated: i-171C429F Current state:shutting-down, type:instance-store, backing volume:None status:None, elapsed:50/480
+[2013-12-18 00:27:10,982] [EUCAOPS] [DEBUG]: 
+------>Waiting for remaining 1/1 instances to go to state:terminated, elapsed:(60/480)...
+[2013-12-18 00:27:11,105] [EUCAOPS] [DEBUG]: WAITING for Intended state:terminated: i-171C429F Current state:shutting-down, type:instance-store, backing volume:None status:None, elapsed:60/480
+[2013-12-18 00:27:21,115] [EUCAOPS] [DEBUG]: 
+------>Waiting for remaining 1/1 instances to go to state:terminated, elapsed:(70/480)...
+[2013-12-18 00:27:21,242] [EUCAOPS] [DEBUG]: WAITING for Intended state:terminated: i-171C429F Current state:shutting-down, type:instance-store, backing volume:None status:None, elapsed:70/480
+[2013-12-18 00:27:31,252] [EUCAOPS] [DEBUG]: 
+------>Waiting for remaining 1/1 instances to go to state:terminated, elapsed:(81/480)...
+[2013-12-18 00:27:31,362] [EUCAOPS] [DEBUG]: WAITING for Intended state:terminated: i-171C429F Current state:shutting-down, type:instance-store, backing volume:None status:None, elapsed:81/480
+[2013-12-18 00:27:41,373] [EUCAOPS] [DEBUG]: 
+------>Waiting for remaining 1/1 instances to go to state:terminated, elapsed:(91/480)...
+[2013-12-18 00:27:41,437] [EUCAOPS] [DEBUG]: SUCCESS Intended state:terminated: i-171C429F Current state:terminated, type:instance-store, backing volume:None status:None, elapsed:91/480
+[2013-12-18 00:27:41,437] [EUCAOPS] [DEBUG]: WAITING for Intended state:terminated: i-171C429F Current state:terminated, type:instance-store, backing volume:None status:None, elapsed:91/480
+[2013-12-18 00:27:41,438] [EUCAOPS] [DEBUG]: 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+  INST_ID  |     EMI     |   RES_ID  |LASTSTATE |PRIV_ADDR |  AGE@STATUS |   VMTYPE   |   ROOT_VOL  |         CLUSTER         |     PUB_IP     |PRIV_IP
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+ i-171C429F| emi-94CD36CC| r-523E413B|terminated|  False   |    198.0    |  m1.small  |     None    |         cloud34         | 192.168.254.23 |192.168.254.23
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+[2013-12-18 00:27:41,438] [EUCAOPS] [DEBUG]: clean_up_test_volumes, no volumes passed to delete
+[2013-12-18 00:27:41,438] [EUCAOPS] [DEBUG]: No loadbalancers to delete
+[2013-12-18 00:27:41,438] [EUCAOPS] [DEBUG]: Deleting SecurityGroup:group-1387355062.08
+[2013-12-18 00:27:41,560] [EUCAOPS] [DEBUG]: Deleting Reservation:r-523E413B
+[2013-12-18 00:27:41,560] [EUCAOPS] [DEBUG]: Sending terminate for Instance:i-171C429F
+[2013-12-18 00:27:41,681] [EUCAOPS] [DEBUG]: Instance: i-171C429F in terminated state:terminated
+[2013-12-18 00:27:41,681] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:3218)Starting method: get_instances(self, state=None, idstring=None, reservation=None, rootdevtype=None, zone=None, key=None, pubip=None, privip=None, ramdisk=None, kernel=None, image_id=None, filters=None)
+[2013-12-18 00:27:41,867] [i-692D4081] [DEBUG]: i-692D4081: Eulogger init test message. Init complete
+[2013-12-18 00:27:42,076] [EUCAOPS] [DEBUG]: 
+--->(euzone.py:70)Starting method: get_all_vm_type_info(self)
+[2013-12-18 00:27:42,108] [i-E977425C] [DEBUG]: i-E977425C: Eulogger init test message. Init complete
+[2013-12-18 00:27:42,344] [EUCAOPS] [DEBUG]: 
+--->(euzone.py:70)Starting method: get_all_vm_type_info(self)
+[2013-12-18 00:27:42,421] [EUCAOPS] [DEBUG]: 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+  INST_ID  |     EMI     |   RES_ID  |LASTSTATE |PRIV_ADDR |  AGE@STATUS |   VMTYPE   |   ROOT_VOL  |         CLUSTER         |     PUB_IP     |PRIV_IP
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+ i-692D4081| emi-94CD36CC| r-78D23C23| running  |  False   |    3635.0   |  m1.large  |     None    |         cloud34         |  10.104.3.10   |192.168.235.49
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+ i-E977425C| emi-398234B7| r-542C425A| running  |  False   |    7987.0   |  m1.large  |     None    |         cloud34         |   10.104.3.1   |192.168.235.60
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+[2013-12-18 00:27:42,421] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:2882)Starting method: monitor_euinstances_to_state(self, state=terminated, min=None, poll_interval=10, failstates=[], timeout=480, eof=True)
+[2013-12-18 00:27:42,421] [EUCAOPS] [DEBUG]: (0) monitor_instances_to_state: 'terminated' starting....
+[2013-12-18 00:27:42,421] [EUCAOPS] [DEBUG]: 
+--->(ec2ops.py:3218)Starting method: get_instances(self, state=None, idstring=None, reservation=None, rootdevtype=None, zone=None, key=None, pubip=None, privip=None, ramdisk=None, kernel=None, image_id=None, filters=None)
+[2013-12-18 00:27:42,608] [i-692D4081] [DEBUG]: i-692D4081: Eulogger init test message. Init complete
+[2013-12-18 00:27:42,819] [EUCAOPS] [DEBUG]: 
+--->(euzone.py:70)Starting method: get_all_vm_type_info(self)
+[2013-12-18 00:27:42,889] [i-E977425C] [DEBUG]: i-E977425C: Eulogger init test message. Init complete
+[2013-12-18 00:27:43,142] [EUCAOPS] [DEBUG]: 
+--->(euzone.py:70)Starting method: get_all_vm_type_info(self)
+[2013-12-18 00:27:43,214] [EUCAOPS] [DEBUG]: 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+  INST_ID  |     EMI     |   RES_ID  |LASTSTATE |PRIV_ADDR |  AGE@STATUS |   VMTYPE   |   ROOT_VOL  |         CLUSTER         |     PUB_IP     |PRIV_IP
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+ i-692D4081| emi-94CD36CC| r-78D23C23| running  |  False   |    3635.0   |  m1.large  |     None    |         cloud34         |  10.104.3.10   |192.168.235.49
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+ i-E977425C| emi-398234B7| r-542C425A| running  |  False   |    7988.0   |  m1.large  |     None    |         cloud34         |   10.104.3.1   |192.168.235.60
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+[2013-12-18 00:27:43,214] [EUCAOPS] [DEBUG]: Deleting KeyPair:keypair-1387355062.45
+[2013-12-18 00:27:43,349] [instancetest] [DEBUG]: (<lambda>:956): Test list results for testcase:instancetest
+[2013-12-18 00:27:43,353] [instancetest] [DEBUG]: (run_test_case_list:827): 
+-------------------------------------------------------------------------
+
+TESTUNIT LIST SUMMARY FOR instancetest
+
+--------------------------------------------------------------------------------
+                    | RESULT: passed    
+                    | TEST NAME: BasicInstanceChecks
+                    | TIME : 32
+                    | ARGS: BasicInstanceChecks()
+--------------------------------------------------------------------------------
+                    | RESULT: passed    
+                    | TEST NAME: MetaData
+                    | TIME : 2
+                    | ARGS: MetaData()
+--------------------------------------------------------------------------------
+                    | RESULT: passed    
+                    | TEST NAME: Reboot
+                    | TIME : 72
+                    | ARGS: Reboot(zone:None)
+--------------------------------------------------------------------------------
+                    | RESULT: passed    
+                    | TEST NAME: clean_method
+                    | TIME : 93
+                    | ARGS: clean_method()
+--------------------------------------------------------------------------------
+RESULTS SUMMARY FOR 'instancetest':
+
+------------------------------------------------------
+| TOTAL   | FAILED  | PASSED  | NOT_RUN | TIME_ELAPSED
+------------------------------------------------------
+| 4       | 0       | 4       | 0       | 199     
+------------------------------------------------------
+
+
+-------------------------------------------------------------------------
+passed:4 failed:0 not_run:0 total:4
